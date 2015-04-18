@@ -1,0 +1,56 @@
+[ERROR] [16:28:04] [func·001 @ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+
+[ERROR] [16:32:49] [func·001 @ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+[ERROR] [16:49:08] [func·001 @ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+[ERROR] [17:33:22] [func·001 @ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+[ERROR] [17:35:11] [func·001 @ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[ERROR] [14:09:55] [getFile @ command.go.71] getfile time out,sessioninfo is %sabc
+[ERROR] [10:21:09] [Process @ command.go.20] c must login frist
+[ERROR] [10:21:19] [getFile @ command.go.78] getfile time out,sessioninfo is %sabc
+[ERROR] [10:22:19] [Process @ command.go.20] c must login frist
+[ERROR] [10:22:29] [getFile @ command.go.78] getfile time out,sessioninfo is %sabc
+[ERROR] [10:22:33] [Process @ command.go.20] c must login frist
+[ERROR] [10:22:43] [getFile @ command.go.78] getfile time out,sessioninfo is %sabc
+[ERROR] [10:35:46] [Process @ command.go.20] client10.1.9.27:3682c must login frist
+[ERROR] [10:37:52] [Process @ command.go.20] client10.1.9.27:3730c must login frist
+[ERROR] [10:41:40] [Process @ command.go.20] client10.1.9.27:3812c must login frist
+[ERROR] [10:41:44] [Process @ command.go.20] client10.1.9.27:3814c must login frist
+[ERROR] [11:57:09] [Process @ command.go.46] client10.1.9.27:6345not support command
+[ERROR] [11:58:18] [Process @ command.go.48] client10.1.9.27:6393not support command
+[ERROR] [11:59:22] [Process @ command.go.48] client10.1.9.27:6416not support command
+[ERROR] [11:59:40] [Process @ command.go.48] client10.1.9.27:6416not support command
+[ERROR] [11:59:42] [Process @ command.go.48] client10.1.9.27:6416not support command
+[ERROR] [11:59:43] [Process @ command.go.48] client10.1.9.27:6416not support command
+[ERROR] [12:00:16] [Process @ command.go.48] client10.1.9.27:6470not support command
+[ERROR] [12:00:24] [Process @ command.go.48] client10.1.9.27:6470not support command
+[ERROR] [12:01:01] [Process @ command.go.48] client10.1.9.27:6489not support command
+[ERROR] [12:01:42] [Process @ command.go.48] client10.1.9.27:6504not support command
+[ERROR] [12:02:38] [Process @ command.go.48] client10.1.9.27:6525not support command
+[ERROR] [12:03:49] [Process @ command.go.48] client10.1.9.27:6538not support command
+[ERROR] [12:04:14] [Process @ command.go.48] client10.1.9.27:6554not support command
+[ERROR] [12:04:37] [Process @ command.go.48] client10.1.9.27:6563not support command
+[ERROR] [12:10:40] [Process @ command.go.29] client10.1.9.27:6674c must login frist
