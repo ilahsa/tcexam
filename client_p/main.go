@@ -37,7 +37,7 @@ func main() {
 		for i := 0; i < 20; i++ {
 			id := strconv.Itoa(i)
 			dat := map[string]string{
-				"action": "putfile", "file:": "file_" + id, "seq": id,
+				"action": "putfile", "file": "file_" + id, "seq": id,
 			}
 			by, _ := json.Marshal(dat)
 			client.Send(link.Bytes(by))

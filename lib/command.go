@@ -94,7 +94,7 @@ func reportAnswer(session *link.Session, req map[string]string) error {
 func getFile(session *link.Session, req map[string]string) error {
 	seq := req["seq"]
 
-	vf := QueueInstance.Dequeue()
+	vf := QueueInstance.DequeueWithoutPClosed()
 	if vf == nil {
 		ULogger.Error("getfile time out,sessioninfo is %s", session.State.(*User).Id)
 		ret := map[string]string{

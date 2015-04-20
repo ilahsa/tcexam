@@ -120,7 +120,6 @@ func (m *VFMap) Get(id string) *VerifyObj {
 
 //p 端关闭，清楚掉所有的session
 func (m *VFMap) DelSessionByP(s *link.Session) {
-
 	for k, v := range m.innerMap {
 		if v.P == s {
 			ULogger.Info("p is closed ", s.Conn().RemoteAddr().String())

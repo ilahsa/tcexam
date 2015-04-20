@@ -39,6 +39,22 @@ func (q *Queue) Enqueue(v *VerifyObj) error {
 	return nil
 }
 
+//排除掉 已经关闭的p 端的问题
+func (q *Queue) DequeueWithoutPClosed() *VerifyObj {
+	for {
+		vf := q.Dequeue()
+		if vf == nil {
+			return vf
+		}
+		if vf.P == nil ||
+			vf.P.IsClosed() {
+			continue
+		} else {
+			return vf
+		}
+	}
+	return nil
+}
 func (q *Queue) Dequeue() *VerifyObj {
 	q.syncRoot.Lock()
 	defer q.syncRoot.Unlock()
@@ -46,6 +62,7 @@ func (q *Queue) Dequeue() *VerifyObj {
 		return nil
 	}
 	e := q.lst.Front()
+
 	if e != nil {
 		q.lst.Remove(e)
 		return e.Value.(*VerifyObj)
