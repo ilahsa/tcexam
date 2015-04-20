@@ -6,6 +6,7 @@ import (
 	"github.com/funny/link"
 	"github.com/ilahsa/tcexam/lib"
 	"strconv"
+	"sync"
 )
 
 // This is an echo client demo work with the echo_server.
@@ -17,13 +18,20 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	stopWait := sync.WaitGroup{}
 	acount := 0
 	go client.Process(func(msg *link.InBuffer) error {
-		println(string(msg.Data))
+		fmt.Println("接收", string(msg.Data))
 		//处理接收到的文件
 		dat := map[string]string{}
 		json.Unmarshal(msg.Data, &dat)
 		action := dat["action"]
+		ret := dat["result"]
+		if action == "res_cstart" && ret == "1" {
+			stopWait.Done()
+			fmt.Println("登陆成功")
+			return nil
+		}
 		if action == "res_getfile" {
 			acount = acount + 1
 			fmt.Println("收到答案的总数", acount)
@@ -45,16 +53,21 @@ func main() {
 	}
 	by, _ := json.Marshal(dat)
 	client.Send(link.Bytes(by))
+	fmt.Println("发送登陆", string(by))
+	stopWait.Add(1)
 	for {
+		//等待登陆成功
+		stopWait.Wait()
 
 		//发10个获取
-		for i := 0; i < 10; i++ {
+		for i := 0; i < 20; i++ {
 			id := strconv.Itoa(i)
 			dat := map[string]string{
 				"action": "getfile", "seq": id,
 			}
 			by, _ := json.Marshal(dat)
 			client.Send(link.Bytes(by))
+			fmt.Println("发送", string(by))
 		}
 		fmt.Println("发送10个获取")
 		var input string

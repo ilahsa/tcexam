@@ -7,7 +7,7 @@ import (
 	"container/list"
 	"errors"
 	"sync"
-	"time"
+	//	"time"
 )
 
 var (
@@ -19,11 +19,11 @@ type Queue struct {
 	MaxSize  int
 	lst      *list.List
 	syncRoot sync.Mutex
-	Ch       chan *VerifyObj
+	//Ch       chan *VerifyObj
 }
 
 func newQueue() *Queue {
-	q := &Queue{MaxSize: 500, lst: list.New(), Ch: make(chan *VerifyObj)}
+	q := &Queue{MaxSize: 500, lst: list.New()}
 	//q.startEnChan()
 	return q
 }
@@ -58,22 +58,22 @@ func (q *Queue) len() int {
 	return q.lst.Len()
 }
 
-func (q *Queue) startEnChan() {
-	go func() {
-		for {
-			vf := q.Dequeue()
-			if vf != nil {
-				q.Ch <- vf
-			}
-		}
-	}()
-}
+//func (q *Queue) startEnChan() {
+//	go func() {
+//		for {
+//			vf := q.Dequeue()
+//			if vf != nil {
+//				q.Ch <- vf
+//			}
+//		}
+//	}()
+//}
 
-func (q *Queue) DeChan() *VerifyObj {
-	select {
-	case vf := <-q.Ch:
-		return vf
-	case <-time.After(time.Second * 2):
-		return nil
-	}
-}
+//func (q *Queue) DeChan() *VerifyObj {
+//	select {
+//	case vf := <-q.Ch:
+//		return vf
+//	case <-time.After(time.Second * 2):
+//		return nil
+//	}
+//}

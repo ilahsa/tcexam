@@ -19,7 +19,7 @@ func main() {
 	}
 	acount := 0
 	go client.Process(func(msg *link.InBuffer) error {
-		println(string(msg.Data))
+		fmt.Println("接收 ", string(msg.Data))
 		//处理接收到的文件
 		dat := map[string]string{}
 		json.Unmarshal(msg.Data, &dat)
@@ -34,13 +34,14 @@ func main() {
 
 	for {
 		//发10个文件
-		for i := 0; i < 10; i++ {
+		for i := 0; i < 20; i++ {
 			id := strconv.Itoa(i)
 			dat := map[string]string{
 				"action": "putfile", "file:": "file_" + id, "seq": id,
 			}
 			by, _ := json.Marshal(dat)
 			client.Send(link.Bytes(by))
+			fmt.Println("发送", string(by))
 		}
 		fmt.Println("发送10个文件")
 		var input string
