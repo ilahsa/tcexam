@@ -1,0 +1,2201 @@
+[Info] [11:50:50] [@ tcex_test.go.43] server start:127.0.0.1:10010
+[Info] [11:52:09] [@ tcex_test.go.43] server start:127.0.0.1:10010
+[Info] [11:53:29] [@ tcex_test.go.43] server start:127.0.0.1:10010
+[Info] [16:17:24] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [16:19:17] [@ main.go.38] client127.0.0.1:53423in
+[Info] [16:19:20] [@ main.go.60] client127.0.0.1:53423close
+[Info] [16:22:50] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [16:22:55] [@ main.go.38] client127.0.0.1:53530in
+[Info] [16:22:56] [@ main.go.60] client127.0.0.1:53530close
+[Info] [16:27:57] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [16:28:03] [@ main.go.38] client127.0.0.1:53666in
+[Info] [16:28:04] [@ main.go.41] client127.0.0.1:53666say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+[Error] [16:28:04] [@ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+
+[Info] [16:32:48] [@ main.go.38] client127.0.0.1:53815in
+[Info] [16:32:49] [@ main.go.41] client127.0.0.1:53815say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Error] [16:32:49] [@ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+[Info] [16:32:49] [@ main.go.60] client127.0.0.1:53815close
+[Info] [16:48:59] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [16:49:07] [@ main.go.38] client127.0.0.1:54200in
+[Info] [16:49:08] [@ main.go.41] client127.0.0.1:54200say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Error] [16:49:08] [@ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+[Info] [16:49:08] [@ main.go.60] client127.0.0.1:54200close
+[Info] [17:33:14] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [17:33:21] [@ main.go.38] client127.0.0.1:55700in
+[Info] [17:33:22] [@ main.go.41] client127.0.0.1:55700say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Error] [17:33:22] [@ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+
+[Info] [17:33:22] [@ main.go.60] client127.0.0.1:55700close
+[Info] [17:35:07] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [17:35:11] [@ main.go.38] client127.0.0.1:55733in
+[Info] [17:35:11] [@ main.go.41] client127.0.0.1:55733say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Error] [17:35:11] [@ main.go.47] bad request,req is {
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [17:35:11] [@ main.go.60] client127.0.0.1:55733close
+[Info] [17:35:58] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [17:36:01] [@ main.go.38] client127.0.0.1:55748in
+[Info] [17:36:02] [@ main.go.41] client127.0.0.1:55748say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [17:36:02] [@ main.go.60] client127.0.0.1:55748close
+[Info] [17:38:44] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [17:39:05] [@ main.go.38] client127.0.0.1:55833in
+[Info] [17:39:06] [@ main.go.41] client127.0.0.1:55833say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [17:39:06] [@ main.go.61] client127.0.0.1:55833close
+[Info] [18:01:04] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [18:01:10] [@ main.go.38] client127.0.0.1:56454in
+[Info] [18:01:11] [@ main.go.41] client127.0.0.1:56454say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [18:01:11] [@ command.go.42] putfile 进队列 &{1 0xc082082000 <nil>  1 b210367bdecdeec8cea29bb7a919a1b4 sdfqfaqfwsef  0}
+
+[Info] [18:01:11] [@ main.go.61] client127.0.0.1:56454close
+[Info] [18:09:23] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [18:09:26] [@ main.go.38] client127.0.0.1:56706in
+[Info] [18:09:27] [@ main.go.41] client127.0.0.1:56706say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [18:09:27] [@ command.go.42] putfile 进队列 &{1 0xc082082000 <nil>  1 b210367bdecdeec8cea29bb7a919a1b4 sdfqfaqfwsef  0}
+
+[Info] [18:09:27] [@ main.go.62] client127.0.0.1:56706close
+[Info] [18:10:46] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [18:10:49] [@ main.go.38] client127.0.0.1:56728in
+[Info] [18:10:50] [@ main.go.41] client127.0.0.1:56728say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [18:10:50] [@ command.go.42] putfile 进队列 &{1 0xc082072090 <nil>  1 b210367bdecdeec8cea29bb7a919a1b4 sdfqfaqfwsef  0}
+
+[Info] [18:10:50] [@ main.go.62] client127.0.0.1:56728close
+[Info] [18:59:12] [@ main.go.35] server start:127.0.0.1:10010
+[Info] [18:59:15] [@ main.go.38] client127.0.0.1:58325in
+[Info] [18:59:16] [@ main.go.41] client127.0.0.1:58325say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [18:59:16] [@ command.go.42] putfile 进队列 &{1 0xc082082000 <nil>  1 b210367bdecdeec8cea29bb7a919a1b4 sdfqfaqfwsef  0}
+
+[Info] [18:59:16] [@ main.go.52] retbyte is  []
+
+[Info] [18:59:16] [@ main.go.62] client127.0.0.1:58325close
+[Info] [19:03:09] [@ main.go.36] server start:127.0.0.1:10010
+[Info] [19:03:13] [@ main.go.39] client127.0.0.1:58451in
+[Info] [19:03:13] [@ main.go.42] client127.0.0.1:58451say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [19:03:13] [@ command.go.42] putfile 进队列 &{1 0xc082082000 <nil>  1 b210367bdecdeec8cea29bb7a919a1b4 sdfqfaqfwsef  0}
+
+[Info] [19:03:13] [@ main.go.55] client127.0.0.1:58451close
+[Info] [19:04:36] [@ main.go.36] server start:127.0.0.1:10010
+[Info] [19:04:39] [@ main.go.39] client127.0.0.1:58501in
+[Info] [19:04:40] [@ main.go.42] client127.0.0.1:58501say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [19:04:40] [@ command.go.42] putfile 进队列 &{1 0xc082082000 <nil>  1 b210367bdecdeec8cea29bb7a919a1b4 sdfqfaqfwsef  0}
+
+[Info] [19:04:40] [@ main.go.51] tttt <nil>
+
+[Info] [19:04:40] [@ main.go.57] client127.0.0.1:58501close
+[Info] [19:12:35] [@ main.go.36] server start:[::]:10010
+[Info] [14:00:58] [@ main.go.36] server start:[::]:10010
+[Info] [14:01:02] [@ main.go.39] client10.1.9.27:54416in
+[Info] [14:01:05] [@ main.go.42] client10.1.9.27:54416say:{
+  "action": "putfile",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [14:01:05] [@ command.go.43] putfile 进队列 &{1 0xc082094360 <nil>  1 d41d8cd98f00b204e9800998ecf8427e   0 1}
+
+[Info] [14:01:05] [@ main.go.51] tttt <nil>
+
+[Info] [14:01:53] [@ main.go.39] client10.1.9.27:54472in
+[Info] [14:01:54] [@ main.go.42] client10.1.9.27:54472say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [14:01:54] [@ main.go.51] tttt <nil>
+
+[Info] [14:04:35] [@ main.go.36] server start:[::]:10010
+[Info] [14:04:38] [@ main.go.39] client10.1.9.27:54702in
+[Info] [14:04:40] [@ main.go.42] client10.1.9.27:54702say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [14:04:40] [@ command.go.94] user u_001 start answer
+[Info] [14:04:40] [@ main.go.51] tttt <nil>
+
+[Info] [14:07:55] [@ main.go.42] client10.1.9.27:54702say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [14:09:55] [@ command.go.71] getfile time out,sessioninfo is %sabc
+[Info] [14:09:55] [@ main.go.51] tttt <nil>
+
+[Info] [14:35:33] [@ main.go.36] server start:[::]:10010
+[Info] [14:35:37] [@ main.go.39] client10.1.9.27:57442in
+[Info] [14:35:51] [@ main.go.42] client10.1.9.27:57442say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [14:35:51] [@ command.go.101] user u_001 start answer
+[Info] [14:35:51] [@ main.go.51] tttt <nil>
+
+[Info] [14:36:17] [@ main.go.57] client10.1.9.27:57442close
+[Info] [15:29:30] [@ main.go.36] server start:[::]:10010
+[Info] [15:29:52] [@ main.go.39] client10.1.9.27:61979in
+[Info] [15:30:09] [@ main.go.57] client10.1.9.27:61979close
+[Info] [15:30:39] [@ main.go.39] client10.1.9.27:62039in
+[Info] [15:30:44] [@ main.go.57] client10.1.9.27:62039close
+[Info] [15:31:46] [@ main.go.39] client10.1.9.27:62117in
+[Info] [15:31:48] [@ main.go.42] client10.1.9.27:62117say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [15:31:48] [@ command.go.44] putfile 进队列 &{1429169508_1 0xc082092000 <nil>  1 b210367bdecdeec8cea29bb7a919a1b4 sdfqfaqfwsef  0 1}
+
+[Info] [15:31:48] [@ main.go.51] tttt <nil>
+
+[Info] [15:36:11] [@ main.go.39] client10.1.9.27:62482in
+[Info] [15:36:15] [@ main.go.42] client10.1.9.27:62482say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [15:36:15] [@ command.go.101] user u_001 start answer
+[Info] [15:36:15] [@ main.go.51] tttt <nil>
+
+[Info] [15:36:26] [@ main.go.42] client10.1.9.27:62482say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [15:36:26] [@ main.go.51] tttt <nil>
+
+[Info] [15:38:46] [@ main.go.36] server start:[::]:10010
+[Info] [15:39:08] [@ main.go.39] client10.1.9.27:62740in
+[Info] [15:39:22] [@ main.go.39] client10.1.9.27:62755in
+[Info] [15:39:24] [@ main.go.42] client10.1.9.27:62755say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "sdfqfaqfwsef"
+}
+[Info] [15:39:24] [@ command.go.44] putfile 进队列 &{1429169964_1 0xc0820921b0 <nil>  1 b210367bdecdeec8cea29bb7a919a1b4 sdfqfaqfwsef  0 1}
+
+[Info] [15:39:24] [@ main.go.51] tttt <nil>
+
+[Info] [15:39:45] [@ main.go.39] client10.1.9.27:62800in
+[Info] [15:39:47] [@ main.go.42] client10.1.9.27:62800say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [15:39:47] [@ command.go.101] user u_001 start answer
+[Info] [15:39:47] [@ main.go.51] tttt <nil>
+
+[Info] [15:40:01] [@ main.go.42] client10.1.9.27:62800say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [15:40:01] [@ main.go.51] tttt <nil>
+
+[Info] [15:41:52] [@ main.go.42] client10.1.9.27:62755say:{
+  "action": "answer",
+  "seq":"1",
+  "id":"1429169964_1",
+  "answer":"123"
+}
+[Info] [15:41:53] [@ main.go.51] tttt <nil>
+
+[Info] [15:42:37] [@ main.go.42] client10.1.9.27:62800say:{
+  "action": "answer",
+  "seq":"1",
+  "id":"1429169964_1",
+  "answer":"123"
+}
+[Info] [15:42:37] [@ main.go.51] tttt <nil>
+
+[Info] [18:22:43] [@ main.go.36] server start:[::]:10010
+[Info] [18:23:13] [@ main.go.39] client10.1.9.27:12745in
+[Info] [18:23:16] [@ main.go.42] client10.1.9.27:12745say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "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"
+}
+[Info] [18:23:16] [@ command.go.50] putfile 进队列 &{1429179796_1 0xc082092090 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:23:16] [@ main.go.51] tttt <nil>
+
+[Info] [18:24:07] [@ main.go.36] server start:[::]:10010
+[Info] [18:24:10] [@ main.go.39] client10.1.9.27:12864in
+[Info] [18:24:11] [@ main.go.42] client10.1.9.27:12864say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "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"
+}
+[Info] [18:24:11] [@ command.go.50] putfile 进队列 &{1429179851_1 0xc082092090 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:24:11] [@ main.go.51] tttt <nil>
+
+[Info] [18:25:29] [@ main.go.36] server start:[::]:10010
+[Info] [18:25:32] [@ main.go.39] client10.1.9.27:12970in
+[Info] [18:25:33] [@ main.go.42] client10.1.9.27:12970say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "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"
+}
+[Info] [18:25:33] [@ command.go.50] putfile 进队列 &{1429179933_1 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:25:33] [@ main.go.51] tttt <nil>
+
+[Info] [18:25:39] [@ command.go.50] putfile 进队列 &{1429179939_2 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 /9j/4AAQSkZJRgABAQAAAQABAAD//gATMGVlY2Y3YjRkNjdmY2NhOQD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+jNFIaADNGaKSgBc0ZrlNPl8Uahr7S3Ea2OlxsQImALSCurqIT5lexnTqc6vZr1DNGaSlqzQM0ZoooAM0ZopKAHZpM0Vmx69p0ustpMdwHvFUsUAJAx159aTkluS5KNrvc0s0ZpKKZQuaM0UlAC5ozRRQAZozRSUALmjNFFAC0UDpRQAUhpaQ0ANd1jRnc4VRkmub1zxlBo1sk/2C6lR22oxXy1Y/wDAuf0rpa841Y/8JR8QYNNPzWdicyDsehP+FYV5yjH3d2cuKqShFKD1bsjpLTxjp402O51S4t7OZ/m8gSb2A7ZwM5/CrukeJNO12WRNPaWQRj5nMZVR+JrzLx9eWsmrLptjbQxR2vDeVGBub8K6/wAJaZqVvoEEECCwV/nlldd0jk+g6AY9axp15yqcm6RzUsVVlWdPdLfz/Q6+4uYLSIy3EyRRjqzsAKwrrxjZxqzWdnfX4Xq9vASn/fR4/Kr8OgWMcomnRrucf8tblt5H0B4H4CrGpXaafplxcsAFiQnHaumXPa97HbL2lm72/EwNL8f6RqEc7Tb7MwLuYTY5HtjqfatCz1q81WPztP00/Zj92a5k8sP7gAE4/KvHbbRdR1W2uNStrd50SX94qDLc85x3r2HSfEej3NhEEu4IGVQrQysEZD6YNcuHrzqaTdv1OHCYmpV0qO36j7i8163QuumWdwAMkR3ZU/qlc0fifbwztDc6TcRSKcMokBwfxxW9qniuxtYWSyf7ddkYSK3G/n3I6VxWneAtS1nUJL/V820crl2TPznP8qdWdTmSpO5WIqVeZRoSu+u1vvO50/X7jUViki0a8WGTkSu8e3Hrw2f0qWy0zRrTVp7m2EIv58l/3mWPrgZ4qjqGiaXpeiSF0llSKPaolmdgOOOM4rynRtWfSDeXcJxclPLiY9s9TRUrOm0pq/8AXoFbEujKKqq739PwPX77XiL/APszS4hdX+MvziOEern+lSJpF1ON2oapcSMesdufJQfTHzfrWZ4AtI4vDcd1nfPdMZJZDySc45rp5po7eF5pXCRoMsx6AVvD3488up1Ur1IKpPr06HM+ILbStF0mW6l+0Mw4UG7lyT/31XB+G7PV/EWqHy768itAxLMJ2+UenWl8e6le3+oQNKjR2bpvt1P8S5xk/lXoXgm0htvDdu8IGJlDkjua5LKtW5VokedaOJxPItIx/E34YhBCkSliFGMscn86kpKK9E9kWikpaACkopaAFFFA6UUAFIaWkNACNnacdccV5V4Uk1Cw13VbyTSrqZnVhuC7Qpzk5Jr1WkdFkRkYZVhgj2rKpS52pXtY561D2koyTtY8h8EWa6z4tmursCQx5lIPPzZ4NevjjpWbpvh/StIlaSws0hdhgsGJz+ZrTqcPSdKNnuThMO6NPlluJXPeN455PCt2sCM5IG5VGSRXQ0VrOPNFx7m9SHPBx7nlng/xBZaNoF1a3y3MUsjHYY4zlsjHB9RV/wAPm9sbdwNFk1G2lkL7pYdswz6k8N+dVNa0/VtI8YLrN1ayX9ism4Mo3bV+nbH5V3mmeIdK1eMNaXkRcjmJjtdfqDzXDRi78snZrY8zDwbfs5ys46LzIYtc0+2XE9tPp/qJrcqv/fQBX9a0LbUbG8Gba8t5v+ucgb+VWeCPUVm3vh7SNQObnT4Gf++F2t+Y5rttNbano2qLaz/D+vuKvi+GSfw3dIgJG3nHUe9eUeF7Sy1O9k0u+fy/OH7qT0cV2HiTSbnw7am50rW7iNc8200u9SPQZ/rXIeHRpuo6xHFqNlI3mNy8DlcH1I/wxXnYh81VXWv4Hj4uXNiIqSs/PY6vTLPxP4YuW07TprC/iPzLC8oVh74JBFb0Gla5rM6Sa/JDDaxncLO3OQ5/2j3HtW5p+lWOmR7bO3SPPVsZY/UnmrtdkKFlZvTt0PSpYVRVm3btfQ57xT4Uh8SWkMfm/Z5YCdjhcjB7EVW0nwbNp1otu+uXzRD/AJZxNsUfTqa6qirdGDlz21NHhqTn7RrUzbbQNPtpRKI5JJR0kllZz+prSpaStFFLY1jGMdkLSUUUyhaSlooAUdKKB0ooAKQ0tJigAooxRigAooxRigBKWjFGKAEqldaPpt4c3NhbSt/eaME/n1q9ijFJpPcTino0ZQ8O6coxEtxD/wBcrqRR+QbFNfw/bSDDXeoEen2t/wDGtfFGKn2cexHsodjnz4L0N33TWrzn1mmd/wCZrRs9G03T8fZLKGEjuic1fxRihU4LVII0acXdRQlFLijFWaCUtGKMUAJRS4oxQAUlLijFACUtGKMUAKKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z  0 1 0}
+
+[Info] [18:25:49] [@ command.go.50] putfile 进队列 &{1429179949_3 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 /9j/4AAQSkZJRgABAQAAAQABAAD//gATMGVlY2Y3YjRkNjdmY2NhOQD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+jNFIaADNGaKSgBc0ZrlNPl8Uahr7S3Ea2OlxsQImALSCurqIT5lexnTqc6vZr1DNGaSlqzQM0ZoooAM0ZopKAHZpM0Vmx69p0ustpMdwHvFUsUAJAx159aTkluS5KNrvc0s0ZpKKZQuaM0UlAC5ozRRQAZozRSUALmjNFFAC0UDpRQAUhpaQ0ANd1jRnc4VRkmub1zxlBo1sk/2C6lR22oxXy1Y/wDAuf0rpa841Y/8JR8QYNNPzWdicyDsehP+FYV5yjH3d2cuKqShFKD1bsjpLTxjp402O51S4t7OZ/m8gSb2A7ZwM5/CrukeJNO12WRNPaWQRj5nMZVR+JrzLx9eWsmrLptjbQxR2vDeVGBub8K6/wAJaZqVvoEEECCwV/nlldd0jk+g6AY9axp15yqcm6RzUsVVlWdPdLfz/Q6+4uYLSIy3EyRRjqzsAKwrrxjZxqzWdnfX4Xq9vASn/fR4/Kr8OgWMcomnRrucf8tblt5H0B4H4CrGpXaafplxcsAFiQnHaumXPa97HbL2lm72/EwNL8f6RqEc7Tb7MwLuYTY5HtjqfatCz1q81WPztP00/Zj92a5k8sP7gAE4/KvHbbRdR1W2uNStrd50SX94qDLc85x3r2HSfEej3NhEEu4IGVQrQysEZD6YNcuHrzqaTdv1OHCYmpV0qO36j7i8163QuumWdwAMkR3ZU/qlc0fifbwztDc6TcRSKcMokBwfxxW9qniuxtYWSyf7ddkYSK3G/n3I6VxWneAtS1nUJL/V820crl2TPznP8qdWdTmSpO5WIqVeZRoSu+u1vvO50/X7jUViki0a8WGTkSu8e3Hrw2f0qWy0zRrTVp7m2EIv58l/3mWPrgZ4qjqGiaXpeiSF0llSKPaolmdgOOOM4rynRtWfSDeXcJxclPLiY9s9TRUrOm0pq/8AXoFbEujKKqq739PwPX77XiL/APszS4hdX+MvziOEern+lSJpF1ON2oapcSMesdufJQfTHzfrWZ4AtI4vDcd1nfPdMZJZDySc45rp5po7eF5pXCRoMsx6AVvD3488up1Ur1IKpPr06HM+ILbStF0mW6l+0Mw4UG7lyT/31XB+G7PV/EWqHy768itAxLMJ2+UenWl8e6le3+oQNKjR2bpvt1P8S5xk/lXoXgm0htvDdu8IGJlDkjua5LKtW5VokedaOJxPItIx/E34YhBCkSliFGMscn86kpKK9E9kWikpaACkopaAFFFA6UUAFIaWkNACNnacdccV5V4Uk1Cw13VbyTSrqZnVhuC7Qpzk5Jr1WkdFkRkYZVhgj2rKpS52pXtY561D2koyTtY8h8EWa6z4tmursCQx5lIPPzZ4NevjjpWbpvh/StIlaSws0hdhgsGJz+ZrTqcPSdKNnuThMO6NPlluJXPeN455PCt2sCM5IG5VGSRXQ0VrOPNFx7m9SHPBx7nlng/xBZaNoF1a3y3MUsjHYY4zlsjHB9RV/wAPm9sbdwNFk1G2lkL7pYdswz6k8N+dVNa0/VtI8YLrN1ayX9ism4Mo3bV+nbH5V3mmeIdK1eMNaXkRcjmJjtdfqDzXDRi78snZrY8zDwbfs5ys46LzIYtc0+2XE9tPp/qJrcqv/fQBX9a0LbUbG8Gba8t5v+ucgb+VWeCPUVm3vh7SNQObnT4Gf++F2t+Y5rttNbano2qLaz/D+vuKvi+GSfw3dIgJG3nHUe9eUeF7Sy1O9k0u+fy/OH7qT0cV2HiTSbnw7am50rW7iNc8200u9SPQZ/rXIeHRpuo6xHFqNlI3mNy8DlcH1I/wxXnYh81VXWv4Hj4uXNiIqSs/PY6vTLPxP4YuW07TprC/iPzLC8oVh74JBFb0Gla5rM6Sa/JDDaxncLO3OQ5/2j3HtW5p+lWOmR7bO3SPPVsZY/UnmrtdkKFlZvTt0PSpYVRVm3btfQ57xT4Uh8SWkMfm/Z5YCdjhcjB7EVW0nwbNp1otu+uXzRD/AJZxNsUfTqa6qirdGDlz21NHhqTn7RrUzbbQNPtpRKI5JJR0kllZz+prSpaStFFLY1jGMdkLSUUUyhaSlooAUdKKB0ooAKQ0tJigAooxRigAooxRigBKWjFGKAEqldaPpt4c3NhbSt/eaME/n1q9ijFJpPcTino0ZQ8O6coxEtxD/wBcrqRR+QbFNfw/bSDDXeoEen2t/wDGtfFGKn2cexHsodjnz4L0N33TWrzn1mmd/wCZrRs9G03T8fZLKGEjuic1fxRihU4LVII0acXdRQlFLijFWaCUtGKMUAJRS4oxQAUlLijFACUtGKMUAKKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z  0 1 0}
+
+[Info] [18:25:59] [@ command.go.50] putfile 进队列 &{1429179959_4 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 /9j/4AAQSkZJRgABAQAAAQABAAD//gATMGVlY2Y3YjRkNjdmY2NhOQD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+jNFIaADNGaKSgBc0ZrlNPl8Uahr7S3Ea2OlxsQImALSCurqIT5lexnTqc6vZr1DNGaSlqzQM0ZoooAM0ZopKAHZpM0Vmx69p0ustpMdwHvFUsUAJAx159aTkluS5KNrvc0s0ZpKKZQuaM0UlAC5ozRRQAZozRSUALmjNFFAC0UDpRQAUhpaQ0ANd1jRnc4VRkmub1zxlBo1sk/2C6lR22oxXy1Y/wDAuf0rpa841Y/8JR8QYNNPzWdicyDsehP+FYV5yjH3d2cuKqShFKD1bsjpLTxjp402O51S4t7OZ/m8gSb2A7ZwM5/CrukeJNO12WRNPaWQRj5nMZVR+JrzLx9eWsmrLptjbQxR2vDeVGBub8K6/wAJaZqVvoEEECCwV/nlldd0jk+g6AY9axp15yqcm6RzUsVVlWdPdLfz/Q6+4uYLSIy3EyRRjqzsAKwrrxjZxqzWdnfX4Xq9vASn/fR4/Kr8OgWMcomnRrucf8tblt5H0B4H4CrGpXaafplxcsAFiQnHaumXPa97HbL2lm72/EwNL8f6RqEc7Tb7MwLuYTY5HtjqfatCz1q81WPztP00/Zj92a5k8sP7gAE4/KvHbbRdR1W2uNStrd50SX94qDLc85x3r2HSfEej3NhEEu4IGVQrQysEZD6YNcuHrzqaTdv1OHCYmpV0qO36j7i8163QuumWdwAMkR3ZU/qlc0fifbwztDc6TcRSKcMokBwfxxW9qniuxtYWSyf7ddkYSK3G/n3I6VxWneAtS1nUJL/V820crl2TPznP8qdWdTmSpO5WIqVeZRoSu+u1vvO50/X7jUViki0a8WGTkSu8e3Hrw2f0qWy0zRrTVp7m2EIv58l/3mWPrgZ4qjqGiaXpeiSF0llSKPaolmdgOOOM4rynRtWfSDeXcJxclPLiY9s9TRUrOm0pq/8AXoFbEujKKqq739PwPX77XiL/APszS4hdX+MvziOEern+lSJpF1ON2oapcSMesdufJQfTHzfrWZ4AtI4vDcd1nfPdMZJZDySc45rp5po7eF5pXCRoMsx6AVvD3488up1Ur1IKpPr06HM+ILbStF0mW6l+0Mw4UG7lyT/31XB+G7PV/EWqHy768itAxLMJ2+UenWl8e6le3+oQNKjR2bpvt1P8S5xk/lXoXgm0htvDdu8IGJlDkjua5LKtW5VokedaOJxPItIx/E34YhBCkSliFGMscn86kpKK9E9kWikpaACkopaAFFFA6UUAFIaWkNACNnacdccV5V4Uk1Cw13VbyTSrqZnVhuC7Qpzk5Jr1WkdFkRkYZVhgj2rKpS52pXtY561D2koyTtY8h8EWa6z4tmursCQx5lIPPzZ4NevjjpWbpvh/StIlaSws0hdhgsGJz+ZrTqcPSdKNnuThMO6NPlluJXPeN455PCt2sCM5IG5VGSRXQ0VrOPNFx7m9SHPBx7nlng/xBZaNoF1a3y3MUsjHYY4zlsjHB9RV/wAPm9sbdwNFk1G2lkL7pYdswz6k8N+dVNa0/VtI8YLrN1ayX9ism4Mo3bV+nbH5V3mmeIdK1eMNaXkRcjmJjtdfqDzXDRi78snZrY8zDwbfs5ys46LzIYtc0+2XE9tPp/qJrcqv/fQBX9a0LbUbG8Gba8t5v+ucgb+VWeCPUVm3vh7SNQObnT4Gf++F2t+Y5rttNbano2qLaz/D+vuKvi+GSfw3dIgJG3nHUe9eUeF7Sy1O9k0u+fy/OH7qT0cV2HiTSbnw7am50rW7iNc8200u9SPQZ/rXIeHRpuo6xHFqNlI3mNy8DlcH1I/wxXnYh81VXWv4Hj4uXNiIqSs/PY6vTLPxP4YuW07TprC/iPzLC8oVh74JBFb0Gla5rM6Sa/JDDaxncLO3OQ5/2j3HtW5p+lWOmR7bO3SPPVsZY/UnmrtdkKFlZvTt0PSpYVRVm3btfQ57xT4Uh8SWkMfm/Z5YCdjhcjB7EVW0nwbNp1otu+uXzRD/AJZxNsUfTqa6qirdGDlz21NHhqTn7RrUzbbQNPtpRKI5JJR0kllZz+prSpaStFFLY1jGMdkLSUUUyhaSlooAUdKKB0ooAKQ0tJigAooxRigAooxRigBKWjFGKAEqldaPpt4c3NhbSt/eaME/n1q9ijFJpPcTino0ZQ8O6coxEtxD/wBcrqRR+QbFNfw/bSDDXeoEen2t/wDGtfFGKn2cexHsodjnz4L0N33TWrzn1mmd/wCZrRs9G03T8fZLKGEjuic1fxRihU4LVII0acXdRQlFLijFWaCUtGKMUAJRS4oxQAUlLijFACUtGKMUAKKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z  0 1 0}
+
+[Info] [18:26:09] [@ command.go.50] putfile 进队列 &{1429179969_5 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:26:19] [@ command.go.50] putfile 进队列 &{1429179979_6 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:26:29] [@ command.go.50] putfile 进队列 &{1429179989_7 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 /9j/4AAQSkZJRgABAQAAAQABAAD//gATMGVlY2Y3YjRkNjdmY2NhOQD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+jNFIaADNGaKSgBc0ZrlNPl8Uahr7S3Ea2OlxsQImALSCurqIT5lexnTqc6vZr1DNGaSlqzQM0ZoooAM0ZopKAHZpM0Vmx69p0ustpMdwHvFUsUAJAx159aTkluS5KNrvc0s0ZpKKZQuaM0UlAC5ozRRQAZozRSUALmjNFFAC0UDpRQAUhpaQ0ANd1jRnc4VRkmub1zxlBo1sk/2C6lR22oxXy1Y/wDAuf0rpa841Y/8JR8QYNNPzWdicyDsehP+FYV5yjH3d2cuKqShFKD1bsjpLTxjp402O51S4t7OZ/m8gSb2A7ZwM5/CrukeJNO12WRNPaWQRj5nMZVR+JrzLx9eWsmrLptjbQxR2vDeVGBub8K6/wAJaZqVvoEEECCwV/nlldd0jk+g6AY9axp15yqcm6RzUsVVlWdPdLfz/Q6+4uYLSIy3EyRRjqzsAKwrrxjZxqzWdnfX4Xq9vASn/fR4/Kr8OgWMcomnRrucf8tblt5H0B4H4CrGpXaafplxcsAFiQnHaumXPa97HbL2lm72/EwNL8f6RqEc7Tb7MwLuYTY5HtjqfatCz1q81WPztP00/Zj92a5k8sP7gAE4/KvHbbRdR1W2uNStrd50SX94qDLc85x3r2HSfEej3NhEEu4IGVQrQysEZD6YNcuHrzqaTdv1OHCYmpV0qO36j7i8163QuumWdwAMkR3ZU/qlc0fifbwztDc6TcRSKcMokBwfxxW9qniuxtYWSyf7ddkYSK3G/n3I6VxWneAtS1nUJL/V820crl2TPznP8qdWdTmSpO5WIqVeZRoSu+u1vvO50/X7jUViki0a8WGTkSu8e3Hrw2f0qWy0zRrTVp7m2EIv58l/3mWPrgZ4qjqGiaXpeiSF0llSKPaolmdgOOOM4rynRtWfSDeXcJxclPLiY9s9TRUrOm0pq/8AXoFbEujKKqq739PwPX77XiL/APszS4hdX+MvziOEern+lSJpF1ON2oapcSMesdufJQfTHzfrWZ4AtI4vDcd1nfPdMZJZDySc45rp5po7eF5pXCRoMsx6AVvD3488up1Ur1IKpPr06HM+ILbStF0mW6l+0Mw4UG7lyT/31XB+G7PV/EWqHy768itAxLMJ2+UenWl8e6le3+oQNKjR2bpvt1P8S5xk/lXoXgm0htvDdu8IGJlDkjua5LKtW5VokedaOJxPItIx/E34YhBCkSliFGMscn86kpKK9E9kWikpaACkopaAFFFA6UUAFIaWkNACNnacdccV5V4Uk1Cw13VbyTSrqZnVhuC7Qpzk5Jr1WkdFkRkYZVhgj2rKpS52pXtY561D2koyTtY8h8EWa6z4tmursCQx5lIPPzZ4NevjjpWbpvh/StIlaSws0hdhgsGJz+ZrTqcPSdKNnuThMO6NPlluJXPeN455PCt2sCM5IG5VGSRXQ0VrOPNFx7m9SHPBx7nlng/xBZaNoF1a3y3MUsjHYY4zlsjHB9RV/wAPm9sbdwNFk1G2lkL7pYdswz6k8N+dVNa0/VtI8YLrN1ayX9ism4Mo3bV+nbH5V3mmeIdK1eMNaXkRcjmJjtdfqDzXDRi78snZrY8zDwbfs5ys46LzIYtc0+2XE9tPp/qJrcqv/fQBX9a0LbUbG8Gba8t5v+ucgb+VWeCPUVm3vh7SNQObnT4Gf++F2t+Y5rttNbano2qLaz/D+vuKvi+GSfw3dIgJG3nHUe9eUeF7Sy1O9k0u+fy/OH7qT0cV2HiTSbnw7am50rW7iNc8200u9SPQZ/rXIeHRpuo6xHFqNlI3mNy8DlcH1I/wxXnYh81VXWv4Hj4uXNiIqSs/PY6vTLPxP4YuW07TprC/iPzLC8oVh74JBFb0Gla5rM6Sa/JDDaxncLO3OQ5/2j3HtW5p+lWOmR7bO3SPPVsZY/UnmrtdkKFlZvTt0PSpYVRVm3btfQ57xT4Uh8SWkMfm/Z5YCdjhcjB7EVW0nwbNp1otu+uXzRD/AJZxNsUfTqa6qirdGDlz21NHhqTn7RrUzbbQNPtpRKI5JJR0kllZz+prSpaStFFLY1jGMdkLSUUUyhaSlooAUdKKB0ooAKQ0tJigAooxRigAooxRigBKWjFGKAEqldaPpt4c3NhbSt/eaME/n1q9ijFJpPcTino0ZQ8O6coxEtxD/wBcrqRR+QbFNfw/bSDDXeoEen2t/wDGtfFGKn2cexHsodjnz4L0N33TWrzn1mmd/wCZrRs9G03T8fZLKGEjuic1fxRihU4LVII0acXdRQlFLijFWaCUtGKMUAJRS4oxQAUlLijFACUtGKMUAKKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z  0 1 0}
+
+[Info] [18:26:39] [@ command.go.50] putfile 进队列 &{1429179999_8 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:26:49] [@ command.go.50] putfile 进队列 &{1429180009_9 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:26:59] [@ command.go.50] putfile 进队列 &{1429180019_10 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:27:09] [@ command.go.50] putfile 进队列 &{1429180029_11 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 /9j/4AAQSkZJRgABAQAAAQABAAD//gATMGVlY2Y3YjRkNjdmY2NhOQD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+jNFIaADNGaKSgBc0ZrlNPl8Uahr7S3Ea2OlxsQImALSCurqIT5lexnTqc6vZr1DNGaSlqzQM0ZoooAM0ZopKAHZpM0Vmx69p0ustpMdwHvFUsUAJAx159aTkluS5KNrvc0s0ZpKKZQuaM0UlAC5ozRRQAZozRSUALmjNFFAC0UDpRQAUhpaQ0ANd1jRnc4VRkmub1zxlBo1sk/2C6lR22oxXy1Y/wDAuf0rpa841Y/8JR8QYNNPzWdicyDsehP+FYV5yjH3d2cuKqShFKD1bsjpLTxjp402O51S4t7OZ/m8gSb2A7ZwM5/CrukeJNO12WRNPaWQRj5nMZVR+JrzLx9eWsmrLptjbQxR2vDeVGBub8K6/wAJaZqVvoEEECCwV/nlldd0jk+g6AY9axp15yqcm6RzUsVVlWdPdLfz/Q6+4uYLSIy3EyRRjqzsAKwrrxjZxqzWdnfX4Xq9vASn/fR4/Kr8OgWMcomnRrucf8tblt5H0B4H4CrGpXaafplxcsAFiQnHaumXPa97HbL2lm72/EwNL8f6RqEc7Tb7MwLuYTY5HtjqfatCz1q81WPztP00/Zj92a5k8sP7gAE4/KvHbbRdR1W2uNStrd50SX94qDLc85x3r2HSfEej3NhEEu4IGVQrQysEZD6YNcuHrzqaTdv1OHCYmpV0qO36j7i8163QuumWdwAMkR3ZU/qlc0fifbwztDc6TcRSKcMokBwfxxW9qniuxtYWSyf7ddkYSK3G/n3I6VxWneAtS1nUJL/V820crl2TPznP8qdWdTmSpO5WIqVeZRoSu+u1vvO50/X7jUViki0a8WGTkSu8e3Hrw2f0qWy0zRrTVp7m2EIv58l/3mWPrgZ4qjqGiaXpeiSF0llSKPaolmdgOOOM4rynRtWfSDeXcJxclPLiY9s9TRUrOm0pq/8AXoFbEujKKqq739PwPX77XiL/APszS4hdX+MvziOEern+lSJpF1ON2oapcSMesdufJQfTHzfrWZ4AtI4vDcd1nfPdMZJZDySc45rp5po7eF5pXCRoMsx6AVvD3488up1Ur1IKpPr06HM+ILbStF0mW6l+0Mw4UG7lyT/31XB+G7PV/EWqHy768itAxLMJ2+UenWl8e6le3+oQNKjR2bpvt1P8S5xk/lXoXgm0htvDdu8IGJlDkjua5LKtW5VokedaOJxPItIx/E34YhBCkSliFGMscn86kpKK9E9kWikpaACkopaAFFFA6UUAFIaWkNACNnacdccV5V4Uk1Cw13VbyTSrqZnVhuC7Qpzk5Jr1WkdFkRkYZVhgj2rKpS52pXtY561D2koyTtY8h8EWa6z4tmursCQx5lIPPzZ4NevjjpWbpvh/StIlaSws0hdhgsGJz+ZrTqcPSdKNnuThMO6NPlluJXPeN455PCt2sCM5IG5VGSRXQ0VrOPNFx7m9SHPBx7nlng/xBZaNoF1a3y3MUsjHYY4zlsjHB9RV/wAPm9sbdwNFk1G2lkL7pYdswz6k8N+dVNa0/VtI8YLrN1ayX9ism4Mo3bV+nbH5V3mmeIdK1eMNaXkRcjmJjtdfqDzXDRi78snZrY8zDwbfs5ys46LzIYtc0+2XE9tPp/qJrcqv/fQBX9a0LbUbG8Gba8t5v+ucgb+VWeCPUVm3vh7SNQObnT4Gf++F2t+Y5rttNbano2qLaz/D+vuKvi+GSfw3dIgJG3nHUe9eUeF7Sy1O9k0u+fy/OH7qT0cV2HiTSbnw7am50rW7iNc8200u9SPQZ/rXIeHRpuo6xHFqNlI3mNy8DlcH1I/wxXnYh81VXWv4Hj4uXNiIqSs/PY6vTLPxP4YuW07TprC/iPzLC8oVh74JBFb0Gla5rM6Sa/JDDaxncLO3OQ5/2j3HtW5p+lWOmR7bO3SPPVsZY/UnmrtdkKFlZvTt0PSpYVRVm3btfQ57xT4Uh8SWkMfm/Z5YCdjhcjB7EVW0nwbNp1otu+uXzRD/AJZxNsUfTqa6qirdGDlz21NHhqTn7RrUzbbQNPtpRKI5JJR0kllZz+prSpaStFFLY1jGMdkLSUUUyhaSlooAUdKKB0ooAKQ0tJigAooxRigAooxRigBKWjFGKAEqldaPpt4c3NhbSt/eaME/n1q9ijFJpPcTino0ZQ8O6coxEtxD/wBcrqRR+QbFNfw/bSDDXeoEen2t/wDGtfFGKn2cexHsodjnz4L0N33TWrzn1mmd/wCZrRs9G03T8fZLKGEjuic1fxRihU4LVII0acXdRQlFLijFWaCUtGKMUAJRS4oxQAUlLijFACUtGKMUAKKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z  0 1 0}
+
+[Info] [18:27:19] [@ command.go.50] putfile 进队列 &{1429180039_12 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [18:27:29] [@ command.go.50] putfile 进队列 &{1429180049_13 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 /9j/4AAQSkZJRgABAQAAAQABAAD//gATMGVlY2Y3YjRkNjdmY2NhOQD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+jNFIaADNGaKSgBc0ZrlNPl8Uahr7S3Ea2OlxsQImALSCurqIT5lexnTqc6vZr1DNGaSlqzQM0ZoooAM0ZopKAHZpM0Vmx69p0ustpMdwHvFUsUAJAx159aTkluS5KNrvc0s0ZpKKZQuaM0UlAC5ozRRQAZozRSUALmjNFFAC0UDpRQAUhpaQ0ANd1jRnc4VRkmub1zxlBo1sk/2C6lR22oxXy1Y/wDAuf0rpa841Y/8JR8QYNNPzWdicyDsehP+FYV5yjH3d2cuKqShFKD1bsjpLTxjp402O51S4t7OZ/m8gSb2A7ZwM5/CrukeJNO12WRNPaWQRj5nMZVR+JrzLx9eWsmrLptjbQxR2vDeVGBub8K6/wAJaZqVvoEEECCwV/nlldd0jk+g6AY9axp15yqcm6RzUsVVlWdPdLfz/Q6+4uYLSIy3EyRRjqzsAKwrrxjZxqzWdnfX4Xq9vASn/fR4/Kr8OgWMcomnRrucf8tblt5H0B4H4CrGpXaafplxcsAFiQnHaumXPa97HbL2lm72/EwNL8f6RqEc7Tb7MwLuYTY5HtjqfatCz1q81WPztP00/Zj92a5k8sP7gAE4/KvHbbRdR1W2uNStrd50SX94qDLc85x3r2HSfEej3NhEEu4IGVQrQysEZD6YNcuHrzqaTdv1OHCYmpV0qO36j7i8163QuumWdwAMkR3ZU/qlc0fifbwztDc6TcRSKcMokBwfxxW9qniuxtYWSyf7ddkYSK3G/n3I6VxWneAtS1nUJL/V820crl2TPznP8qdWdTmSpO5WIqVeZRoSu+u1vvO50/X7jUViki0a8WGTkSu8e3Hrw2f0qWy0zRrTVp7m2EIv58l/3mWPrgZ4qjqGiaXpeiSF0llSKPaolmdgOOOM4rynRtWfSDeXcJxclPLiY9s9TRUrOm0pq/8AXoFbEujKKqq739PwPX77XiL/APszS4hdX+MvziOEern+lSJpF1ON2oapcSMesdufJQfTHzfrWZ4AtI4vDcd1nfPdMZJZDySc45rp5po7eF5pXCRoMsx6AVvD3488up1Ur1IKpPr06HM+ILbStF0mW6l+0Mw4UG7lyT/31XB+G7PV/EWqHy768itAxLMJ2+UenWl8e6le3+oQNKjR2bpvt1P8S5xk/lXoXgm0htvDdu8IGJlDkjua5LKtW5VokedaOJxPItIx/E34YhBCkSliFGMscn86kpKK9E9kWikpaACkopaAFFFA6UUAFIaWkNACNnacdccV5V4Uk1Cw13VbyTSrqZnVhuC7Qpzk5Jr1WkdFkRkYZVhgj2rKpS52pXtY561D2koyTtY8h8EWa6z4tmursCQx5lIPPzZ4NevjjpWbpvh/StIlaSws0hdhgsGJz+ZrTqcPSdKNnuThMO6NPlluJXPeN455PCt2sCM5IG5VGSRXQ0VrOPNFx7m9SHPBx7nlng/xBZaNoF1a3y3MUsjHYY4zlsjHB9RV/wAPm9sbdwNFk1G2lkL7pYdswz6k8N+dVNa0/VtI8YLrN1ayX9ism4Mo3bV+nbH5V3mmeIdK1eMNaXkRcjmJjtdfqDzXDRi78snZrY8zDwbfs5ys46LzIYtc0+2XE9tPp/qJrcqv/fQBX9a0LbUbG8Gba8t5v+ucgb+VWeCPUVm3vh7SNQObnT4Gf++F2t+Y5rttNbano2qLaz/D+vuKvi+GSfw3dIgJG3nHUe9eUeF7Sy1O9k0u+fy/OH7qT0cV2HiTSbnw7am50rW7iNc8200u9SPQZ/rXIeHRpuo6xHFqNlI3mNy8DlcH1I/wxXnYh81VXWv4Hj4uXNiIqSs/PY6vTLPxP4YuW07TprC/iPzLC8oVh74JBFb0Gla5rM6Sa/JDDaxncLO3OQ5/2j3HtW5p+lWOmR7bO3SPPVsZY/UnmrtdkKFlZvTt0PSpYVRVm3btfQ57xT4Uh8SWkMfm/Z5YCdjhcjB7EVW0nwbNp1otu+uXzRD/AJZxNsUfTqa6qirdGDlz21NHhqTn7RrUzbbQNPtpRKI5JJR0kllZz+prSpaStFFLY1jGMdkLSUUUyhaSlooAUdKKB0ooAKQ0tJigAooxRigAooxRigBKWjFGKAEqldaPpt4c3NhbSt/eaME/n1q9ijFJpPcTino0ZQ8O6coxEtxD/wBcrqRR+QbFNfw/bSDDXeoEen2t/wDGtfFGKn2cexHsodjnz4L0N33TWrzn1mmd/wCZrRs9G03T8fZLKGEjuic1fxRihU4LVII0acXdRQlFLijFWaCUtGKMUAJRS4oxQAUlLijFACUtGKMUAKKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z  0 1 0}
+
+[Info] [18:27:39] [@ command.go.50] putfile 进队列 &{1429180059_14 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 /9j/4AAQSkZJRgABAQAAAQABAAD//gATMGVlY2Y3YjRkNjdmY2NhOQD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+jNFIaADNGaKSgBc0ZrlNPl8Uahr7S3Ea2OlxsQImALSCurqIT5lexnTqc6vZr1DNGaSlqzQM0ZoooAM0ZopKAHZpM0Vmx69p0ustpMdwHvFUsUAJAx159aTkluS5KNrvc0s0ZpKKZQuaM0UlAC5ozRRQAZozRSUALmjNFFAC0UDpRQAUhpaQ0ANd1jRnc4VRkmub1zxlBo1sk/2C6lR22oxXy1Y/wDAuf0rpa841Y/8JR8QYNNPzWdicyDsehP+FYV5yjH3d2cuKqShFKD1bsjpLTxjp402O51S4t7OZ/m8gSb2A7ZwM5/CrukeJNO12WRNPaWQRj5nMZVR+JrzLx9eWsmrLptjbQxR2vDeVGBub8K6/wAJaZqVvoEEECCwV/nlldd0jk+g6AY9axp15yqcm6RzUsVVlWdPdLfz/Q6+4uYLSIy3EyRRjqzsAKwrrxjZxqzWdnfX4Xq9vASn/fR4/Kr8OgWMcomnRrucf8tblt5H0B4H4CrGpXaafplxcsAFiQnHaumXPa97HbL2lm72/EwNL8f6RqEc7Tb7MwLuYTY5HtjqfatCz1q81WPztP00/Zj92a5k8sP7gAE4/KvHbbRdR1W2uNStrd50SX94qDLc85x3r2HSfEej3NhEEu4IGVQrQysEZD6YNcuHrzqaTdv1OHCYmpV0qO36j7i8163QuumWdwAMkR3ZU/qlc0fifbwztDc6TcRSKcMokBwfxxW9qniuxtYWSyf7ddkYSK3G/n3I6VxWneAtS1nUJL/V820crl2TPznP8qdWdTmSpO5WIqVeZRoSu+u1vvO50/X7jUViki0a8WGTkSu8e3Hrw2f0qWy0zRrTVp7m2EIv58l/3mWPrgZ4qjqGiaXpeiSF0llSKPaolmdgOOOM4rynRtWfSDeXcJxclPLiY9s9TRUrOm0pq/8AXoFbEujKKqq739PwPX77XiL/APszS4hdX+MvziOEern+lSJpF1ON2oapcSMesdufJQfTHzfrWZ4AtI4vDcd1nfPdMZJZDySc45rp5po7eF5pXCRoMsx6AVvD3488up1Ur1IKpPr06HM+ILbStF0mW6l+0Mw4UG7lyT/31XB+G7PV/EWqHy768itAxLMJ2+UenWl8e6le3+oQNKjR2bpvt1P8S5xk/lXoXgm0htvDdu8IGJlDkjua5LKtW5VokedaOJxPItIx/E34YhBCkSliFGMscn86kpKK9E9kWikpaACkopaAFFFA6UUAFIaWkNACNnacdccV5V4Uk1Cw13VbyTSrqZnVhuC7Qpzk5Jr1WkdFkRkYZVhgj2rKpS52pXtY561D2koyTtY8h8EWa6z4tmursCQx5lIPPzZ4NevjjpWbpvh/StIlaSws0hdhgsGJz+ZrTqcPSdKNnuThMO6NPlluJXPeN455PCt2sCM5IG5VGSRXQ0VrOPNFx7m9SHPBx7nlng/xBZaNoF1a3y3MUsjHYY4zlsjHB9RV/wAPm9sbdwNFk1G2lkL7pYdswz6k8N+dVNa0/VtI8YLrN1ayX9ism4Mo3bV+nbH5V3mmeIdK1eMNaXkRcjmJjtdfqDzXDRi78snZrY8zDwbfs5ys46LzIYtc0+2XE9tPp/qJrcqv/fQBX9a0LbUbG8Gba8t5v+ucgb+VWeCPUVm3vh7SNQObnT4Gf++F2t+Y5rttNbano2qLaz/D+vuKvi+GSfw3dIgJG3nHUe9eUeF7Sy1O9k0u+fy/OH7qT0cV2HiTSbnw7am50rW7iNc8200u9SPQZ/rXIeHRpuo6xHFqNlI3mNy8DlcH1I/wxXnYh81VXWv4Hj4uXNiIqSs/PY6vTLPxP4YuW07TprC/iPzLC8oVh74JBFb0Gla5rM6Sa/JDDaxncLO3OQ5/2j3HtW5p+lWOmR7bO3SPPVsZY/UnmrtdkKFlZvTt0PSpYVRVm3btfQ57xT4Uh8SWkMfm/Z5YCdjhcjB7EVW0nwbNp1otu+uXzRD/AJZxNsUfTqa6qirdGDlz21NHhqTn7RrUzbbQNPtpRKI5JJR0kllZz+prSpaStFFLY1jGMdkLSUUUyhaSlooAUdKKB0ooAKQ0tJigAooxRigAooxRigBKWjFGKAEqldaPpt4c3NhbSt/eaME/n1q9ijFJpPcTino0ZQ8O6coxEtxD/wBcrqRR+QbFNfw/bSDDXeoEen2t/wDGtfFGKn2cexHsodjnz4L0N33TWrzn1mmd/wCZrRs9G03T8fZLKGEjuic1fxRihU4LVII0acXdRQlFLijFWaCUtGKMUAJRS4oxQAUlLijFACUtGKMUAKKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z  0 1 0}
+
+[Info] [18:27:49] [@ command.go.50] putfile 进队列 &{1429180069_15 0xc082094360 <nil>  1 8d9b95c22453b0bcee60ca23d2049c42 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  0 1 0}
+
+[Info] [10:14:46] [@ main.go.36] server start:[::]:10010
+[Info] [10:14:50] [@ main.go.39] client10.1.9.27:3140in
+[Info] [10:15:42] [@ main.go.42] client10.1.9.27:3140say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [10:15:42] [@ command.go.50] putfile 进队列 &{1429236942_1 0xc082092090 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429236942}
+
+[Info] [10:15:42] [@ main.go.51] tttt <nil>
+
+[Info] [10:15:59] [@ main.go.39] client10.1.9.27:3156in
+[Info] [10:16:09] [@ main.go.42] client10.1.9.27:3156say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [10:16:09] [@ command.go.110] user u_001 start answer
+[Info] [10:16:09] [@ command.go.129] send to client10.1.9.27:3156say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [10:16:09] [@ main.go.51] tttt <nil>
+
+[Info] [10:16:09] [@ main.go.57] client10.1.9.27:3156close
+[Info] [10:17:07] [@ main.go.42] client10.1.9.27:3140say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [10:17:07] [@ command.go.50] putfile 进队列 &{1429237027_2 0xc082092090 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429237027}
+
+[Info] [10:17:07] [@ main.go.51] tttt <nil>
+
+[Info] [10:17:34] [@ main.go.36] server start:[::]:10010
+[Info] [10:17:41] [@ main.go.39] client10.1.9.27:3206in
+[Info] [10:17:42] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [10:17:42] [@ command.go.50] putfile 进队列 &{1429237062_1 0xc082092090 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429237062}
+
+[Info] [10:17:42] [@ main.go.51] tttt <nil>
+
+[Info] [10:17:51] [@ main.go.39] client10.1.9.27:3209in
+[Info] [10:17:52] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [10:17:52] [@ command.go.110] user u_001 start answer
+[Info] [10:17:52] [@ command.go.129] send to client10.1.9.27:3209say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [10:17:52] [@ main.go.51] tttt <nil>
+
+[Info] [10:18:08] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:18:08] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaaa","id":"1429237062_1","seq":"1"}
+[Info] [10:18:08] [@ main.go.51] tttt <nil>
+
+[Info] [10:18:25] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:18:30] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [10:18:30] [@ command.go.50] putfile 进队列 &{1429237110_2 0xc082092090 0xc082092480 abc 2 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 1429237110 1429237110}
+
+[Info] [10:18:30] [@ main.go.51] tttt <nil>
+
+[Info] [10:18:30] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaaa","id":"1429237110_2","seq":"1"}
+[Info] [10:18:30] [@ main.go.51] tttt <nil>
+
+[Info] [10:18:44] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:18:47] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:18:47] [@ command.go.50] putfile 进队列 &{1429237127_3 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237127 1429237127}
+
+[Info] [10:18:47] [@ main.go.51] tttt <nil>
+
+[Info] [10:18:47] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237127_3","seq":"1"}
+[Info] [10:18:47] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:14] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:14] [@ command.go.50] putfile 进队列 &{1429237154_4 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237154}
+
+[Info] [10:19:14] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:14] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:14] [@ command.go.50] putfile 进队列 &{1429237154_5 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237154}
+
+[Info] [10:19:14] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:15] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:15] [@ command.go.50] putfile 进队列 &{1429237155_6 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237155}
+
+[Info] [10:19:15] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:15] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:15] [@ command.go.50] putfile 进队列 &{1429237155_7 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237155}
+
+[Info] [10:19:15] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:15] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:15] [@ command.go.50] putfile 进队列 &{1429237155_8 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237155}
+
+[Info] [10:19:15] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:15] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:15] [@ command.go.50] putfile 进队列 &{1429237155_9 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237155}
+
+[Info] [10:19:15] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:15] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:15] [@ command.go.50] putfile 进队列 &{1429237155_10 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237155}
+
+[Info] [10:19:15] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:16] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:16] [@ command.go.50] putfile 进队列 &{1429237156_11 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237156}
+
+[Info] [10:19:16] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:16] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:16] [@ command.go.50] putfile 进队列 &{1429237156_12 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237156}
+
+[Info] [10:19:16] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:16] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:16] [@ command.go.50] putfile 进队列 &{1429237156_13 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237156}
+
+[Info] [10:19:16] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:16] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:16] [@ command.go.50] putfile 进队列 &{1429237156_14 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237156}
+
+[Info] [10:19:16] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:16] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:16] [@ command.go.50] putfile 进队列 &{1429237156_15 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237156}
+
+[Info] [10:19:16] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:17] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:17] [@ command.go.50] putfile 进队列 &{1429237157_16 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237157}
+
+[Info] [10:19:17] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:17] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:17] [@ command.go.50] putfile 进队列 &{1429237157_17 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237157}
+
+[Info] [10:19:17] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:17] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:17] [@ command.go.50] putfile 进队列 &{1429237157_18 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237157}
+
+[Info] [10:19:17] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:17] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:17] [@ command.go.50] putfile 进队列 &{1429237157_19 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237157}
+
+[Info] [10:19:17] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:17] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:17] [@ command.go.50] putfile 进队列 &{1429237157_20 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237157}
+
+[Info] [10:19:17] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:18] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:18] [@ command.go.50] putfile 进队列 &{1429237158_21 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237158}
+
+[Info] [10:19:18] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:18] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:18] [@ command.go.50] putfile 进队列 &{1429237158_22 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237158}
+
+[Info] [10:19:18] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:18] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:18] [@ command.go.50] putfile 进队列 &{1429237158_23 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237158}
+
+[Info] [10:19:18] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:21] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:21] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237154_4","seq":"1"}
+[Info] [10:19:21] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:22] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:22] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237154_5","seq":"1"}
+[Info] [10:19:22] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:23] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:23] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237155_6","seq":"1"}
+[Info] [10:19:23] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:24] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:24] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237155_7","seq":"1"}
+[Info] [10:19:24] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:24] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:24] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237155_8","seq":"1"}
+[Info] [10:19:24] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:24] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:24] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237155_9","seq":"1"}
+[Info] [10:19:24] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:24] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:24] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237155_10","seq":"1"}
+[Info] [10:19:24] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:24] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:24] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237156_11","seq":"1"}
+[Info] [10:19:24] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:25] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:25] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237156_12","seq":"1"}
+[Info] [10:19:25] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:25] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:25] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237156_13","seq":"1"}
+[Info] [10:19:25] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:25] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:25] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237156_14","seq":"1"}
+[Info] [10:19:25] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:26] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:26] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237156_15","seq":"1"}
+[Info] [10:19:26] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:26] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:26] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237157_16","seq":"1"}
+[Info] [10:19:26] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:26] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:26] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237157_17","seq":"1"}
+[Info] [10:19:26] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:26] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:26] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237157_18","seq":"1"}
+[Info] [10:19:26] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:26] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:26] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237157_19","seq":"1"}
+[Info] [10:19:26] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:27] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:27] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237157_20","seq":"1"}
+[Info] [10:19:27] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:27] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:27] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237158_21","seq":"1"}
+[Info] [10:19:27] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:27] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:27] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237158_22","seq":"1"}
+[Info] [10:19:27] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:27] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:27] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237158_23","seq":"1"}
+[Info] [10:19:27] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:27] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:32] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:32] [@ command.go.50] putfile 进队列 &{1429237172_24 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237172 1429237172}
+
+[Info] [10:19:32] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:32] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237172_24","seq":"1"}
+[Info] [10:19:32] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:32] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:32] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:32] [@ command.go.50] putfile 进队列 &{1429237172_25 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237172 1429237172}
+
+[Info] [10:19:32] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:32] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237172_25","seq":"1"}
+[Info] [10:19:32] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:32] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:32] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:32] [@ command.go.50] putfile 进队列 &{1429237172_26 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237172 1429237172}
+
+[Info] [10:19:32] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:33] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237172_26","seq":"1"}
+[Info] [10:19:33] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:33] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:33] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:33] [@ command.go.50] putfile 进队列 &{1429237173_27 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237173 1429237173}
+
+[Info] [10:19:33] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:33] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237173_27","seq":"1"}
+[Info] [10:19:33] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:33] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:33] [@ command.go.50] putfile 进队列 &{1429237173_28 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237173}
+
+[Info] [10:19:33] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:34] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:34] [@ command.go.50] putfile 进队列 &{1429237174_29 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237174}
+
+[Info] [10:19:34] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:34] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:19:34] [@ command.go.50] putfile 进队列 &{1429237174_30 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237174}
+
+[Info] [10:19:34] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:58] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:58] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237173_28","seq":"1"}
+[Info] [10:19:58] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:58] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:58] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237174_29","seq":"1"}
+[Info] [10:19:58] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:59] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:19:59] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237174_30","seq":"1"}
+[Info] [10:19:59] [@ main.go.51] tttt <nil>
+
+[Info] [10:19:59] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:04] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:04] [@ command.go.50] putfile 进队列 &{1429237204_31 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237204 1429237204}
+
+[Info] [10:20:04] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:04] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237204_31","seq":"1"}
+[Info] [10:20:04] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:04] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:04] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:04] [@ command.go.50] putfile 进队列 &{1429237204_32 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237204 1429237204}
+
+[Info] [10:20:04] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:04] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237204_32","seq":"1"}
+[Info] [10:20:04] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:04] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:04] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:04] [@ command.go.50] putfile 进队列 &{1429237204_33 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237204 1429237204}
+
+[Info] [10:20:04] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:04] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237204_33","seq":"1"}
+[Info] [10:20:04] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:04] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:04] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:05] [@ command.go.50] putfile 进队列 &{1429237204_34 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237204 1429237204}
+
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:05] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:05] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237204_34","seq":"1"}
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:05] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:05] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237205_35","seq":"1"}
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:05] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:05] [@ command.go.50] putfile 进队列 &{1429237205_35 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237205 1429237205}
+
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:05] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:05] [@ command.go.50] putfile 进队列 &{1429237205_36 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237205 1429237205}
+
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:05] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237205_36","seq":"1"}
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:05] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:05] [@ command.go.50] putfile 进队列 &{1429237205_37 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237205}
+
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:05] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:05] [@ command.go.50] putfile 进队列 &{1429237205_38 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237205}
+
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:05] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:05] [@ command.go.50] putfile 进队列 &{1429237205_39 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237205}
+
+[Info] [10:20:05] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:06] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:06] [@ command.go.50] putfile 进队列 &{1429237206_40 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237206}
+
+[Info] [10:20:06] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:06] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:06] [@ command.go.50] putfile 进队列 &{1429237206_41 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237206}
+
+[Info] [10:20:06] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:06] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:06] [@ command.go.50] putfile 进队列 &{1429237206_42 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237206}
+
+[Info] [10:20:06] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:06] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:06] [@ command.go.50] putfile 进队列 &{1429237206_43 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237206}
+
+[Info] [10:20:06] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:06] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:06] [@ command.go.50] putfile 进队列 &{1429237206_44 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237206}
+
+[Info] [10:20:06] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:07] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:07] [@ command.go.50] putfile 进队列 &{1429237207_45 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237207}
+
+[Info] [10:20:07] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:07] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:07] [@ command.go.50] putfile 进队列 &{1429237207_46 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237207}
+
+[Info] [10:20:07] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:07] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:07] [@ command.go.50] putfile 进队列 &{1429237207_47 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237207}
+
+[Info] [10:20:07] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:07] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:07] [@ command.go.50] putfile 进队列 &{1429237207_48 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237207}
+
+[Info] [10:20:07] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:07] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:07] [@ command.go.50] putfile 进队列 &{1429237207_49 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237207}
+
+[Info] [10:20:07] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:08] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:08] [@ command.go.50] putfile 进队列 &{1429237208_50 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237208}
+
+[Info] [10:20:08] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:08] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:08] [@ command.go.50] putfile 进队列 &{1429237208_51 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237208}
+
+[Info] [10:20:08] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:08] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:08] [@ command.go.50] putfile 进队列 &{1429237208_52 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237208}
+
+[Info] [10:20:08] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:08] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:08] [@ command.go.50] putfile 进队列 &{1429237208_53 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237208}
+
+[Info] [10:20:08] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:08] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:08] [@ command.go.50] putfile 进队列 &{1429237208_54 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237208}
+
+[Info] [10:20:08] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:09] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:09] [@ command.go.50] putfile 进队列 &{1429237209_55 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237209}
+
+[Info] [10:20:09] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:09] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:09] [@ command.go.50] putfile 进队列 &{1429237209_56 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237209}
+
+[Info] [10:20:09] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:09] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:09] [@ command.go.50] putfile 进队列 &{1429237209_57 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237209}
+
+[Info] [10:20:09] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:09] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:09] [@ command.go.50] putfile 进队列 &{1429237209_58 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237209}
+
+[Info] [10:20:09] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:24] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:24] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237205_37","seq":"1"}
+[Info] [10:20:24] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:25] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:25] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237205_38","seq":"1"}
+[Info] [10:20:25] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:26] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:26] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237205_39","seq":"1"}
+[Info] [10:20:26] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:27] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:27] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237206_40","seq":"1"}
+[Info] [10:20:27] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:28] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:28] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237206_41","seq":"1"}
+[Info] [10:20:28] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:30] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:30] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237206_42","seq":"1"}
+[Info] [10:20:30] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:31] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:31] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237206_43","seq":"1"}
+[Info] [10:20:31] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:32] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:32] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237206_44","seq":"1"}
+[Info] [10:20:32] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:33] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:33] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237207_45","seq":"1"}
+[Info] [10:20:33] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:34] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:34] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237207_46","seq":"1"}
+[Info] [10:20:34] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:36] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:36] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237207_47","seq":"1"}
+[Info] [10:20:36] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:37] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:37] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237207_48","seq":"1"}
+[Info] [10:20:37] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:38] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:38] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237207_49","seq":"1"}
+[Info] [10:20:38] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:39] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:39] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237208_50","seq":"1"}
+[Info] [10:20:39] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:40] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:40] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237208_51","seq":"1"}
+[Info] [10:20:40] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:41] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:41] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237208_52","seq":"1"}
+[Info] [10:20:41] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:42] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:42] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237208_53","seq":"1"}
+[Info] [10:20:42] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:42] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:42] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237208_54","seq":"1"}
+[Info] [10:20:42] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:43] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:43] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237209_55","seq":"1"}
+[Info] [10:20:43] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:44] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:44] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237209_56","seq":"1"}
+[Info] [10:20:44] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:44] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:44] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237209_57","seq":"1"}
+[Info] [10:20:44] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:46] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:46] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237209_58","seq":"1"}
+[Info] [10:20:46] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:47] [@ main.go.42] client10.1.9.27:3209say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:20:55] [@ main.go.42] client10.1.9.27:3206say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:20:55] [@ command.go.50] putfile 进队列 &{1429237255_59 0xc082092090 0xc082092480 abc 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 1429237255 1429237255}
+
+[Info] [10:20:55] [@ main.go.51] tttt <nil>
+
+[Info] [10:20:55] [@ command.go.101] send to client10.1.9.27:3209say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237255_59","seq":"1"}
+[Info] [10:20:55] [@ main.go.51] tttt <nil>
+
+[Info] [10:21:07] [@ main.go.39] client10.1.9.27:3386in
+[Info] [10:21:09] [@ main.go.42] client10.1.9.27:3386say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [10:21:09] [@ command.go.20] c must login frist
+[Error] [10:21:19] [@ command.go.78] getfile time out,sessioninfo is %sabc
+[Info] [10:21:19] [@ command.go.85] send to client10.1.9.27:3386say:{"action":"res_getfile","seq":"1"}
+[Info] [10:21:19] [@ main.go.51] tttt <nil>
+
+[Info] [10:21:19] [@ main.go.57] client10.1.9.27:3386close
+[Info] [10:22:16] [@ main.go.39] client10.1.9.27:3408in
+[Info] [10:22:19] [@ main.go.42] client10.1.9.27:3408say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [10:22:19] [@ command.go.20] c must login frist
+[Error] [10:22:29] [@ command.go.78] getfile time out,sessioninfo is %sabc
+[Info] [10:22:29] [@ command.go.85] send to client10.1.9.27:3408say:{"action":"res_getfile","seq":"1"}
+[Info] [10:22:29] [@ main.go.51] tttt <nil>
+
+[Info] [10:22:29] [@ main.go.57] client10.1.9.27:3408close
+[Info] [10:22:31] [@ main.go.39] client10.1.9.27:3411in
+[Info] [10:22:33] [@ main.go.42] client10.1.9.27:3411say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [10:22:33] [@ command.go.20] c must login frist
+[Error] [10:22:43] [@ command.go.78] getfile time out,sessioninfo is %sabc
+[Info] [10:22:43] [@ command.go.85] send to client10.1.9.27:3411say:{"action":"res_getfile","seq":"1"}
+[Info] [10:22:43] [@ main.go.51] tttt <nil>
+
+[Info] [10:22:43] [@ main.go.57] client10.1.9.27:3411close
+[Info] [10:32:55] [@ main.go.36] server start:[::]:10010
+[Info] [10:33:02] [@ main.go.39] client10.1.9.27:3573in
+[Info] [10:33:03] [@ main.go.42] client10.1.9.27:3573say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:33:04] [@ command.go.50] putfile 进队列 &{1429237983_1 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429237983}
+
+[Info] [10:33:04] [@ main.go.51] tttt <nil>
+
+[Info] [10:33:27] [@ main.go.39] client10.1.9.27:3619in
+[Info] [10:33:30] [@ main.go.42] client10.1.9.27:3619say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [10:33:30] [@ command.go.110] user u_001 start answer
+[Info] [10:33:30] [@ command.go.129] send to client10.1.9.27:3619say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [10:33:30] [@ main.go.51] tttt <nil>
+
+[Info] [10:33:46] [@ main.go.42] client10.1.9.27:3619say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:33:46] [@ command.go.101] send to client10.1.9.27:3619say:{"action":"res_getfile","file":"file_2222aaab","id":"1429237983_1","seq":"1"}
+[Info] [10:33:46] [@ main.go.51] tttt <nil>
+
+[Info] [10:35:42] [@ main.go.36] server start:[::]:10010
+[Info] [10:35:45] [@ main.go.39] client10.1.9.27:3682in
+[Info] [10:35:46] [@ main.go.42] client10.1.9.27:3682say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [10:35:46] [@ command.go.20] client10.1.9.27:3682c must login frist
+[Info] [10:35:54] [@ main.go.39] client10.1.9.27:3687in
+[Info] [10:35:55] [@ main.go.42] client10.1.9.27:3687say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:37:45] [@ main.go.36] server start:[::]:10010
+[Info] [10:37:51] [@ main.go.39] client10.1.9.27:3730in
+[Info] [10:37:52] [@ main.go.42] client10.1.9.27:3730say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [10:37:52] [@ command.go.20] client10.1.9.27:3730c must login frist
+[Info] [10:38:00] [@ main.go.39] client10.1.9.27:3733in
+[Info] [10:38:00] [@ main.go.42] client10.1.9.27:3733say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:39:41] [@ main.go.36] server start:[::]:10010
+[Info] [10:39:46] [@ main.go.39] client10.1.9.27:3774in
+[Info] [10:39:47] [@ main.go.42] client10.1.9.27:3774say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:39:47] [@ command.go.50] putfile 进队列 &{1429238387_1 0xc082092090 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429238387}
+
+[Info] [10:39:47] [@ main.go.51] tttt <nil>
+
+[Info] [10:39:56] [@ main.go.39] client10.1.9.27:3776in
+[Info] [10:41:33] [@ main.go.36] server start:[::]:10010
+[Info] [10:41:39] [@ main.go.39] client10.1.9.27:3812in
+[Info] [10:41:40] [@ main.go.42] client10.1.9.27:3812say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [10:41:40] [@ command.go.20] client10.1.9.27:3812c must login frist
+[Info] [10:41:40] [@ main.go.51] tttt <nil>
+
+[Info] [10:41:40] [@ main.go.57] client10.1.9.27:3812close
+[Info] [10:41:43] [@ main.go.39] client10.1.9.27:3814in
+[Info] [10:41:44] [@ main.go.42] client10.1.9.27:3814say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [10:41:44] [@ command.go.20] client10.1.9.27:3814c must login frist
+[Info] [10:41:44] [@ main.go.51] tttt <nil>
+
+[Info] [10:41:44] [@ main.go.57] client10.1.9.27:3814close
+[Info] [10:46:28] [@ main.go.39] client10.1.9.27:3898in
+[Info] [10:46:30] [@ main.go.42] client10.1.9.27:3898say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaab"
+}
+[Info] [10:46:30] [@ command.go.51] putfile 进队列 &{1429238790_1 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 1 0 1429238790}
+
+[Info] [10:46:30] [@ main.go.51] tttt <nil>
+
+[Info] [10:46:37] [@ main.go.39] client10.1.9.27:3908in
+[Info] [10:46:41] [@ main.go.42] client10.1.9.27:3908say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [10:46:41] [@ command.go.110] user u_001 start answer
+[Info] [10:46:41] [@ command.go.129] send to client10.1.9.27:3908say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [10:46:41] [@ main.go.51] tttt <nil>
+
+[Info] [10:46:59] [@ main.go.42] client10.1.9.27:3908say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:46:59] [@ command.go.101] send to client10.1.9.27:3908say:{"action":"res_getfile","file":"file_2222aaab","id":"1429238790_1","seq":"1"}
+[Info] [10:46:59] [@ main.go.51] tttt <nil>
+
+[Info] [10:48:01] [@ main.go.42] client10.1.9.27:3908say:{
+  "action": "answer",
+  "seq":"1",
+  "id":"1429238790_1",
+  "answer":"123"
+}
+[Info] [10:48:01] [@ command.go.163] send to client10.1.9.27:3898say:{"action":"res_putfile","answer":"123","id":"1429238790_1","seq":"1"}
+[Info] [10:48:01] [@ main.go.51] tttt <nil>
+
+[Info] [10:48:33] [@ main.go.42] client10.1.9.27:3898say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [10:48:33] [@ command.go.51] putfile 进队列 &{1429238913_2 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429238913}
+
+[Info] [10:48:33] [@ main.go.51] tttt <nil>
+
+[Info] [10:49:03] [@ main.go.42] client10.1.9.27:3908say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [10:49:03] [@ command.go.101] send to client10.1.9.27:3908say:{"action":"res_getfile","file":"file_2222aaab","id":"1429238913_2","seq":"1"}
+[Info] [10:49:03] [@ main.go.51] tttt <nil>
+
+[Info] [10:49:30] [@ main.go.42] client10.1.9.27:3908say:{
+  "action": "answer",
+  "seq":"1",
+  "id":"1429238913_2",
+  "answer":"123"
+}
+[Info] [10:49:30] [@ command.go.163] send to client10.1.9.27:3898say:{"action":"res_putfile","answer":"123","id":"1429238913_2","seq":"2"}
+[Info] [10:49:30] [@ main.go.51] tttt <nil>
+
+[Info] [10:51:31] [@ main.go.42] client10.1.9.27:3898say:{
+	"action": "reportanswer",
+	"seq": "1",
+	"id": "1429238913_2",
+	"result": "1"
+}
+[Info] [10:51:31] [@ main.go.51] tttt <nil>
+
+[Info] [11:55:37] [@ main.go.36] server start:[::]:10010
+[Info] [11:55:45] [@ main.go.36] server start:[::]:10010
+[Info] [11:55:56] [@ main.go.39] client10.1.9.27:6333in
+[Info] [11:55:57] [@ main.go.42] client10.1.9.27:6333say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [11:55:58] [@ command.go.60] putfile 进队列 &{1429242957_1 0xc0820943f0 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429242957}
+
+[Info] [11:55:58] [@ main.go.51] tttt <nil>
+
+[Info] [11:56:42] [@ main.go.39] client10.1.9.27:6345in
+[Info] [11:56:45] [@ main.go.42] client10.1.9.27:6345say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [11:56:45] [@ command.go.60] putfile 进队列 &{1429243005_2 0xc082094360 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429243005}
+
+[Info] [11:56:45] [@ main.go.51] tttt <nil>
+
+[Info] [11:57:09] [@ main.go.42] client10.1.9.27:6345say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [11:57:09] [@ command.go.46] client10.1.9.27:6345not support command
+[Info] [11:57:09] [@ main.go.51] tttt <nil>
+
+[Info] [11:58:13] [@ main.go.36] server start:[::]:10010
+[Info] [11:58:17] [@ main.go.39] client10.1.9.27:6393in
+[Info] [11:58:18] [@ main.go.42] client10.1.9.27:6393say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [11:58:18] [@ command.go.48] client10.1.9.27:6393not support command
+[Info] [11:58:18] [@ main.go.51] tttt <nil>
+
+[Info] [11:59:16] [@ main.go.36] server start:[::]:10010
+[Info] [11:59:21] [@ main.go.39] client10.1.9.27:6416in
+[Info] [11:59:22] [@ main.go.42] client10.1.9.27:6416say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [11:59:22] [@ command.go.48] client10.1.9.27:6416not support command
+[Info] [11:59:40] [@ main.go.42] client10.1.9.27:6416say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [11:59:40] [@ command.go.48] client10.1.9.27:6416not support command
+[Info] [11:59:42] [@ main.go.42] client10.1.9.27:6416say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [11:59:42] [@ command.go.48] client10.1.9.27:6416not support command
+[Info] [11:59:43] [@ main.go.42] client10.1.9.27:6416say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [11:59:43] [@ command.go.48] client10.1.9.27:6416not support command
+[Info] [12:00:11] [@ main.go.36] server start:[::]:10010
+[Info] [12:00:14] [@ main.go.39] client10.1.9.27:6470in
+[Info] [12:00:16] [@ main.go.42] client10.1.9.27:6470say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [12:00:16] [@ command.go.48] client10.1.9.27:6470not support command
+[Info] [12:00:24] [@ main.go.42] client10.1.9.27:6470say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [12:00:24] [@ command.go.48] client10.1.9.27:6470not support command
+[Info] [12:00:56] [@ main.go.36] server start:[::]:10010
+[Info] [12:01:00] [@ main.go.39] client10.1.9.27:6489in
+[Info] [12:01:01] [@ main.go.42] client10.1.9.27:6489say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [12:01:01] [@ command.go.48] client10.1.9.27:6489not support command
+[Info] [12:01:01] [@ main.go.57] client10.1.9.27:6489close
+[Info] [12:01:32] [@ main.go.39] client10.1.9.27:6504in
+[Info] [12:01:33] [@ main.go.42] client10.1.9.27:6504say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [12:01:33] [@ command.go.63] putfile 进队列 &{1429243293_1 0xc082092360 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429243293}
+
+[Info] [12:01:42] [@ main.go.42] client10.1.9.27:6504say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [12:01:42] [@ command.go.48] client10.1.9.27:6504not support command
+[Info] [12:01:42] [@ main.go.57] client10.1.9.27:6504close
+[Info] [12:02:29] [@ main.go.36] server start:[::]:10010
+[Info] [12:02:33] [@ main.go.39] client10.1.9.27:6525in
+[Info] [12:02:34] [@ main.go.42] client10.1.9.27:6525say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [12:02:34] [@ command.go.63] putfile 进队列 &{1429243354_1 0xc082092120 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429243354}
+
+[Info] [12:02:38] [@ main.go.42] client10.1.9.27:6525say:{
+  "action": "putfil1",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Error] [12:02:38] [@ command.go.48] client10.1.9.27:6525not support command
+[Info] [12:02:38] [@ main.go.57] client10.1.9.27:6525close
+[Info] [12:03:25] [@ main.go.39] client10.1.9.27:6538in
+[Info] [12:03:32] [@ main.go.42] client10.1.9.27:6538say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:03:32] [@ command.go.129] user u_001 start answer
+[Info] [12:03:32] [@ command.go.148] send to client10.1.9.27:6538say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:03:49] [@ main.go.42] client10.1.9.27:6538say:{
+  "action": "cstar1",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Error] [12:03:49] [@ command.go.48] client10.1.9.27:6538not support command
+[Info] [12:03:49] [@ main.go.57] client10.1.9.27:6538close
+[Info] [12:04:13] [@ main.go.39] client10.1.9.27:6554in
+[Info] [12:04:14] [@ main.go.42] client10.1.9.27:6554say:{
+  "action": "cstar1",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Error] [12:04:14] [@ command.go.48] client10.1.9.27:6554not support command
+[Info] [12:04:14] [@ main.go.57] client10.1.9.27:6554close
+[Info] [12:04:31] [@ main.go.39] client10.1.9.27:6561in
+[Info] [12:04:35] [@ main.go.39] client10.1.9.27:6563in
+[Info] [12:04:37] [@ main.go.42] client10.1.9.27:6563say:{
+  "action": "cstar1",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Error] [12:04:37] [@ command.go.48] client10.1.9.27:6563not support command
+[Info] [12:04:37] [@ main.go.57] client10.1.9.27:6563close
+[Info] [12:04:48] [@ main.go.39] client10.1.9.27:6565in
+[Info] [12:04:49] [@ main.go.42] client10.1.9.27:6565say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:04:49] [@ command.go.129] user u_001 start answer
+[Info] [12:04:49] [@ command.go.148] send to client10.1.9.27:6565say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:04:56] [@ main.go.42] client10.1.9.27:6565say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:04:56] [@ command.go.120] send to client10.1.9.27:6565say:{"action":"res_getfile","file":"file_2222aaab","id":"1429243354_1","seq":"1"}
+[Info] [12:04:56] [@ main.go.57] client10.1.9.27:6565close
+[Info] [12:05:45] [@ main.go.39] client10.1.9.27:6579in
+[Info] [12:05:47] [@ main.go.42] client10.1.9.27:6579say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:05:47] [@ command.go.129] user u_001 start answer
+[Info] [12:05:47] [@ command.go.148] send to client10.1.9.27:6579say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:05:51] [@ main.go.42] client10.1.9.27:6579say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:05:59] [@ main.go.39] client10.1.9.27:6583in
+[Info] [12:06:00] [@ main.go.42] client10.1.9.27:6583say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [12:06:00] [@ command.go.63] putfile 进队列 &{1429243560_2 0xc082092480 0xc082092240 u_001 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 1429243560 1429243560}
+
+[Info] [12:06:00] [@ command.go.120] send to client10.1.9.27:6579say:{"action":"res_getfile","file":"file_2222aaab","id":"1429243560_2","seq":"1"}
+[Info] [12:06:00] [@ main.go.57] client10.1.9.27:6579close
+[Info] [12:08:08] [@ main.go.39] client10.1.9.27:6614in
+[Info] [12:08:09] [@ main.go.42] client10.1.9.27:6614say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:08:09] [@ command.go.129] user u_001 start answer
+[Info] [12:08:09] [@ command.go.148] send to client10.1.9.27:6614say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:08:24] [@ main.go.42] client10.1.9.27:6614say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:10:33] [@ main.go.36] server start:[::]:10010
+[Info] [12:10:39] [@ main.go.39] client10.1.9.27:6674in
+[Info] [12:10:40] [@ main.go.42] client10.1.9.27:6674say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Error] [12:10:40] [@ command.go.29] client10.1.9.27:6674c must login frist
+[Info] [12:10:40] [@ main.go.57] client10.1.9.27:6674close
+[Info] [12:10:45] [@ main.go.39] client10.1.9.27:6676in
+[Info] [12:10:46] [@ main.go.42] client10.1.9.27:6676say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:10:46] [@ command.go.129] user u_001 start answer
+[Info] [12:10:46] [@ command.go.148] send to client10.1.9.27:6676say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:10:51] [@ main.go.42] client10.1.9.27:6676say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:10:56] [@ main.go.39] client10.1.9.27:6679in
+[Info] [12:10:58] [@ main.go.42] client10.1.9.27:6679say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [12:10:58] [@ command.go.63] putfile 进队列 &{1429243858_1 0xc082092000 0xc0820921b0 u_001 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 1429243858 1429243858}
+
+[Info] [12:10:58] [@ command.go.120] send to client10.1.9.27:6676say:{"action":"res_getfile","file":"file_2222aaab","id":"1429243858_1","seq":"1"}
+[Info] [12:10:58] [@ main.go.57] client10.1.9.27:6676close
+[Info] [12:11:08] [@ main.go.42] client10.1.9.27:6679say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [12:11:08] [@ command.go.63] putfile 进队列 &{1429243868_2 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429243868}
+
+[Info] [12:12:28] [@ main.go.39] client10.1.9.27:6704in
+[Info] [12:12:29] [@ main.go.42] client10.1.9.27:6704say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:12:29] [@ command.go.129] user u_001 start answer
+[Info] [12:12:29] [@ command.go.148] send to client10.1.9.27:6704say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:12:41] [@ main.go.42] client10.1.9.27:6704say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:12:41] [@ command.go.120] send to client10.1.9.27:6704say:{"action":"res_getfile","file":"file_2222aaab","id":"1429243868_2","seq":"1"}
+[Info] [12:12:41] [@ main.go.57] client10.1.9.27:6704close
+[Info] [12:15:58] [@ main.go.39] client10.1.9.27:6771in
+[Info] [12:15:59] [@ main.go.39] client10.1.9.27:6773in
+[Info] [12:16:00] [@ main.go.39] client10.1.9.27:6774in
+[Info] [12:16:01] [@ main.go.39] client10.1.9.27:6775in
+[Info] [12:16:02] [@ main.go.39] client10.1.9.27:6776in
+[Info] [12:16:04] [@ main.go.39] client10.1.9.27:6778in
+[Info] [12:16:07] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:07] [@ command.go.129] user u_001 start answer
+[Info] [12:16:07] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:10] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:10] [@ command.go.129] user u_001 start answer
+[Info] [12:16:11] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:16] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:16] [@ command.go.129] user u_001 start answer
+[Info] [12:16:16] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:20] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:20] [@ command.go.129] user u_001 start answer
+[Info] [12:16:20] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:22] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:22] [@ command.go.129] user u_001 start answer
+[Info] [12:16:22] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:23] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:23] [@ command.go.129] user u_001 start answer
+[Info] [12:16:23] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:24] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:24] [@ command.go.129] user u_001 start answer
+[Info] [12:16:24] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:25] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:25] [@ command.go.129] user u_001 start answer
+[Info] [12:16:25] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:26] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:26] [@ command.go.129] user u_001 start answer
+[Info] [12:16:26] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:27] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:16:27] [@ command.go.129] user u_001 start answer
+[Info] [12:16:27] [@ command.go.148] send to client10.1.9.27:6778say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:16:31] [@ main.go.42] client10.1.9.27:6778say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:16:33] [@ vfmap.go.30] %s recycle1429243858_1
+[Info] [12:16:33] [@ vfmap.go.36] recycle putfile 进队列 &{1429244193_3 0xc082092000 0xc082092510 u_001 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 1429244193 1429243858}
+
+[Info] [12:16:33] [@ command.go.120] send to client10.1.9.27:6778say:{"action":"res_getfile","file":"file_2222aaab","id":"1429244193_3","seq":"1"}
+[Info] [12:16:33] [@ main.go.57] client10.1.9.27:6778close
+[Info] [12:16:34] [@ command.go.63] putfile 进队列 &{1429244193_4 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429244193}
+
+[Info] [12:17:56] [@ main.go.36] server start:[::]:10010
+[Info] [12:18:02] [@ main.go.39] client10.1.9.27:6849in
+[Info] [12:18:03] [@ main.go.42] client10.1.9.27:6849say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:18:03] [@ command.go.129] user u_001 start answer
+[Info] [12:18:03] [@ command.go.148] send to client10.1.9.27:6849say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:18:07] [@ main.go.42] client10.1.9.27:6849say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:18:12] [@ main.go.39] client10.1.9.27:6857in
+[Info] [12:18:14] [@ main.go.42] client10.1.9.27:6857say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [12:18:14] [@ command.go.63] putfile 进队列 &{1429244294_1 0xc082092000 0xc082092090 u_001 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 1429244294 1429244294}
+
+[Info] [12:18:14] [@ command.go.120] send to client10.1.9.27:6849say:{"action":"res_getfile","file":"file_2222aaab","id":"1429244294_1","seq":"1"}
+[Info] [12:18:14] [@ main.go.60] client10.1.9.27:6849close
+[Info] [12:41:19] [@ main.go.36] server start:[::]:10010
+[Info] [12:41:24] [@ main.go.39] client10.1.9.27:8259in
+[Info] [12:41:25] [@ main.go.42] client10.1.9.27:8259say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:41:25] [@ command.go.130] user u_001 start answer
+[Info] [12:41:25] [@ command.go.154] send to client10.1.9.27:8259say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:41:28] [@ main.go.42] client10.1.9.27:8259say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:41:33] [@ main.go.39] client10.1.9.27:8264in
+[Info] [12:41:34] [@ main.go.42] client10.1.9.27:8264say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [12:41:34] [@ command.go.64] putfile 进队列 &{1429245694_1 0xc082092000 0xc082092090 u_001 2 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 1429245694 1429245694}
+
+[Info] [12:41:34] [@ command.go.121] send to client10.1.9.27:8259say:{"action":"res_getfile","file":"file_2222aaab","id":"1429245694_1","seq":"1"}
+[Info] [12:41:34] [@ main.go.60] client10.1.9.27:8259close
+[Info] [12:41:50] [@ main.go.42] client10.1.9.27:8264say:{
+  "action": "putfile",
+  "seq":"2",  
+  "file": "file_2222aaab"
+}
+[Info] [12:41:50] [@ command.go.64] putfile 进队列 &{1429245710_2 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429245710}
+
+[Info] [12:41:56] [@ main.go.39] client10.1.9.27:8286in
+[Info] [12:41:57] [@ main.go.42] client10.1.9.27:8286say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [12:41:57] [@ command.go.130] user u_001 start answer
+[Info] [12:41:57] [@ command.go.154] send to client10.1.9.27:8286say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [12:42:01] [@ main.go.42] client10.1.9.27:8286say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [12:42:01] [@ command.go.121] send to client10.1.9.27:8286say:{"action":"res_getfile","file":"file_2222aaab","id":"1429245710_2","seq":"1"}
+[Info] [12:42:01] [@ main.go.60] client10.1.9.27:8286close
+[Info] [12:47:19] [@ vfmap.go.30] %s recycle1429245694_1
+[Info] [12:47:19] [@ vfmap.go.36] recycle putfile 进队列 &{1429246039_3 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429245694}
+
+[Info] [12:47:19] [@ command.go.64] putfile 进队列 &{1429246039_4 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429246039}
+
+[Info] [12:47:19] [@ vfmap.go.30] %s recycle1429245710_2
+[Info] [12:47:19] [@ vfmap.go.36] recycle putfile 进队列 &{1429246039_5 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429245710}
+
+[Info] [12:47:19] [@ command.go.64] putfile 进队列 &{1429246039_6 0xc082092000 <nil>  1 eac3849ef0b67e94e666a3a80794a363 file_2222aaab  0 2 0 1429246039}
+
+[Info] [12:47:22] [@ main.go.60] client10.1.9.27:8264close
+[Info] [17:36:11] [@ main.go.36] server start:[::]:10010
+[Info] [17:36:37] [@ main.go.39] client10.1.9.27:29351in
+[Info] [17:36:38] [@ main.go.42] client10.1.9.27:29351say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [17:36:38] [@ command.go.131] user u_001 start answer
+[Info] [17:36:39] [@ command.go.159] send to client10.1.9.27:29351say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [17:37:34] [@ main.go.39] client10.1.9.27:29369in
+[Info] [17:37:41] [@ vfmap.go.69] send to client10.1.9.27:29351say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
+[Info] [17:37:45] [@ main.go.42] client10.1.9.27:29369say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:37:45] [@ command.go.65] putfile 进队列 &{1429263465_1 0xc0820923f0 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263465}
+
+[Info] [17:37:46] [@ main.go.42] client10.1.9.27:29369say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:37:46] [@ command.go.65] putfile 进队列 &{1429263466_2 0xc0820923f0 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263466}
+
+[Info] [17:37:46] [@ main.go.42] client10.1.9.27:29369say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:37:46] [@ command.go.65] putfile 进队列 &{1429263466_3 0xc0820923f0 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263466}
+
+[Info] [17:37:46] [@ main.go.42] client10.1.9.27:29369say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:37:46] [@ command.go.65] putfile 进队列 &{1429263466_4 0xc0820923f0 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263466}
+
+[Info] [17:41:52] [@ main.go.36] server start:[::]:10010
+[Info] [17:42:00] [@ main.go.39] client10.1.9.27:29484in
+[Info] [17:42:02] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:42:02] [@ command.go.65] putfile 进队列 &{1429263722_1 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263722}
+
+[Info] [17:42:08] [@ main.go.39] client10.1.9.27:29490in
+[Info] [17:42:11] [@ main.go.42] client10.1.9.27:29490say:{
+  "action": "cstart",
+  "seq":"1",  
+  "userid": "u_001",
+  "password":"123456"
+}
+[Info] [17:42:11] [@ command.go.131] user u_001 start answer
+[Info] [17:42:11] [@ command.go.159] send to client10.1.9.27:29490say:{"action":"res_cstart","result":"1","seq":"1"}
+[Info] [17:43:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
+[Info] [17:43:43] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:43] [@ command.go.65] putfile 进队列 &{1429263823_2 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263823}
+
+[Info] [17:43:43] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:43] [@ command.go.65] putfile 进队列 &{1429263823_3 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263823}
+
+[Info] [17:43:43] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:43] [@ command.go.65] putfile 进队列 &{1429263823_4 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263823}
+
+[Info] [17:43:44] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:44] [@ command.go.65] putfile 进队列 &{1429263824_5 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263824}
+
+[Info] [17:43:44] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:44] [@ command.go.65] putfile 进队列 &{1429263824_6 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263824}
+
+[Info] [17:43:44] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:44] [@ command.go.65] putfile 进队列 &{1429263824_7 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263824}
+
+[Info] [17:43:44] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:44] [@ command.go.65] putfile 进队列 &{1429263824_8 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263824}
+
+[Info] [17:43:44] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:44] [@ command.go.65] putfile 进队列 &{1429263824_9 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263824}
+
+[Info] [17:43:45] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:45] [@ command.go.65] putfile 进队列 &{1429263825_10 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263825}
+
+[Info] [17:43:45] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:45] [@ command.go.65] putfile 进队列 &{1429263825_11 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263825}
+
+[Info] [17:43:45] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:45] [@ command.go.65] putfile 进队列 &{1429263825_12 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263825}
+
+[Info] [17:43:45] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:45] [@ command.go.65] putfile 进队列 &{1429263825_13 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263825}
+
+[Info] [17:43:45] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:45] [@ command.go.65] putfile 进队列 &{1429263825_14 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263825}
+
+[Info] [17:43:46] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:46] [@ command.go.65] putfile 进队列 &{1429263826_15 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263826}
+
+[Info] [17:43:46] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:46] [@ command.go.65] putfile 进队列 &{1429263826_16 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263826}
+
+[Info] [17:43:46] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:46] [@ command.go.65] putfile 进队列 &{1429263826_17 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263826}
+
+[Info] [17:43:46] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:46] [@ command.go.65] putfile 进队列 &{1429263826_18 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263826}
+
+[Info] [17:43:46] [@ main.go.42] client10.1.9.27:29484say:{
+  "action": "putfile",
+  "seq":"1",  
+  "file": "file_2222aaaa"
+}
+[Info] [17:43:46] [@ command.go.65] putfile 进队列 &{1429263826_19 0xc082094360 <nil>  1 8ffa5a60705d7c99f0387315e0eb81cd file_2222aaaa  0 1 0 1429263826}
+
+[Info] [17:44:17] [@ main.go.42] client10.1.9.27:29490say:{
+  "action": "getfile",
+  "seq":"1"
+}
+[Info] [17:44:17] [@ command.go.122] send to client10.1.9.27:29490say:{"action":"res_getfile","file":"file_2222aaaa","id":"1429263722_1","seq":"1"}
+[Info] [17:44:41] [@ main.go.42] client10.1.9.27:29490say:{
+  "action": "answer",
+  "seq":"1",
+  "id":"1429263722_1",
+  "answer":"123"
+}
+[Info] [17:44:41] [@ command.go.194] send to client10.1.9.27:29484say:{"action":"res_putfile","answer":"123","id":"1429263722_1","seq":"1"}
+[Info] [17:44:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"0","waitcount":"17"}
+[Info] [17:45:41] [@ main.go.42] client10.1.9.27:29484say:{
+	"action": "reportanswer",
+	"seq": "1",
+	"id": "1429263722_1",
+	"result": "1"
+}
+[Info] [17:46:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:47:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:49:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:50:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:52:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:53:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:55:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:56:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:58:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263823_4
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263824_7
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263825_13
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263826_16
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263824_6
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263825_12
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263826_17
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263823_2
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263824_5
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263824_9
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263825_11
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263826_18
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263823_3
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263824_8
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263825_10
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263825_14
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263826_15
+[Info] [17:58:52] [@ vfmap.go.27] %s file timeout1429263826_19
+[Info] [17:59:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [18:01:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [18:02:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [18:04:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [18:05:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [18:07:22] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [18:08:52] [@ vfmap.go.69] send to client10.1.9.27:29490say:{"action":"stat","clientcount":"1","finishcount":"1","rightcount":"1","waitcount":"17"}
+[Info] [10:18:12] [@ main.go.36] server start:[::]:10010
