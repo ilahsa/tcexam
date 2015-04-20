@@ -6,6 +6,7 @@ import (
 	//	"strconv"
 	"encoding/json"
 	"github.com/funny/link"
+	"sync"
 	"time"
 )
 
@@ -77,6 +78,7 @@ func init() {
 type VFMap struct {
 	innerMap   map[string]*VerifyObj
 	c_sessions map[uint64]*link.Session
+	syncRoot   sync.Mutex
 }
 
 func newVFMapInstance() *VFMap {
@@ -84,6 +86,8 @@ func newVFMapInstance() *VFMap {
 }
 
 func (m *VFMap) Put(vf *VerifyObj) {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
 	_, ok := m.innerMap[vf.Id]
 	if ok {
 		ULogger.Error("key exists")
@@ -97,10 +101,15 @@ func (m *VFMap) Put(vf *VerifyObj) {
 }
 
 func (m *VFMap) AddSession(s *link.Session) {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
+
 	m.c_sessions[s.Id()] = s
 }
 
 func (m *VFMap) Get(id string) *VerifyObj {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
 	_, ok := m.innerMap[id]
 	if !ok {
 		ULogger.Error("verifyobj not found")
@@ -111,6 +120,8 @@ func (m *VFMap) Get(id string) *VerifyObj {
 
 //p 端关闭，清楚掉所有的session
 func (m *VFMap) DelSessionByP(s *link.Session) {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
 	for k, v := range m.innerMap {
 		if v.P == s {
 			ULogger.Info("p is closed", s.Conn().RemoteAddr().String())
@@ -122,6 +133,8 @@ func (m *VFMap) DelSessionByP(s *link.Session) {
 
 ///更新map
 func (m *VFMap) Update(action string, vf *VerifyObj) {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
 	_, ok := m.innerMap[vf.Id]
 	if !ok {
 		ULogger.Error("key not exists")

@@ -24,13 +24,13 @@ type Queue struct {
 
 func newQueue() *Queue {
 	q := &Queue{MaxSize: 500, lst: list.New(), Ch: make(chan *VerifyObj)}
-	q.startEnChan()
+	//q.startEnChan()
 	return q
 }
 
 func (q *Queue) Enqueue(v *VerifyObj) error {
 	q.syncRoot.Lock()
-	q.syncRoot.Unlock()
+	defer q.syncRoot.Unlock()
 	if q.len() >= 500 {
 		return QueuFullError
 	}
@@ -41,7 +41,7 @@ func (q *Queue) Enqueue(v *VerifyObj) error {
 
 func (q *Queue) Dequeue() *VerifyObj {
 	q.syncRoot.Lock()
-	q.syncRoot.Unlock()
+	defer q.syncRoot.Unlock()
 	if q.len() <= 0 {
 		return nil
 	}
