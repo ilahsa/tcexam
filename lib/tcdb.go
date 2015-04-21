@@ -4,11 +4,26 @@ import (
 	"database/sql"
 	"fmt"
 	//	"fmt"
+	"github.com/astaxie/beego/config"
 	_ "github.com/go-sql-driver/mysql"
 )
 
+var (
+	DbConnectStr string
+)
+
+func init() {
+
+	cf, err := config.NewConfig("ini", "config.ini")
+	if err != nil {
+		panic(err)
+	}
+	DbConnectStr = cf.DefaultString("dbconnect", "")
+
+}
+
 func Exec(query string, args ...interface{}) {
-	db, err := sql.Open("mysql", "root:123456@tcp(10.1.9.102:3306)/proxy_exam")
+	db, err := sql.Open("mysql", DbConnectStr)
 	if err != nil {
 		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
 	}
@@ -29,7 +44,7 @@ func Exec(query string, args ...interface{}) {
 }
 
 func Login(userid, password string) bool {
-	db, err := sql.Open("mysql", "root:123456@tcp(10.1.9.102:3306)/proxy_exam")
+	db, err := sql.Open("mysql", DbConnectStr)
 	if err != nil {
 		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
 	}
@@ -59,7 +74,7 @@ func Login(userid, password string) bool {
 
 func QueryInt(query string, args ...interface{}) int {
 
-	db, err := sql.Open("mysql", "root:123456@tcp(10.1.9.102:3306)/proxy_exam")
+	db, err := sql.Open("mysql", DbConnectStr)
 	if err != nil {
 		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
 	}

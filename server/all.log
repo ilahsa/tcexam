@@ -1,1 +1,187 @@
 [Info] [12:08:21] [@ main.go.37] server start:[::]:10010
+[Info] [14:27:26] [@ main.go.39] server start:[::]:10010
+[Info] [14:29:17] [@ main.go.39] server start:[::]:10010
+[Info] [14:29:30] [@ main.go.42] client10.1.9.27:52011in
+[Info] [14:29:30] [@ main.go.45] client10.1.9.27:52011say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [14:29:53] [@ main.go.39] server start:[::]:10010
+[Info] [14:29:57] [@ main.go.42] client10.1.9.27:52039in
+[Info] [14:29:57] [@ main.go.45] client10.1.9.27:52039say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [14:36:01] [@ main.go.41] server start:[::]:10010
+[Info] [14:36:50] [@ main.go.41] server start:[::]:10010
+[Info] [14:37:24] [@ main.go.41] server start:[::]:10010
+[Info] [14:44:20] [@ main.go.41] server start:[::]:10010
+[Info] [15:17:15] [@ main.go.40] server start:[::]:10010
+[Info] [15:23:26] [@ main.go.37] server start:[::]:10010
+[Info] [15:23:49] [@ main.go.40] client10.1.9.27:53962in
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_1 0xc0820783f0 <nil>  1 6eb512cb2557734c63f6fa15ef61ef9f file_0  0 0 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_2 0xc0820783f0 <nil>  1 ba9d332813a722b273a95fa13dd88d94 file_1  0 1 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_3 0xc0820783f0 <nil>  1 92ed3b5f07b44bc4f70d0b24d5e1867c file_2  0 2 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_4 0xc0820783f0 <nil>  1 797b373a9c4ec0d6de0a31a90b5bee8e file_3  0 3 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_5 0xc0820783f0 <nil>  1 74a02cce629c5f4c0bd3c0b60db915e4 file_4  0 4 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_6 0xc0820783f0 <nil>  1 3d58b0ebc69908c51a9273135f3aac3f file_5  0 5 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_7 0xc0820783f0 <nil>  1 045e4d119474a0ffe08e1632ca286c9c file_6  0 6 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_8 0xc0820783f0 <nil>  1 1813845c8e402f8d0482a5d274dc5596 file_7  0 7 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_9 0xc0820783f0 <nil>  1 e4492ed6bafa3b349caf653a02864d67 file_8  0 8 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_10 0xc0820783f0 <nil>  1 dd6838271569dbfceb004806672be7d9 file_9  0 9 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_10","seq":"10"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_11 0xc0820783f0 <nil>  1 57b22a2f669653c777b624c8a0586cf4 file_10  0 10 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_11","seq":"11"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_12 0xc0820783f0 <nil>  1 e87a3e7bcb96fb645ad47224cb044f4e file_11  0 11 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_12","seq":"12"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_13 0xc0820783f0 <nil>  1 6b39611f0f256ee3756a44013f956158 file_12  0 12 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_13","seq":"13"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_14 0xc0820783f0 <nil>  1 59dcf9b35400e14d5d265d23aa6baaa9 file_13  0 13 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_14","seq":"14"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_15 0xc0820783f0 <nil>  1 9a51d586f3b7a85cb7593591f5ed0060 file_14  0 14 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_15","seq":"15"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_16 0xc0820783f0 <nil>  1 40de2b1ec2a5685fe08a9abe08788daa file_15  0 15 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_16","seq":"16"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_17 0xc0820783f0 <nil>  1 43e24fb93eaf2c84ee0c773d6340f98e file_16  0 16 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_17","seq":"17"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_18 0xc0820783f0 <nil>  1 c9687ae10e9ed2e4d182bcb50e241809 file_17  0 17 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_18","seq":"18"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_19 0xc0820783f0 <nil>  1 a932e19201d9894ad5a56568903ef133 file_18  0 18 0 1429601029}
+
+[Info] [15:23:49] [@ main.go.43] client10.1.9.27:53962say:{"action":"putfile","file":"file_19","seq":"19"}
+[Info] [15:23:49] [@ command.go.65] putfile 进队列 &{1429601029_20 0xc0820783f0 <nil>  1 9ca76e9fd5c02dad82b96a09445a0543 file_19  0 19 0 1429601029}
+
+[Info] [15:23:54] [@ main.go.40] client10.1.9.27:53987in
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"cstart","password":"123456","seq":"00001","userid":"u_001"}
+[Info] [15:23:54] [@ command.go.131] user u_001 start answer
+[Info] [15:23:54] [@ command.go.159] send to client10.1.9.27:53987say:{"action":"res_cstart","result":"1","seq":"00001"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"0"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_0","id":"1429601029_1","seq":"0"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"1"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_1","id":"1429601029_2","seq":"1"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"2"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_2","id":"1429601029_3","seq":"2"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"3"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_3","id":"1429601029_4","seq":"3"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"4"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_4","id":"1429601029_5","seq":"4"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"5"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_5","id":"1429601029_6","seq":"5"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"6"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_6","id":"1429601029_7","seq":"6"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"7"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_7","id":"1429601029_8","seq":"7"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"8"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_8","id":"1429601029_9","seq":"8"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"9"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_9","id":"1429601029_10","seq":"9"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"10"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_10","id":"1429601029_11","seq":"10"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"11"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_11","id":"1429601029_12","seq":"11"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"12"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_12","id":"1429601029_13","seq":"12"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"13"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_13","id":"1429601029_14","seq":"13"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"14"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_14","id":"1429601029_15","seq":"14"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"15"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_15","id":"1429601029_16","seq":"15"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"16"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_16","id":"1429601029_17","seq":"16"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"17"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_17","id":"1429601029_18","seq":"17"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"18"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_18","id":"1429601029_19","seq":"18"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"getfile","seq":"19"}
+[Info] [15:23:54] [@ command.go.122] send to client10.1.9.27:53987say:{"action":"res_getfile","file":"file_19","id":"1429601029_20","seq":"19"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_1","seq":"0"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_1","seq":"0"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_2","seq":"1"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_2","seq":"1"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_3","seq":"2"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_3","seq":"2"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_4","seq":"3"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_4","seq":"3"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_5","seq":"4"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_5","seq":"4"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_6","seq":"5"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_6","seq":"5"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_7","seq":"6"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_7","seq":"6"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_8","seq":"7"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_8","seq":"7"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_9","seq":"8"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_9","seq":"8"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_10","seq":"9"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_10","seq":"9"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_11","seq":"10"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_11","seq":"10"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_12","seq":"11"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_12","seq":"11"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_13","seq":"12"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_13","seq":"12"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_14","seq":"13"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_14","seq":"13"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_15","seq":"14"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_15","seq":"14"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_16","seq":"15"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_16","seq":"15"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_17","seq":"16"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_17","seq":"16"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_18","seq":"17"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_18","seq":"17"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_19","seq":"18"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_19","seq":"18"}
+[Info] [15:23:54] [@ main.go.43] client10.1.9.27:53987say:{"action":"answer","id":"1429601029_20","seq":"19"}
+[Info] [15:23:54] [@ command.go.194] send to client10.1.9.27:53962say:{"action":"res_putfile","answer":"","id":"1429601029_20","seq":"19"}
+[Info] [15:24:02] [@ main.go.61] client10.1.9.27:53962close
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:02] [@ vfmap.go.125] p is closed 10.1.9.27:53962
+[Info] [15:24:03] [@ main.go.61] client10.1.9.27:53987close
+[Info] [15:24:56] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
+[Info] [15:26:26] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
+[Info] [15:27:56] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
+[Info] [15:29:26] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
+[Info] [15:30:56] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
+[Info] [15:32:26] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}

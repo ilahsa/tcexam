@@ -25,7 +25,7 @@ func log(v ...interface{}) {
 //     go run echo_server/main.go
 func main() {
 	flag.Parse()
-
+	fmt.Println(lib.DbConnectStr)
 	link.DefaultConnBufferSize = *buffersize
 	link.DefaultProtocol = lib.TCProtocol
 

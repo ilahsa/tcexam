@@ -62,7 +62,7 @@ func putFile(session *link.Session, req map[string]string) error {
 	vf := &VerifyObj{Id: getId(), P: session, C: nil, FileId: fileid, File: file, Status: 1, Result: "0", Seq: seq, PPutUnix: time.Now().Unix()}
 	QueueInstance.Enqueue(vf)
 	VFMapInstance.Put(vf)
-	ULogger.Infof("putfile 进队列 %v\n", vf)
+	//ULogger.Infof("putfile 进队列 %v\n", vf)
 	//记录p端的操作
 	if session.State == nil {
 		userId := session.Conn().RemoteAddr().String()
