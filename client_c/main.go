@@ -14,7 +14,7 @@ import (
 //     go run echo_client/main.go
 func main() {
 	link.DefaultProtocol = lib.TCProtocol
-	client, err := link.Dial("tcp", "10.1.9.104:10010")
+	client, err := link.Dial("tcp", "10.1.9.27:10010")
 	if err != nil {
 		panic(err)
 	}
@@ -22,7 +22,7 @@ func main() {
 	acount := 0
 	go client.Process(func(msg *link.InBuffer) error {
 		fmt.Println("接收", string(msg.Data))
-		//处理接收到的文件
+		//处理接收到的文件r
 		dat := map[string]string{}
 		json.Unmarshal(msg.Data, &dat)
 		action := dat["action"]

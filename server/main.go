@@ -41,7 +41,14 @@ func main() {
 		lib.ULogger.Info("client", session.Conn().RemoteAddr().String(), "in")
 
 		session.Process(func(msg *link.InBuffer) error {
-			lib.ULogger.Info("client", session.Conn().RemoteAddr().String(), "say:", string(msg.Data))
+			var receiveTmp []byte
+			if len(msg.Data) > 100 {
+				receiveTmp = msg.Data[0:100]
+			} else {
+				receiveTmp = msg.Data
+			}
+
+			lib.ULogger.Info("client", session.Conn().RemoteAddr().String(), "say:", string(receiveTmp))
 
 			var dat map[string]string
 
@@ -50,6 +57,13 @@ func main() {
 				lib.ULogger.Errorf("bad request,req is %s", string(msg.Data))
 				return errors.New("bad request")
 			} else {
+				tmpMap := map[string]string{}
+				for k, v := range dat {
+					if k != "file" {
+						tmpMap[k] = v
+					}
+				}
+				lib.ULogger.Info("receive request:\r\n", tmpMap)
 				er := lib.Process(session, dat)
 				//ULogger.Infof("tttt %v\n", er)
 				if er != nil {

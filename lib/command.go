@@ -62,7 +62,7 @@ func putFile(session *link.Session, req map[string]string) error {
 	vf := &VerifyObj{Id: getId(), P: session, C: nil, FileId: fileid, File: file, Status: 1, Result: "0", Seq: seq, PPutUnix: time.Now().Unix()}
 	QueueInstance.Enqueue(vf)
 	VFMapInstance.Put(vf)
-	//ULogger.Infof("putfile 进队列 %v\n", vf)
+	ULogger.Infof("putfile enqueue %s\n", vf.String())
 	//记录p端的操作
 	if session.State == nil {
 		userId := session.Conn().RemoteAddr().String()
@@ -85,7 +85,7 @@ func reportAnswer(session *link.Session, req map[string]string) error {
 	vf.Status = 5
 	vf.Result = result
 	VFMapInstance.Update("p_reportanswer", vf)
-
+	ULogger.Infof("reportanswer %s\n", vf.String())
 	return nil
 }
 
@@ -119,7 +119,7 @@ func getFile(session *link.Session, req map[string]string) error {
 	by, _ := json.Marshal(ret)
 	VFMapInstance.Update("c_getfile", vf)
 	session.Send(link.Bytes(by))
-	ULogger.Info("send to client", session.Conn().RemoteAddr().String(), "say:", string(by))
+	ULogger.Info("res_getfile", session.Conn().RemoteAddr().String(), "say:", vf.String())
 	return nil
 }
 
@@ -156,7 +156,7 @@ func cStart(session *link.Session, req map[string]string) error {
 		by, _ := json.Marshal(ret)
 
 		session.Send(link.Bytes(by))
-		ULogger.Info("send to client", session.Conn().RemoteAddr().String(), "say:", string(by))
+		ULogger.Info("cstart", session.Conn().RemoteAddr().String(), "say:", string(by))
 		//c端开始答题
 		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'begin','customer',?)`, userid, session.Conn().RemoteAddr().String())
 		VFMapInstance.AddSession(session)
@@ -191,7 +191,7 @@ func answer(session *link.Session, req map[string]string) error {
 		}
 		by, _ := json.Marshal(ret)
 		vf.P.Send(link.Bytes(by))
-		ULogger.Info("send to client", vf.P.Conn().RemoteAddr().String(), "say:", string(by))
+		ULogger.Info("res_putfile", vf.P.Conn().RemoteAddr().String(), "say:", string(by))
 		vf.Status = 4
 		//给P投递了消息
 		VFMapInstance.Update("p_fileanswer", vf)

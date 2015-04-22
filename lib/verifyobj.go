@@ -1,7 +1,10 @@
 package lib
 
 import (
+	"bytes"
 	"github.com/funny/link"
+	"strconv"
+	"time"
 )
 
 type VerifyObj struct {
@@ -18,4 +21,27 @@ type VerifyObj struct {
 	Seq      string //上传问题时的seq
 	CGetUnix int64  //c端获取的时间戳 5分钟超时
 	PPutUnix int64  //p端放入的时间戳 15分钟超时
+}
+
+func (v *VerifyObj) String() string {
+	bys := bytes.Buffer{}
+	bys.WriteString("id:" + v.Id)
+	bys.WriteString(";md5:" + v.FileId)
+	bys.WriteString(";puttime:" + strconv.Itoa(int(v.PPutUnix)))
+	bys.WriteString(";gettime:" + strconv.Itoa(int(v.CGetUnix)))
+	bys.WriteString(";nowtime:" + strconv.Itoa(int(time.Now().Unix())))
+	pinfo := ""
+	if v.P != nil && !v.P.IsClosed() {
+		pinfo = v.P.Conn().RemoteAddr().String()
+	}
+	cinfo := ""
+	if v.C != nil && !v.C.IsClosed() {
+		cinfo = v.C.Conn().RemoteAddr().String()
+	}
+	bys.WriteString(";p:" + pinfo)
+	bys.WriteString(";c:" + cinfo)
+	bys.WriteString(";answer:" + v.Answer)
+	bys.WriteString(";p_seq:" + v.Seq)
+	bys.WriteString(";status:" + strconv.Itoa(v.Status))
+	return bys.String()
 }

@@ -39,7 +39,7 @@ func init() {
 						vf := &VerifyObj{Id: getId(), P: v.P, C: nil, FileId: v.FileId, File: v.File, Status: 1, Result: "0", Seq: v.Seq, PPutUnix: v.PPutUnix}
 						QueueInstance.Enqueue(vf)
 						VFMapInstance.Put(vf)
-						ULogger.Infof("recycle putfile 进队列 %v\n", vf)
+						ULogger.Infof("recycle putfile 进队列 %v\n", vf.String())
 						putFile(v.P, map[string]string{"file": v.File, "seq": v.Seq, "action": "putfile"})
 					}
 				}
