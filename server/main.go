@@ -63,7 +63,7 @@ func main() {
 						tmpMap[k] = v
 					}
 				}
-				lib.ULogger.Info("receive request:\r\n", tmpMap)
+				lib.ULogger.Infof("receive %s request:\r\n%s", session.Conn().RemoteAddr().String(), tmpMap)
 				er := lib.Process(session, dat)
 				//ULogger.Infof("tttt %v\n", er)
 				if er != nil {
