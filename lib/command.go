@@ -96,7 +96,7 @@ func getFile(session *link.Session, req map[string]string) error {
 
 	vf := QueueInstance.DequeueWithoutPClosed()
 	if vf == nil {
-		ULogger.Error("getfile time out,sessioninfo is %s", session.State.(*User).Id)
+		ULogger.Errorf("queue is nil ", session.State.(*User).Id)
 		ret := map[string]string{
 			"action": "res_getfile",
 			"seq":    seq,

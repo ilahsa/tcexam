@@ -26,7 +26,7 @@ func log(v ...interface{}) {
 //     go run echo_server/main.go
 func main() {
 	flag.Parse()
-	fmt.Println(lib.DbConnectStr)
+	lib.InitDbConfig()
 	link.DefaultConnBufferSize = *buffersize
 	link.DefaultProtocol = lib.TCProtocol
 
@@ -70,6 +70,7 @@ func main() {
 				lib.Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'end','production',?)`, userId, add)
 			} else if u.UserType == "C" {
 				lib.Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'end','customer',?)`, userId, add)
+				lib.VFMapInstance.DelSessionByC(session)
 			}
 		}
 	})

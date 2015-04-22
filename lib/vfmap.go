@@ -33,7 +33,7 @@ func init() {
 					}
 					//被c 端获取且超时
 					if v.Status == 2 && (v.CGetUnix+300) < nowUnix {
-						ULogger.Info("%s recycle", v.Id)
+						ULogger.Infof("%s recycle", v.Id)
 						VFMapInstance.Update("recycle", v)
 						delete(VFMapInstance.innerMap, k)
 						vf := &VerifyObj{Id: getId(), P: v.P, C: nil, FileId: v.FileId, File: v.File, Status: 1, Result: "0", Seq: v.Seq, PPutUnix: v.PPutUnix}
@@ -119,6 +119,11 @@ func (m *VFMap) Get(id string) *VerifyObj {
 		return nil
 	}
 	return m.innerMap[id]
+}
+
+//c 端关闭
+func (m *VFMap) DelSessionByC(s *link.Session) {
+	delete(m.c_sessions, s.Id())
 }
 
 //p 端关闭，清楚掉所有的session

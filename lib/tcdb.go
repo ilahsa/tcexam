@@ -10,7 +10,7 @@ var (
 	DbConnectStr string
 )
 
-func init() {
+func InitDbConfig() {
 
 	cf, err := config.NewConfig("ini", "config.ini")
 	if err != nil {
