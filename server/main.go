@@ -10,13 +10,14 @@ import (
 )
 
 var (
-	benchmark  = flag.Bool("bench", false, "is for benchmark, will disable print")
+	benchmark  = flag.Bool("bench", false, "is for b1enchmark, will disable print")
 	buffersize = flag.Int("buffer", 1024, "session read buffer size")
 )
 
 func log(v ...interface{}) {
 	if !*benchmark {
 		fmt.Println(v...)
+
 	}
 }
 
@@ -41,6 +42,7 @@ func main() {
 
 		session.Process(func(msg *link.InBuffer) error {
 			lib.ULogger.Info("client", session.Conn().RemoteAddr().String(), "say:", string(msg.Data))
+
 			var dat map[string]string
 
 			err := json.Unmarshal(msg.Data, &dat)

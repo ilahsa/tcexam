@@ -61,6 +61,9 @@ func init() {
 					waitcount := QueueInstance.len()
 					clientcount := len(VFMapInstance.c_sessions)
 
+					questioncount := len(VFMapInstance.innerMap)
+
+					stat["questioncount"] = strconv.Itoa(questioncount)
 					stat["finishcount"] = strconv.Itoa(canswer)
 					stat["rightcount"] = strconv.Itoa(canswerrigth)
 					stat["waitcount"] = strconv.Itoa(waitcount)

@@ -2,8 +2,6 @@ package lib
 
 import (
 	"database/sql"
-	"fmt"
-	//	"fmt"
 	"github.com/astaxie/beego/config"
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -35,7 +33,7 @@ func Exec(query string, args ...interface{}) {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
 	defer stmtIns.Close() // Close the statement when we leave main() / the program terminates
-	fmt.Printf("args %v\n", args)
+	//fmt.Printf("args %v\n", args)
 	_, err = stmtIns.Exec(args...) // 执行插入
 	if err != nil {
 		panic(err.Error())

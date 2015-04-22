@@ -185,3 +185,6 @@
 [Info] [15:29:26] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
 [Info] [15:30:56] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
 [Info] [15:32:26] [@ vfmap.go.70] send to client10.1.9.27:53987say:{"action":"stat","clientcount":"1","finishcount":"0","rightcount":"0","waitcount":"0"}
+[Info] [17:44:58] [@ main.go.37] server start:[::]:10010
+[Info] [17:47:23] [@ main.go.37] server start:[::]:10010
+[Info] [17:48:33] [@ main.go.37] server start:[::]:10010

@@ -3,26 +3,12 @@ package lib
 import (
 	//"database/sql"
 	"fmt"
-	"strconv"
 	"testing"
 	//	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func Test_02(t *testing.T) {
-
-	for i := 0; i < 3; i++ {
-		vf := &VerifyObj{C: nil, P: nil, FileId: "file" + strconv.Itoa(i), File: "fileconent", Status: 1}
-		QueueInstance.Enqueue(vf)
-	}
-	vf1 := QueueInstance.DeChan()
-	fmt.Printf("%v\n", vf1)
-	fmt.Println(1)
-	vf2 := QueueInstance.DeChan()
-	fmt.Printf("%v\n", vf2)
-	fmt.Println(2)
-	vf3 := QueueInstance.DeChan()
-	fmt.Printf("%v\n", vf3)
 
 	fmt.Println("22222")
 }
@@ -54,9 +40,4 @@ func Test_Exec(t *testing.T) {
 
 	i1 := QueryInt(`select count(*) from exam where c_userid='u_001' and c_getfile_time > '2015-04-17 12:54:31' and answer is not null`)
 	fmt.Println(i1)
-}
-
-func Test_GetId(t *testing.T) {
-	fmt.Println(getId())
-	fmt.Println(getId())
 }
