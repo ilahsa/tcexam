@@ -27,6 +27,7 @@ func log(v ...interface{}) {
 func main() {
 	flag.Parse()
 	lib.InitDbConfig()
+
 	link.DefaultConnBufferSize = *buffersize
 	link.DefaultProtocol = lib.TCProtocol
 

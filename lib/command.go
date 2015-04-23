@@ -96,7 +96,7 @@ func getFile(session *link.Session, req map[string]string) error {
 
 	vf := QueueInstance.DequeueWithoutPClosed()
 	if vf == nil {
-		ULogger.Error("queue is nil ", session.State.(*User).Id)
+		ULogger.Info("queue is nil ,c userid is ", session.State.(*User).Id)
 		ret := map[string]string{
 			"action": "res_getfile",
 			"seq":    seq,
@@ -172,7 +172,7 @@ func answer(session *link.Session, req map[string]string) error {
 
 	vf := VFMapInstance.Get(id)
 	if vf == nil {
-		ULogger.Errorf("answer,verifyobj not found,may be timeout%v\n")
+		ULogger.Errorf("answer,verifyobj not found,may be timeout,vf is \r\n%v", req)
 
 		return nil
 	}

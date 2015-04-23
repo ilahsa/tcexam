@@ -55,6 +55,8 @@ func init() {
 					query := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null`
 					//c端回答的问题总数
 					canswer := QueryInt(query, u.Id, u.WorkTime)
+					ULogger.Info(query, u.Id, u.WorkTime)
+
 					query1 := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null and answer_result=1`
 					canswerrigth := QueryInt(query1, u.Id, u.WorkTime)
 					waitcount := QueueInstance.len()
@@ -114,7 +116,7 @@ func (m *VFMap) Get(id string) *VerifyObj {
 	defer m.syncRoot.Unlock()
 	_, ok := m.innerMap[id]
 	if !ok {
-		ULogger.Error("verifyobj not found")
+		//ULogger.Error("verifyobj not found")
 		return nil
 	}
 	return m.innerMap[id]
