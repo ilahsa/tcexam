@@ -40,7 +40,6 @@ func init() {
 						QueueInstance.Enqueue(vf)
 						VFMapInstance.Put(vf)
 						ULogger.Infof("recycle putfile 进队列 %v\n", vf.String())
-						putFile(v.P, map[string]string{"file": v.File, "seq": v.Seq, "action": "putfile"})
 					}
 				}
 				t1.Reset(time.Second * 60)
@@ -124,6 +123,18 @@ func (m *VFMap) Get(id string) *VerifyObj {
 //c 端关闭
 func (m *VFMap) DelSessionByC(s *link.Session) {
 	delete(m.c_sessions, s.Id())
+	//回收c 的任务
+	for k, v := range m.innerMap {
+		if v.Status == 2 && v.C != nil && v.C == s {
+			ULogger.Infof("c is closed, %s recycle", v.Id)
+			VFMapInstance.Update("recycle", v)
+			delete(VFMapInstance.innerMap, k)
+			vf := &VerifyObj{Id: getId(), P: v.P, C: nil, FileId: v.FileId, File: v.File, Status: 1, Result: "0", Seq: v.Seq, PPutUnix: v.PPutUnix}
+			QueueInstance.Enqueue(vf)
+			VFMapInstance.Put(vf)
+			ULogger.Infof("recycle putfile 进队列 %v\n", vf.String())
+		}
+	}
 }
 
 //p 端关闭，清楚掉所有的session
