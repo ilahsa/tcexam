@@ -63,7 +63,7 @@ func main() {
 		stopWait.Wait()
 
 		//发10个获取
-		for i := 0; i < 20; i++ {
+		for i := 0; i < 10; i++ {
 			id := strconv.Itoa(i)
 			dat := map[string]string{
 				"action": "getfile", "seq": id,

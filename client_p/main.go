@@ -24,9 +24,18 @@ func main() {
 		dat := map[string]string{}
 		json.Unmarshal(msg.Data, &dat)
 		action := dat["action"]
-		if action == "res_petfile" {
+		if action == "res_putfile" {
+			id := dat["id"]
+
 			acount = acount + 1
 			fmt.Println("收到答案的总数", acount)
+
+			dat1 := map[string]string{
+				"action": "reportanswer", "seq": "_seq_0001", "id": id, "result": "0",
+			}
+			by, _ := json.Marshal(dat1)
+			client.Send(link.Bytes(by))
+			fmt.Println("发送reportanswer", string(by))
 		}
 
 		return nil
@@ -34,7 +43,7 @@ func main() {
 
 	for {
 		//发10个文件
-		for i := 0; i < 20; i++ {
+		for i := 0; i < 10; i++ {
 			id := strconv.Itoa(i)
 			dat := map[string]string{
 				"action": "putfile", "file": "file_" + id, "seq": id,

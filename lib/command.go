@@ -13,9 +13,10 @@ var (
 )
 
 type User struct {
-	UserType string
-	Id       string
-	WorkTime string
+	UserType   string
+	Id         string
+	WorkTime   string
+	WrongCount int
 }
 
 func Process(session *link.Session, req map[string]string) error {
@@ -82,6 +83,19 @@ func reportAnswer(session *link.Session, req map[string]string) error {
 		ULogger.Errorf("answer,verifyobj not found,%v\n")
 		return nil
 	}
+
+	if vf.C != nil && !vf.C.IsClosed() {
+		if result == "1" {
+			vf.C.State.(*User).WrongCount = 0
+		} else {
+			vf.C.State.(*User).WrongCount = vf.C.State.(*User).WrongCount + 1
+			if vf.C.State.(*User).WrongCount >= 20 {
+				ULogger.Errorf("user %s %s, answer wrong to top limit", vf.C.State.(*User).Id, vf.C.Conn().RemoteAddr().String())
+				vf.C.Close()
+			}
+		}
+	}
+
 	vf.Status = 5
 	vf.Result = result
 	VFMapInstance.Update("p_reportanswer", vf)
@@ -148,7 +162,7 @@ func cStart(session *link.Session, req map[string]string) error {
 		session.Close()
 		return nil
 	} else {
-		user := &User{UserType: "C", Id: userid, WorkTime: time.Now().Format("2006-01-02 15:04:05")}
+		user := &User{UserType: "C", Id: userid, WorkTime: time.Now().Format("2006-01-02 15:04:05"), WrongCount: 0}
 		session.State = user
 
 		ret["result"] = "1"
