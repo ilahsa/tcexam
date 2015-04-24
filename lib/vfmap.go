@@ -17,7 +17,7 @@ var (
 func init() {
 	go func() {
 		t1 := time.NewTimer(time.Second * 60)
-		t2 := time.NewTimer(time.Second * 90)
+		t2 := time.NewTimer(time.Second * 30)
 		for {
 			select {
 			case <-t1.C:
@@ -25,17 +25,23 @@ func init() {
 				for k, v := range VFMapInstance.innerMap {
 					//p 端超时
 					if v.PPutUnix+900 < nowUnix {
-						ULogger.Info("%s file timeout", v.Id)
-						delete(VFMapInstance.innerMap, k)
-						if v.P != nil && v.P.IsClosed() {
-							v.P.Close()
-						}
+						ULogger.Infof("%s file timeover 15 minutes,puttime %s, now is %s", v.Id, v.PPutUnix, time.Now().Unix())
+						//						delete(VFMapInstance.innerMap, k)
+						//						if v.P != nil && v.P.IsClosed() {
+						//							v.P.Close()
+						//						}
 					}
 					//被c 端获取且超时
-					if v.Status == 2 && (v.CGetUnix+300) < nowUnix {
+					if v.Status == 2 && (v.CGetUnix+30) < nowUnix {
 						ULogger.Infof("%s recycle", v.Id)
 						VFMapInstance.Update("recycle", v)
 						delete(VFMapInstance.innerMap, k)
+						uid := ""
+						if v.C != nil {
+							uid = v.C.State.(*User).Id
+						}
+						Exec(`insert into recycle_log(c_id,file_id,file_hash,put_time,c_getfile_time,recycle_time) 
+values(?,?,?,?,?,?)`, uid, v.Id, v.FileId, v.PPutUnix, v.CGetUnix, time.Now().Unix())
 						vf := &VerifyObj{Id: getId(), P: v.P, C: nil, FileId: v.FileId, File: v.File, Status: 1, Result: "0", Seq: v.Seq, PPutUnix: v.PPutUnix}
 						QueueInstance.Enqueue(vf)
 						VFMapInstance.Put(vf)
@@ -61,9 +67,10 @@ func init() {
 					canswerrigth := QueryInt(query1, u.Id, u.WorkTime)
 					waitcount := QueueInstance.len()
 					clientcount := len(VFMapInstance.c_sessions)
-
+					pcount := len(VFMapInstance.p_sessions)
 					questioncount := len(VFMapInstance.innerMap)
 
+					stat["productioncount"] = strconv.Itoa(pcount)
 					stat["questioncount"] = strconv.Itoa(questioncount)
 					stat["finishcount"] = strconv.Itoa(canswer)
 					stat["rightcount"] = strconv.Itoa(canswerrigth)
@@ -82,6 +89,7 @@ func init() {
 type VFMap struct {
 	innerMap   map[string]*VerifyObj
 	c_sessions map[uint64]*link.Session
+	p_sessions map[uint64]*link.Session
 	syncRoot   sync.Mutex
 }
 
@@ -104,11 +112,20 @@ func (m *VFMap) Put(vf *VerifyObj) {
 	Exec(`insert into exam(file_id,file_hash,f_status,put_time) values(?,?,1,now())`, vf.Id, vf.FileId)
 }
 
-func (m *VFMap) AddSession(s *link.Session) {
+//添加c 端的session
+func (m *VFMap) AddCSession(s *link.Session) {
 	m.syncRoot.Lock()
 	defer m.syncRoot.Unlock()
 
 	m.c_sessions[s.Id()] = s
+}
+
+//添加p 端的session
+func (m *VFMap) AddPSession(s *link.Session) {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
+
+	m.p_sessions[s.Id()] = s
 }
 
 func (m *VFMap) Get(id string) *VerifyObj {
@@ -124,6 +141,9 @@ func (m *VFMap) Get(id string) *VerifyObj {
 
 //c 端关闭
 func (m *VFMap) DelSessionByC(s *link.Session) {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
+
 	delete(m.c_sessions, s.Id())
 	//回收c 的任务
 	for k, v := range m.innerMap {
@@ -131,6 +151,9 @@ func (m *VFMap) DelSessionByC(s *link.Session) {
 			ULogger.Infof("c is closed, %s recycle", v.Id)
 			VFMapInstance.Update("recycle", v)
 			delete(VFMapInstance.innerMap, k)
+			Exec(`insert into recycle_log(c_id,file_id,file_hash,put_time,c_getfile_time,recycle_time) 
+values(?,?,?,?,?,?)`, s.State.(*User).Id, v.Id, v.FileId, v.PPutUnix, v.CGetUnix, time.Now().Unix())
+
 			vf := &VerifyObj{Id: getId(), P: v.P, C: nil, FileId: v.FileId, File: v.File, Status: 1, Result: "0", Seq: v.Seq, PPutUnix: v.PPutUnix}
 			QueueInstance.Enqueue(vf)
 			VFMapInstance.Put(vf)
@@ -141,6 +164,10 @@ func (m *VFMap) DelSessionByC(s *link.Session) {
 
 //p 端关闭，清楚掉所有的session
 func (m *VFMap) DelSessionByP(s *link.Session) {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
+
+	delete(m.p_sessions, s.Id())
 	for k, v := range m.innerMap {
 		if v.P == s {
 			ULogger.Info("p is closed ", s.Conn().RemoteAddr().String())

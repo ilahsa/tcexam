@@ -1392,3 +1392,741 @@ map[result:0 seq:_seq_0001 action:reportanswer id:1429782867_9]
 map[action:reportanswer id:1429782867_10 result:0 seq:_seq_0001]
 [Info] [17:54:31] [@ command.go.102] reportanswer id:1429782867_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429782867;gettime:1429782871;nowtime:1429782871;p:10.1.9.27:2251;c:;answer:;p_seq:9;status:5
 
+[Info] [15:18:41] [@ main.go.39] server start:[::]:10010
+[Info] [15:18:49] [@ main.go.42] client10.1.9.27:36391in
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[action:putfile seq:0]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:0;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[seq:1 action:putfile]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:1;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[seq:2 action:putfile]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:2;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[seq:3 action:putfile]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:3;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[seq:4 action:putfile]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:4;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[action:putfile seq:5]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:5;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[action:putfile seq:6]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:6;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[seq:7 action:putfile]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:7;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[action:putfile seq:8]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:8;status:1
+
+[Info] [15:18:49] [@ main.go.52] client10.1.9.27:36391say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [15:18:49] [@ main.go.67] receive 10.1.9.27:36391 request:
+map[seq:9 action:putfile]
+[Info] [15:18:49] [@ command.go.66] putfile enqueue id:1429859929_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429859929;gettime:0;nowtime:1429859929;p:10.1.9.27:36391;c:;answer:;p_seq:9;status:1
+
+[Info] [15:19:46] [@ main.go.78] client10.1.9.27:36391close
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:46] [@ vfmap.go.155] p is closed 10.1.9.27:36391
+[Info] [15:19:59] [@ main.go.42] client10.1.9.27:36422in
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[seq:0 action:putfile]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_11;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:0;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[seq:1 action:putfile]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_12;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:1;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[action:putfile seq:2]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_13;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:2;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[seq:3 action:putfile]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_14;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:3;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[seq:4 action:putfile]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_15;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:4;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[action:putfile seq:5]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_16;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:5;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[action:putfile seq:6]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_17;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:6;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[seq:7 action:putfile]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_18;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:7;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[seq:8 action:putfile]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_19;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:8;status:1
+
+[Info] [15:19:59] [@ main.go.52] client10.1.9.27:36422say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [15:19:59] [@ main.go.67] receive 10.1.9.27:36422 request:
+map[seq:9 action:putfile]
+[Info] [15:19:59] [@ command.go.66] putfile enqueue id:1429859999_20;md5:dd6838271569dbfceb004806672be7d9;puttime:1429859999;gettime:0;nowtime:1429859999;p:10.1.9.27:36422;c:;answer:;p_seq:9;status:1
+
+[Info] [15:20:54] [@ main.go.78] client10.1.9.27:36422close
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:20:54] [@ vfmap.go.155] p is closed 10.1.9.27:36422
+[Info] [15:21:43] [@ main.go.39] server start:[::]:10010
+[Info] [15:21:49] [@ main.go.42] client10.1.9.27:36466in
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:0]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:0;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:1]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:1;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:2]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:2;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[seq:3 action:putfile]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:3;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:4]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:4;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:5]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:5;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:6]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:6;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:7]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:7;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:8]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:8;status:1
+
+[Info] [15:21:49] [@ main.go.52] client10.1.9.27:36466say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [15:21:49] [@ main.go.67] receive 10.1.9.27:36466 request:
+map[action:putfile seq:9]
+[Info] [15:21:49] [@ command.go.66] putfile enqueue id:1429860109_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429860109;gettime:0;nowtime:1429860109;p:10.1.9.27:36466;c:;answer:;p_seq:9;status:1
+
+[Info] [15:29:25] [@ main.go.78] client10.1.9.27:36466close
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:29:25] [@ vfmap.go.155] p is closed 10.1.9.27:36466
+[Info] [15:30:04] [@ main.go.39] server start:[::]:10010
+[Info] [15:30:09] [@ main.go.42] client10.1.9.27:36787in
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[action:putfile seq:0]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:0;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[action:putfile seq:1]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:1;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[action:putfile seq:2]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:2;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[action:putfile seq:3]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:3;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[seq:4 action:putfile]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:4;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[action:putfile seq:5]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:5;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[action:putfile seq:6]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:6;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[action:putfile seq:7]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:7;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[seq:8 action:putfile]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:8;status:1
+
+[Info] [15:30:09] [@ main.go.52] client10.1.9.27:36787say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [15:30:09] [@ main.go.67] receive 10.1.9.27:36787 request:
+map[action:putfile seq:9]
+[Info] [15:30:09] [@ command.go.66] putfile enqueue id:1429860609_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429860609;gettime:0;nowtime:1429860609;p:10.1.9.27:36787;c:;answer:;p_seq:9;status:1
+
+[Info] [15:33:19] [@ main.go.78] client10.1.9.27:36787close
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:33:19] [@ vfmap.go.155] p is closed 10.1.9.27:36787
+[Info] [15:52:58] [@ main.go.42] client10.1.9.27:37053in
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[action:putfile seq:0]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_11;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:0;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[seq:1 action:putfile]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_12;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:1;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[action:putfile seq:2]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_13;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:2;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[action:putfile seq:3]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_14;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:3;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[action:putfile seq:4]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_15;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:4;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[action:putfile seq:5]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_16;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:5;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[action:putfile seq:6]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_17;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:6;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[action:putfile seq:7]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_18;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:7;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[action:putfile seq:8]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_19;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:8;status:1
+
+[Info] [15:52:58] [@ main.go.52] client10.1.9.27:37053say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [15:52:58] [@ main.go.67] receive 10.1.9.27:37053 request:
+map[seq:9 action:putfile]
+[Info] [15:52:58] [@ command.go.66] putfile enqueue id:1429861978_20;md5:dd6838271569dbfceb004806672be7d9;puttime:1429861978;gettime:0;nowtime:1429861978;p:10.1.9.27:37053;c:;answer:;p_seq:9;status:1
+
+[Info] [15:53:01] [@ main.go.42] client10.1.9.27:37069in
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"cstart","password":"123456","seq":"00001","userid":"u_001"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:cstart password:123456 seq:00001 userid:u_001]
+[Info] [15:53:01] [@ command.go.145] user u_001 start answer
+[Info] [15:53:01] [@ command.go.173] cstart10.1.9.27:37069say:{"action":"res_cstart","result":"1","seq":"00001"}
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"0"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:getfile seq:0]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_11;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:0;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"1"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:getfile seq:1]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_12;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:1;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"2"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:getfile seq:2]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_13;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:2;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"3"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:getfile seq:3]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_14;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:3;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"4"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:getfile seq:4]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_15;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:4;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"5"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:getfile seq:5]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_16;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:5;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"6"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[seq:6 action:getfile]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_17;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:6;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"7"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:getfile seq:7]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_18;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:7;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"8"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[action:getfile seq:8]
+[Info] [15:53:01] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_19;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429861978;gettime:1429861981;nowtime:1429861981;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:8;status:2
+[Info] [15:53:01] [@ main.go.52] client10.1.9.27:37069say:{"action":"getfile","seq":"9"}
+[Info] [15:53:01] [@ main.go.67] receive 10.1.9.27:37069 request:
+map[seq:9 action:getfile]
+[Info] [15:53:02] [@ command.go.136] res_getfile10.1.9.27:37069say:id:1429861978_20;md5:dd6838271569dbfceb004806672be7d9;puttime:1429861978;gettime:1429861981;nowtime:1429861982;p:10.1.9.27:37053;c:10.1.9.27:37069;answer:;p_seq:9;status:2
+[Info] [15:54:04] [@ vfmap.go.64] select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not nullu_0012015-04-24 15:53:01
+[Info] [15:57:19] [@ main.go.39] server start:[::]:10010
+[Info] [15:57:24] [@ main.go.42] client10.1.9.27:37149in
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[action:putfile seq:0]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:0;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[action:putfile seq:1]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:1;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[seq:2 action:putfile]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:2;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[action:putfile seq:3]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:3;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[seq:4 action:putfile]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:4;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[action:putfile seq:5]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:5;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[action:putfile seq:6]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:6;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[action:putfile seq:7]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:7;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[seq:8 action:putfile]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:8;status:1
+
+[Info] [15:57:24] [@ main.go.52] client10.1.9.27:37149say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [15:57:24] [@ main.go.67] receive 10.1.9.27:37149 request:
+map[action:putfile seq:9]
+[Info] [15:57:24] [@ command.go.66] putfile enqueue id:1429862244_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429862244;gettime:0;nowtime:1429862244;p:10.1.9.27:37149;c:;answer:;p_seq:9;status:1
+
+[Info] [15:57:28] [@ main.go.42] client10.1.9.27:37164in
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"cstart","password":"123456","seq":"00001","userid":"u_001"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[userid:u_001 action:cstart password:123456 seq:00001]
+[Info] [15:57:28] [@ command.go.145] user u_001 start answer
+[Info] [15:57:28] [@ command.go.173] cstart10.1.9.27:37164say:{"action":"res_cstart","result":"1","seq":"00001"}
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"0"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[seq:0 action:getfile]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:0;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"1"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:1]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:1;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"2"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:2]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:2;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"3"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:3]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:3;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"4"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:4]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:4;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"5"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:5]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:5;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"6"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:6]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:6;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"7"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:7]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:7;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"8"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:8]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:8;status:2
+[Info] [15:57:28] [@ main.go.52] client10.1.9.27:37164say:{"action":"getfile","seq":"9"}
+[Info] [15:57:28] [@ main.go.67] receive 10.1.9.27:37164 request:
+map[action:getfile seq:9]
+[Info] [15:57:28] [@ command.go.136] res_getfile10.1.9.27:37164say:id:1429862244_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429862244;gettime:1429862248;nowtime:1429862248;p:10.1.9.27:37149;c:10.1.9.27:37164;answer:;p_seq:9;status:2
+[Info] [15:58:19] [@ vfmap.go.36] 1429862244_2 recycle
+[Info] [16:03:23] [@ main.go.39] server start:[::]:10010
+[Info] [16:03:43] [@ main.go.42] client10.1.9.27:37375in
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[action:putfile seq:0]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:0;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[action:putfile seq:1]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:1;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[action:putfile seq:2]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:2;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[seq:3 action:putfile]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:3;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[seq:4 action:putfile]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:4;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[action:putfile seq:5]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:5;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[seq:6 action:putfile]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:6;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[action:putfile seq:7]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:7;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[action:putfile seq:8]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:8;status:1
+
+[Info] [16:03:43] [@ main.go.52] client10.1.9.27:37375say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [16:03:43] [@ main.go.67] receive 10.1.9.27:37375 request:
+map[action:putfile seq:9]
+[Info] [16:03:43] [@ command.go.66] putfile enqueue id:1429862623_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429862623;gettime:0;nowtime:1429862623;p:10.1.9.27:37375;c:;answer:;p_seq:9;status:1
+
+[Info] [16:03:47] [@ main.go.42] client10.1.9.27:37390in
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"cstart","password":"123456","seq":"00001","userid":"u_001"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:cstart password:123456 seq:00001 userid:u_001]
+[Info] [16:03:47] [@ command.go.145] user u_001 start answer
+[Info] [16:03:47] [@ command.go.173] cstart10.1.9.27:37390say:{"action":"res_cstart","result":"1","seq":"00001"}
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"0"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:0]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:0;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"1"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:1]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:1;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"2"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:2]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:2;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"3"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:3]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:3;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"4"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[seq:4 action:getfile]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:4;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"5"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:5]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:5;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"6"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:6]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:6;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"7"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:7]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:7;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"8"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:8]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:8;status:2
+[Info] [16:03:47] [@ main.go.52] client10.1.9.27:37390say:{"action":"getfile","seq":"9"}
+[Info] [16:03:47] [@ main.go.67] receive 10.1.9.27:37390 request:
+map[action:getfile seq:9]
+[Info] [16:03:47] [@ command.go.136] res_getfile10.1.9.27:37390say:id:1429862623_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429862623;gettime:1429862627;nowtime:1429862627;p:10.1.9.27:37375;c:10.1.9.27:37390;answer:;p_seq:9;status:2
+[Info] [16:04:23] [@ vfmap.go.36] 1429862623_1 recycle
+[Info] [16:08:43] [@ main.go.39] server start:[::]:10010
+[Info] [16:08:50] [@ main.go.42] client10.1.9.27:37485in
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[action:putfile seq:0]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:0;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[action:putfile seq:1]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:1;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[action:putfile seq:2]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:2;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[action:putfile seq:3]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:3;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[seq:4 action:putfile]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:4;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[action:putfile seq:5]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:5;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[action:putfile seq:6]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:6;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[action:putfile seq:7]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:7;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[seq:8 action:putfile]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:8;status:1
+
+[Info] [16:08:50] [@ main.go.52] client10.1.9.27:37485say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [16:08:50] [@ main.go.67] receive 10.1.9.27:37485 request:
+map[action:putfile seq:9]
+[Info] [16:08:50] [@ command.go.66] putfile enqueue id:1429862930_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429862930;gettime:0;nowtime:1429862930;p:10.1.9.27:37485;c:;answer:;p_seq:9;status:1
+
+[Info] [16:08:54] [@ main.go.42] client10.1.9.27:37501in
+[Info] [16:08:54] [@ main.go.52] client10.1.9.27:37501say:{"action":"cstart","password":"123456","seq":"00001","userid":"u_001"}
+[Info] [16:08:54] [@ main.go.67] receive 10.1.9.27:37501 request:
+map[action:cstart password:123456 seq:00001 userid:u_001]
+[Info] [16:08:54] [@ command.go.145] user u_001 start answer
+[Info] [16:08:54] [@ command.go.173] cstart10.1.9.27:37501say:{"action":"res_cstart","result":"1","seq":"00001"}
+[Info] [16:08:54] [@ main.go.52] client10.1.9.27:37501say:{"action":"getfile","seq":"0"}
+[Info] [16:13:40] [@ main.go.39] server start:[::]:10010
+[Info] [16:14:07] [@ main.go.42] client10.1.9.27:37573in
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_0","seq":"0"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:0]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:0;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_1","seq":"1"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:1]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:1;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_2","seq":"2"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:2]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:2;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_3","seq":"3"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:3]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:3;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_4","seq":"4"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:4]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:4;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_5","seq":"5"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[seq:5 action:putfile]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:5;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_6","seq":"6"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:6]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:6;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_7","seq":"7"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:7]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:7;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_8","seq":"8"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:8]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:8;status:1
+
+[Info] [16:14:07] [@ main.go.52] client10.1.9.27:37573say:{"action":"putfile","file":"file_9","seq":"9"}
+[Info] [16:14:07] [@ main.go.67] receive 10.1.9.27:37573 request:
+map[action:putfile seq:9]
+[Info] [16:14:07] [@ command.go.66] putfile enqueue id:1429863247_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429863247;gettime:0;nowtime:1429863247;p:10.1.9.27:37573;c:;answer:;p_seq:9;status:1
+
+[Info] [16:14:11] [@ main.go.42] client10.1.9.27:37588in
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"cstart","password":"123456","seq":"00001","userid":"u_001"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[seq:00001 userid:u_001 action:cstart password:123456]
+[Info] [16:14:11] [@ command.go.145] user u_001 start answer
+[Info] [16:14:11] [@ command.go.173] cstart10.1.9.27:37588say:{"action":"res_cstart","result":"1","seq":"00001"}
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"0"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[seq:0 action:getfile]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_1;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:0;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"1"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[action:getfile seq:1]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_2;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:1;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"2"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[action:getfile seq:2]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_3;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:2;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"3"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[seq:3 action:getfile]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_4;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:3;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"4"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[action:getfile seq:4]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_5;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:4;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"5"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[action:getfile seq:5]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_6;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:5;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"6"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[action:getfile seq:6]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_7;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:6;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"7"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[seq:7 action:getfile]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_8;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:7;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"8"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[seq:8 action:getfile]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_9;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:8;status:2
+[Info] [16:14:11] [@ main.go.52] client10.1.9.27:37588say:{"action":"getfile","seq":"9"}
+[Info] [16:14:11] [@ main.go.67] receive 10.1.9.27:37588 request:
+map[action:getfile seq:9]
+[Info] [16:14:11] [@ command.go.136] res_getfile10.1.9.27:37588say:id:1429863247_10;md5:dd6838271569dbfceb004806672be7d9;puttime:1429863247;gettime:1429863251;nowtime:1429863251;p:10.1.9.27:37573;c:10.1.9.27:37588;answer:;p_seq:9;status:2
+[Info] [16:15:10] [@ vfmap.go.64] select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not nullu_0012015-04-24 16:14:11
+[Info] [16:15:10] [@ vfmap.go.80] send to client10.1.9.27:37588say:{"action":"stat","clientcount":"1","finishcount":"0","questioncount":"10","rightcount":"0","waitcount":"0"}
+[Info] [16:15:40] [@ vfmap.go.36] 1429863247_2 recycle
+[Info] [16:15:40] [@ vfmap.go.48] recycle putfile 进队列 id:1429863340_11;md5:ba9d332813a722b273a95fa13dd88d94;puttime:1429863247;gettime:0;nowtime:1429863340;p:10.1.9.27:37573;c:;answer:;p_seq:1;status:1
+
+[Info] [16:15:40] [@ vfmap.go.36] 1429863247_4 recycle
+[Info] [16:15:40] [@ vfmap.go.48] recycle putfile 进队列 id:1429863340_12;md5:797b373a9c4ec0d6de0a31a90b5bee8e;puttime:1429863247;gettime:0;nowtime:1429863340;p:10.1.9.27:37573;c:;answer:;p_seq:3;status:1
+
+[Info] [16:15:40] [@ vfmap.go.36] 1429863247_6 recycle
+[Info] [16:15:40] [@ vfmap.go.48] recycle putfile 进队列 id:1429863340_13;md5:3d58b0ebc69908c51a9273135f3aac3f;puttime:1429863247;gettime:0;nowtime:1429863340;p:10.1.9.27:37573;c:;answer:;p_seq:5;status:1
+
+[Info] [16:15:40] [@ vfmap.go.36] 1429863247_8 recycle
+[Info] [16:15:41] [@ vfmap.go.48] recycle putfile 进队列 id:1429863341_14;md5:1813845c8e402f8d0482a5d274dc5596;puttime:1429863247;gettime:0;nowtime:1429863341;p:10.1.9.27:37573;c:;answer:;p_seq:7;status:1
+
+[Info] [16:15:41] [@ vfmap.go.36] 1429863247_1 recycle
+[Info] [16:15:41] [@ vfmap.go.48] recycle putfile 进队列 id:1429863341_15;md5:6eb512cb2557734c63f6fa15ef61ef9f;puttime:1429863247;gettime:0;nowtime:1429863341;p:10.1.9.27:37573;c:;answer:;p_seq:0;status:1
+
+[Info] [16:15:41] [@ vfmap.go.36] 1429863247_3 recycle
+[Info] [16:15:41] [@ vfmap.go.48] recycle putfile 进队列 id:1429863341_16;md5:92ed3b5f07b44bc4f70d0b24d5e1867c;puttime:1429863247;gettime:0;nowtime:1429863341;p:10.1.9.27:37573;c:;answer:;p_seq:2;status:1
+
+[Info] [16:15:41] [@ vfmap.go.36] 1429863247_5 recycle
+[Info] [16:15:41] [@ vfmap.go.48] recycle putfile 进队列 id:1429863341_17;md5:74a02cce629c5f4c0bd3c0b60db915e4;puttime:1429863247;gettime:0;nowtime:1429863341;p:10.1.9.27:37573;c:;answer:;p_seq:4;status:1
+
+[Info] [16:15:41] [@ vfmap.go.36] 1429863247_7 recycle
+[Info] [16:15:42] [@ vfmap.go.48] recycle putfile 进队列 id:1429863342_18;md5:045e4d119474a0ffe08e1632ca286c9c;puttime:1429863247;gettime:0;nowtime:1429863342;p:10.1.9.27:37573;c:;answer:;p_seq:6;status:1
+
+[Info] [16:15:42] [@ vfmap.go.36] 1429863247_9 recycle
+[Info] [16:15:42] [@ vfmap.go.48] recycle putfile 进队列 id:1429863342_19;md5:e4492ed6bafa3b349caf653a02864d67;puttime:1429863247;gettime:0;nowtime:1429863342;p:10.1.9.27:37573;c:;answer:;p_seq:8;status:1
+
+[Info] [16:15:42] [@ vfmap.go.36] 1429863247_10 recycle
+[Info] [16:15:42] [@ vfmap.go.48] recycle putfile 进队列 id:1429863342_20;md5:dd6838271569dbfceb004806672be7d9;puttime:1429863247;gettime:0;nowtime:1429863342;p:10.1.9.27:37573;c:;answer:;p_seq:9;status:1
+
+[Info] [16:16:40] [@ vfmap.go.64] select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not nullu_0012015-04-24 16:14:11
+[Info] [16:16:40] [@ vfmap.go.80] send to client10.1.9.27:37588say:{"action":"stat","clientcount":"1","finishcount":"0","questioncount":"10","rightcount":"0","waitcount":"10"}

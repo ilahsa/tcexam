@@ -69,6 +69,8 @@ func putFile(session *link.Session, req map[string]string) error {
 		userId := session.Conn().RemoteAddr().String()
 		user := &User{UserType: "P", Id: userId, WorkTime: time.Now().Format("2006-01-02 15:04:05")}
 		session.State = user
+		VFMapInstance.AddPSession(session)
+
 		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'begin','production',?)`, userId, userId)
 	}
 	return nil
@@ -173,7 +175,7 @@ func cStart(session *link.Session, req map[string]string) error {
 		ULogger.Info("cstart", session.Conn().RemoteAddr().String(), "say:", string(by))
 		//c端开始答题
 		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'begin','customer',?)`, userid, session.Conn().RemoteAddr().String())
-		VFMapInstance.AddSession(session)
+		VFMapInstance.AddCSession(session)
 	}
 
 	return nil

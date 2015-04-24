@@ -45,7 +45,8 @@ func main() {
 			"action": "answer", "seq": seq, "id": fid,
 		}
 		by1, _ := json.Marshal(dat1)
-		client.Send(link.Bytes(by1))
+		_ = by1
+		//client.Send(link.Bytes(by1))
 
 		return nil
 	})
