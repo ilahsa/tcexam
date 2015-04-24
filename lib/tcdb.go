@@ -49,7 +49,7 @@ func Login(userid, password string) bool {
 	defer db.Close()
 
 	// Prepare statement for reading data
-	stmtOut, err := db.Prepare("select user_id from user where user_id =? and password=?")
+	stmtOut, err := db.Prepare("select user_id from user where user_id =? and password=? and status=1")
 	if err != nil {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
