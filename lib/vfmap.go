@@ -94,7 +94,7 @@ type VFMap struct {
 }
 
 func newVFMapInstance() *VFMap {
-	return &VFMap{innerMap: map[string]*VerifyObj{}, c_sessions: map[uint64]*link.Session{}}
+	return &VFMap{innerMap: map[string]*VerifyObj{}, c_sessions: map[uint64]*link.Session{}, p_sessions: map[uint64]*link.Session{}}
 }
 
 func (m *VFMap) Put(vf *VerifyObj) {

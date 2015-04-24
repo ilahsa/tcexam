@@ -13,7 +13,7 @@ import (
 //     go run echo_client/main.go
 func main() {
 	link.DefaultProtocol = lib.TCProtocol
-	client, err := link.Dial("tcp", "10.1.9.27:10010")
+	client, err := link.Dial("tcp", "10.1.9.104:10010")
 	if err != nil {
 		panic(err)
 	}
