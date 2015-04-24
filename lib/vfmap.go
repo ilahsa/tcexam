@@ -141,8 +141,8 @@ func (m *VFMap) Get(id string) *VerifyObj {
 
 //c 端关闭
 func (m *VFMap) DelSessionByC(s *link.Session) {
-	m.syncRoot.Lock()
-	defer m.syncRoot.Unlock()
+	//	m.syncRoot.Lock()
+	//	defer m.syncRoot.Unlock()
 
 	delete(m.c_sessions, s.Id())
 	//回收c 的任务
@@ -164,8 +164,8 @@ values(?,?,?,?,?,?)`, s.State.(*User).Id, v.Id, v.FileId, v.PPutUnix, v.CGetUnix
 
 //p 端关闭，清楚掉所有的session
 func (m *VFMap) DelSessionByP(s *link.Session) {
-	m.syncRoot.Lock()
-	defer m.syncRoot.Unlock()
+	//	m.syncRoot.Lock()
+	//	defer m.syncRoot.Unlock()
 
 	delete(m.p_sessions, s.Id())
 	for k, v := range m.innerMap {
@@ -179,8 +179,8 @@ func (m *VFMap) DelSessionByP(s *link.Session) {
 
 ///更新map
 func (m *VFMap) Update(action string, vf *VerifyObj) {
-	m.syncRoot.Lock()
-	defer m.syncRoot.Unlock()
+	//	m.syncRoot.Lock()
+	//	defer m.syncRoot.Unlock()
 	_, ok := m.innerMap[vf.Id]
 	if !ok {
 		ULogger.Error("key not exists")
