@@ -32,7 +32,7 @@ func init() {
 						//						}
 					}
 					//被c 端获取且超时
-					if v.Status == 2 && (v.CGetUnix+30) < nowUnix {
+					if v.Status == 2 && (v.CGetUnix+300) < nowUnix {
 						ULogger.Infof("%s recycle", v.Id)
 						VFMapInstance.Update("recycle", v)
 						delete(VFMapInstance.innerMap, k)
