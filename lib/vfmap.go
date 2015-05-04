@@ -1,6 +1,7 @@
 package lib
 
 import (
+	"bytes"
 	//"fmt"
 	"strconv"
 	//	"strconv"
@@ -52,7 +53,9 @@ values(?,?,?,?,?,?)`, uid, v.Id, v.FileId, v.PPutUnix, v.CGetUnix, time.Now().Un
 			case <-t2.C:
 				//fmt.Println("ss")
 				stat := map[string]string{"action": "stat"}
+				stat["now"] = strconv.Itoa(int(time.Now().Unix()))
 				//TCServer.
+				pstatInfo := VFMapInstance.pstatInfo()
 				for k, v := range VFMapInstance.c_sessions {
 					if v == nil || v.State == nil {
 						delete(VFMapInstance.c_sessions, k)
@@ -76,11 +79,12 @@ values(?,?,?,?,?,?)`, uid, v.Id, v.FileId, v.PPutUnix, v.CGetUnix, time.Now().Un
 					stat["rightcount"] = strconv.Itoa(canswerrigth)
 					stat["waitcount"] = strconv.Itoa(waitcount)
 					stat["clientcount"] = strconv.Itoa(clientcount)
+					stat["pstatinfo"] = pstatInfo
 					by, _ := json.Marshal(stat)
 					v.Send(link.Bytes(by))
 					ULogger.Info("send to client", v.Conn().RemoteAddr().String(), "say:", string(by))
 				}
-				t2.Reset(time.Second * 90)
+				t2.Reset(time.Second * 30)
 			}
 		}
 	}()
@@ -94,7 +98,7 @@ type VFMap struct {
 }
 
 func newVFMapInstance() *VFMap {
-	return &VFMap{innerMap: map[string]*VerifyObj{}, c_sessions: map[uint64]*link.Session{}, p_sessions: map[uint64]*link.Session{}}
+	return &VFMap{innerMap: make(map[string]*VerifyObj, 500), c_sessions: map[uint64]*link.Session{}, p_sessions: map[uint64]*link.Session{}}
 }
 
 func (m *VFMap) Put(vf *VerifyObj) {
@@ -113,11 +117,45 @@ func (m *VFMap) Put(vf *VerifyObj) {
 }
 
 //添加c 端的session
+//同一账户只能登陆一个
 func (m *VFMap) AddCSession(s *link.Session) {
 	m.syncRoot.Lock()
 	defer m.syncRoot.Unlock()
 
+	u := s.State.(*User)
+	for k, v := range m.c_sessions {
+		tmpU := v.State.(*User)
+		if u.Id == tmpU.Id && !v.IsClosed() {
+			ULogger.Info("click c, cinfo is ", v.Conn().RemoteAddr().String())
+			notify := `{
+	"action": "notify_kick",
+	"seq": "s_0001"
+}`
+			v.Send(link.String(notify))
+
+			delete(m.c_sessions, k)
+			v.Close()
+		}
+	}
+
 	m.c_sessions[s.Id()] = s
+}
+
+//p 端的统计信息
+func (m *VFMap) pstatInfo() string {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
+
+	bufs := bytes.Buffer{}
+	for k, v := range m.p_sessions {
+		if v == nil {
+			delete(m.p_sessions, k)
+		}
+		tmpU := v.State.(*User)
+
+		bufs.WriteString("p_addr:" + v.Conn().RemoteAddr().String() + ";pputcount:" + strconv.Itoa(tmpU.PPutCount) + ";plastputtime:" + strconv.Itoa(int(tmpU.PLastPutTime)) + "\r\n")
+	}
+	return bufs.String()
 }
 
 //添加p 端的session

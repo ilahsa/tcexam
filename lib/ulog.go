@@ -25,9 +25,9 @@ func loadAppConfig() {
         </filter>
     </outputs>
     <formats>
-        <format id="fmtinfo" format="[%Level] [%Time] %Msg%n"/>
-        <format id="fmterror" format="[%LEVEL] [%Time] [%FuncShort @ %File.%Line] %Msg%n"/>
-        <format id="all" format="[%Level] [%Time] [@ %File.%Line] %Msg%n"/>
+        <format id="fmtinfo" format="[%Level] [%Date(01-02) %Time] %Msg%n"/>
+        <format id="fmterror" format="[%LEVEL] [%Date(01-02) %Time] [%FuncShort @ %File.%Line] %Msg%n"/>
+        <format id="all" format="[%Level] [%Date(01-02) %Time] [@ %File.%Line] %Msg%n"/>
         <format id="criticalemail" format="Critical error on our server!\n    %Time %Date %RelFile %Func %Msg \nSent by Seelog"/>
     </formats>
 </seelog>

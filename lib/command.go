@@ -2,7 +2,9 @@ package lib
 
 import (
 	"encoding/json"
+	"errors"
 	"github.com/funny/link"
+	"runtime/debug"
 	"strconv"
 	"sync/atomic"
 	"time"
@@ -13,13 +15,23 @@ var (
 )
 
 type User struct {
-	UserType   string
-	Id         string
-	WorkTime   string
-	WrongCount int
+	UserType     string
+	Id           string
+	WorkTime     string
+	CWrongCount  int
+	PPutCount    int
+	PLastPutTime int64
 }
 
 func Process(session *link.Session, req map[string]string) error {
+	// panic 异常
+	defer func() {
+		if err := recover(); err != nil {
+			ULogger.Errorf("Error: panic  %v", err)
+			ULogger.Error(string(debug.Stack()))
+		}
+	}()
+
 	command, ok := req["action"]
 	if !ok {
 		ULogger.Error("client", session.Conn().RemoteAddr().String(), "bad request ,not found action")
@@ -46,12 +58,106 @@ func Process(session *link.Session, req map[string]string) error {
 		return cStart(session, req)
 	case "answer":
 		return answer(session, req)
+	case "test001":
+		return test001(session, req)
 	default:
 		ULogger.Error("client", session.Conn().RemoteAddr().String(), "not support command")
 		session.Close()
 		//ULogger.Info("sssss")
 	}
 	return nil
+}
+
+func test001(session *link.Session, req map[string]string) error {
+
+	data := `11111111111111111111111111111111
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  dsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsefdsfasfsef
+	  22222222222222222222222222222222222222222222222222222222222222222222222222222
+	  	`
+	ret := map[string]string{
+		"action": "res_test001",
+		"seq":    "s_test001",
+		"data":   data,
+	}
+	by, _ := json.Marshal(ret)
+	session.Send(link.Bytes(by))
+	panic("222222")
+	return errors.New("test001 error")
+
 }
 
 ///======================================
@@ -73,6 +179,10 @@ func putFile(session *link.Session, req map[string]string) error {
 
 		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'begin','production',?)`, userId, userId)
 	}
+	tmpUser := session.State.(*User)
+	tmpUser.PLastPutTime = time.Now().Unix()
+	tmpUser.PPutCount++
+
 	return nil
 }
 
@@ -88,10 +198,10 @@ func reportAnswer(session *link.Session, req map[string]string) error {
 
 	if vf.C != nil && !vf.C.IsClosed() {
 		if result == "1" {
-			vf.C.State.(*User).WrongCount = 0
+			vf.C.State.(*User).CWrongCount = 0
 		} else {
-			vf.C.State.(*User).WrongCount = vf.C.State.(*User).WrongCount + 1
-			if vf.C.State.(*User).WrongCount >= 20 {
+			vf.C.State.(*User).CWrongCount = vf.C.State.(*User).CWrongCount + 1
+			if vf.C.State.(*User).CWrongCount >= 20 {
 				ULogger.Errorf("user %s %s, answer wrong to top limit", vf.C.State.(*User).Id, vf.C.Conn().RemoteAddr().String())
 				vf.C.Close()
 			}
@@ -164,7 +274,7 @@ func cStart(session *link.Session, req map[string]string) error {
 		session.Close()
 		return nil
 	} else {
-		user := &User{UserType: "C", Id: userid, WorkTime: time.Now().Format("2006-01-02 15:04:05"), WrongCount: 0}
+		user := &User{UserType: "C", Id: userid, WorkTime: time.Now().Format("2006-01-02 15:04:05"), CWrongCount: 0}
 		session.State = user
 
 		ret["result"] = "1"

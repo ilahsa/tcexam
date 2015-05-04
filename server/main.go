@@ -68,9 +68,9 @@ func main() {
 				er := lib.Process(session, dat)
 				//ULogger.Infof("tttt %v\n", er)
 				if er != nil {
-					panic(er)
+					lib.ULogger.Errorf("Error: panic  %v", err)
 				}
-				return er
+				return nil
 			}
 
 		})
