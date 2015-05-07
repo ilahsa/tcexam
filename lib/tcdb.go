@@ -2,26 +2,11 @@ package lib
 
 import (
 	"database/sql"
-	"github.com/astaxie/beego/config"
 	_ "github.com/go-sql-driver/mysql"
 )
 
-var (
-	DbConnectStr string
-)
-
-func InitDbConfig() {
-
-	cf, err := config.NewConfig("ini", "config.ini")
-	if err != nil {
-		panic(err)
-	}
-	DbConnectStr = cf.DefaultString("dbconnect", "")
-
-}
-
 func Exec(query string, args ...interface{}) {
-	db, err := sql.Open("mysql", DbConnectStr)
+	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
 	if err != nil {
 		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
 	}
@@ -42,7 +27,7 @@ func Exec(query string, args ...interface{}) {
 }
 
 func Login(userid, password string) bool {
-	db, err := sql.Open("mysql", DbConnectStr)
+	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
 	if err != nil {
 		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
 	}
@@ -70,9 +55,40 @@ func Login(userid, password string) bool {
 	}
 }
 
+func GetAnswer(fileMd5 string) string {
+	return ""
+	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
+	if err != nil {
+		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
+	}
+	defer db.Close()
+
+	// Prepare statement for reading data
+	stmtOut, err := db.Prepare("SELECT * from exam where  file_hash =? and answer_result =1 and answer is not null ")
+	if err != nil {
+		panic(err.Error()) // proper error handling instead of panic in your app
+	}
+	defer stmtOut.Close()
+
+	var answer string // we "scan" the result in here
+
+	// Query the square-number of 13
+	qr := stmtOut.QueryRow(fileMd5)
+
+	if qr == nil {
+		return ""
+	}
+	err = qr.Scan(&answer) // WHERE number = 13
+	if err != nil {
+		panic(err.Error())
+		return ""
+	}
+	return answer
+}
+
 func QueryInt(query string, args ...interface{}) int {
 
-	db, err := sql.Open("mysql", DbConnectStr)
+	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
 	if err != nil {
 		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
 	}

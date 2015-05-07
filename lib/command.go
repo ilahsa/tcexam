@@ -6,12 +6,14 @@ import (
 	"github.com/funny/link"
 	"runtime/debug"
 	"strconv"
+	"strings"
 	"sync/atomic"
 	"time"
 )
 
 var (
-	VFId int32
+	VFId          int32
+	WorkingStatus = true
 )
 
 type User struct {
@@ -31,6 +33,11 @@ func Process(session *link.Session, req map[string]string) error {
 			ULogger.Error(string(debug.Stack()))
 		}
 	}()
+
+	if !WorkingStatus {
+		ULogger.Warn("System has been closed")
+		return nil
+	}
 
 	command, ok := req["action"]
 	if !ok {
@@ -65,6 +72,40 @@ func Process(session *link.Session, req map[string]string) error {
 		session.Close()
 		//ULogger.Info("sssss")
 	}
+	return nil
+}
+
+///答题系统控制程序，ip 白名单验证
+///
+//{
+//  "action": "conrol",
+//  "event":"start",
+//  "seq":"control_001"
+//}
+func control(session *link.Session, req map[string]string) error {
+	remoteAddr := session.Conn().RemoteAddr().String()
+
+	ip := strings.Split(remoteAddr, ":")[0]
+	if strings.Index(TCConfig.IpWhiteList, ip) < 0 {
+		ULogger.Error("bad request,not in whiteiplist")
+		session.Close()
+		return nil
+	}
+
+	event, _ := req["event"]
+	switch event {
+	//开始系统
+	case "start":
+		WorkingStatus = true
+		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'start','system',?)`, session.Conn().LocalAddr().String(), "operation:"+session.Conn().RemoteAddr().String())
+	//停止系统
+	case "stop":
+		WorkingStatus = false
+		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'stop','system',?)`, session.Conn().LocalAddr().String(), "operation:"+session.Conn().RemoteAddr().String())
+	case "stat":
+		ULogger.Info("dsdsfs")
+	}
+
 	return nil
 }
 
@@ -166,24 +207,46 @@ func putFile(session *link.Session, req map[string]string) error {
 	file := req["file"]
 	seq := req["seq"]
 	fileid := GetMd5String(file)
-	vf := &VerifyObj{Id: getId(), P: session, C: nil, FileId: fileid, File: file, Status: 1, Result: "0", Seq: seq, PPutUnix: time.Now().Unix()}
-	QueueInstance.Enqueue(vf)
-	VFMapInstance.Put(vf)
-	ULogger.Infof("putfile enqueue %s\n", vf.String())
-	//记录p端的操作
-	if session.State == nil {
-		userId := session.Conn().RemoteAddr().String()
-		user := &User{UserType: "P", Id: userId, WorkTime: time.Now().Format("2006-01-02 15:04:05")}
-		session.State = user
-		VFMapInstance.AddPSession(session)
-
-		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'begin','production',?)`, userId, userId)
+	fileAnswer := GetAnswer(fileid)
+	if fileAnswer != "" {
+		ULogger.Infof("file %s have in database,direct return", fileid)
+		//插入题目，状态为9
+		vf := &VerifyObj{Id: getId(), P: session, C: nil, FileId: fileid, File: file, Status: 9, Result: "1", Seq: seq, PPutUnix: time.Now().Unix()}
+		Exec(`insert into exam(file_id,file_hash,f_status,put_time,answer_result,answer) values(?,?,9,now(),1)`, vf.Id, vf.FileId, fileAnswer)
+		//给生产端回应答
+		ret := map[string]string{
+			"action": "res_putfile",
+			"seq":    seq,
+			"id":     vf.Id,
+			"answer": fileAnswer,
+		}
+		by, _ := json.Marshal(ret)
+		session.Send(link.Bytes(by))
+		goto A
+	} else {
+		vf := &VerifyObj{Id: getId(), P: session, C: nil, FileId: fileid, File: file, Status: 1, Result: "0", Seq: seq, PPutUnix: time.Now().Unix()}
+		QueueInstance.Enqueue(vf)
+		VFMapInstance.Put(vf)
+		ULogger.Infof("putfile enqueue %s\n", vf.String())
 	}
-	tmpUser := session.State.(*User)
-	tmpUser.PLastPutTime = time.Now().Unix()
-	tmpUser.PPutCount++
 
-	return nil
+A:
+	{
+		//记录p端的操作
+		if session.State == nil {
+			userId := session.Conn().RemoteAddr().String()
+			user := &User{UserType: "P", Id: userId, WorkTime: time.Now().Format("2006-01-02 15:04:05")}
+			session.State = user
+			VFMapInstance.AddPSession(session)
+
+			Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'begin','production',?)`, userId, userId)
+		}
+		tmpUser := session.State.(*User)
+		tmpUser.PLastPutTime = time.Now().Unix()
+		tmpUser.PPutCount++
+
+		return nil
+	}
 }
 
 func reportAnswer(session *link.Session, req map[string]string) error {
@@ -251,6 +314,7 @@ func getFile(session *link.Session, req map[string]string) error {
 
 ///c端开始答题
 func cStart(session *link.Session, req map[string]string) error {
+
 	userid := req["userid"]
 	password := req["password"]
 	seq := req["seq"]
@@ -260,6 +324,7 @@ func cStart(session *link.Session, req map[string]string) error {
 		"seq":    seq,
 		"result": "0",
 	}
+
 	if session.State != nil && session.State.(*User).UserType == "C" {
 		ULogger.Error("have logined ", userid)
 		session.Close()

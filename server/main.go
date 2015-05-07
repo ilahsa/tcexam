@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"github.com/funny/link"
 	"github.com/ilahsa/tcexam/lib"
+	"runtime"
 )
 
 var (
@@ -26,8 +27,9 @@ func log(v ...interface{}) {
 //     go run echo_server/main.go
 func main() {
 	flag.Parse()
-	lib.InitDbConfig()
+	lib.InitConfig()
 
+	runtime.GOMAXPROCS(8)
 	link.DefaultConnBufferSize = *buffersize
 	link.DefaultProtocol = lib.TCProtocol
 
@@ -35,7 +37,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
+	/// 记录系统的开始时间
+	lib.Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values('system',now(),'start','system','')`)
 	lib.ULogger.Info("server start:", server.Listener().Addr().String())
 
 	server.Serve(func(session *link.Session) {

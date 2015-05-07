@@ -35,12 +35,19 @@ func (p *tcProtocol) Write(writer io.Writer, packet *link.OutBuffer) error {
 		return link.PacketTooLargeError
 	}
 	lenStr := strconv.Itoa(len(packet.Data))
-	writer.Write([]byte(lenStr))
-	writer.Write([]byte{'\r'})
-	writer.Write([]byte{'\n'})
-	if _, err := writer.Write(packet.Data); err != nil {
+	tmpByte := make([]byte, 0, len(lenStr)+2+len(packet.Data))
+	tmpByte = append(tmpByte, []byte(lenStr)...)
+	tmpByte = append(tmpByte, '\r', '\n')
+	tmpByte = append(tmpByte, packet.Data...)
+
+	/*
+		writer.Write([]byte(lenStr))
+		writer.Write([]byte{'\r'})
+		writer.Write([]byte{'\n'})*/
+	if _, err := writer.Write(tmpByte); err != nil {
 		return err
 	}
+
 	return nil
 }
 
