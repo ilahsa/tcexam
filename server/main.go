@@ -5,6 +5,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"github.com/astaxie/beego/logs"
 	"github.com/funny/link"
 	"github.com/ilahsa/tcexam/lib"
 	"runtime"
@@ -26,8 +27,14 @@ func log(v ...interface{}) {
 // usage:
 //     go run echo_server/main.go
 func main() {
-	flag.Parse()
 	lib.InitConfig()
+	//initlog
+	lib.ULogger = logs.NewLogger(10000)
+	lib.ULogger.SetLogger("file", `{"filename":"tcexam.log"}`)
+
+	lib.ULogger.SetLogger("console", "")
+
+	flag.Parse()
 
 	runtime.GOMAXPROCS(8)
 	link.DefaultConnBufferSize = *buffersize
@@ -39,10 +46,10 @@ func main() {
 	}
 	/// 记录系统的开始时间
 	lib.Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values('system',now(),'start','system','')`)
-	lib.ULogger.Info("server start:", server.Listener().Addr().String())
+	lib.ULogger.Info("server start %s", server.Listener().Addr().String())
 
 	server.Serve(func(session *link.Session) {
-		lib.ULogger.Info("client", session.Conn().RemoteAddr().String(), "in")
+		lib.ULogger.Info("client %s %s", session.Conn().RemoteAddr().String(), "in")
 
 		session.Process(func(msg *link.InBuffer) error {
 			var receiveTmp []byte
@@ -52,13 +59,13 @@ func main() {
 				receiveTmp = msg.Data
 			}
 
-			lib.ULogger.Info("client", session.Conn().RemoteAddr().String(), "say:", string(receiveTmp))
+			lib.ULogger.Info("client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(receiveTmp))
 
 			var dat map[string]string
 
 			err := json.Unmarshal(msg.Data, &dat)
 			if err != nil {
-				lib.ULogger.Errorf("bad request,req is %s", string(msg.Data))
+				lib.ULogger.Error("bad request,req is %s", string(msg.Data))
 				return errors.New("bad request")
 			} else {
 				tmpMap := map[string]string{}
@@ -67,18 +74,18 @@ func main() {
 						tmpMap[k] = v
 					}
 				}
-				lib.ULogger.Infof("receive %s request:\r\n%s", session.Conn().RemoteAddr().String(), tmpMap)
+				lib.ULogger.Info("receive %s %s", session.Conn().RemoteAddr().String(), tmpMap)
 				er := lib.Process(session, dat)
 				//ULogger.Infof("tttt %v\n", er)
 				if er != nil {
-					lib.ULogger.Errorf("Error: panic  %v", err)
+					lib.ULogger.Error("Error: panic ", err)
 				}
 				return nil
 			}
 
 		})
 
-		lib.ULogger.Info("client", session.Conn().RemoteAddr().String(), "close")
+		lib.ULogger.Info("client %s %s", session.Conn().RemoteAddr().String(), "close")
 		if session.State != nil {
 			u := session.State.(*lib.User)
 			userId := u.Id

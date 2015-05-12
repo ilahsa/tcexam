@@ -5,6 +5,7 @@ import (
 	"errors"
 	"github.com/funny/link"
 	"runtime/debug"
+	"sort"
 	"strconv"
 	"strings"
 	"sync/atomic"
@@ -25,11 +26,17 @@ type User struct {
 	PLastPutTime int64
 }
 
+type ResMessage struct {
+	Action   string `json:"action"`
+	Seq      string `json:"seq"`
+	StatInfo MM     `json:"stat_info"`
+}
+
 func Process(session *link.Session, req map[string]string) error {
 	// panic 异常
 	defer func() {
 		if err := recover(); err != nil {
-			ULogger.Errorf("Error: panic  %v", err)
+			ULogger.Error("Error: panic ", err)
 			ULogger.Error(string(debug.Stack()))
 		}
 	}()
@@ -41,13 +48,13 @@ func Process(session *link.Session, req map[string]string) error {
 
 	command, ok := req["action"]
 	if !ok {
-		ULogger.Error("client", session.Conn().RemoteAddr().String(), "bad request ,not found action")
+		ULogger.Error("client %s %s", session.Conn().RemoteAddr().String(), "bad request ,not found action")
 		session.Close()
 		return nil
 
 	}
 	if (command == "getfile" || command == "answer") && session.State == nil {
-		ULogger.Error("client", session.Conn().RemoteAddr().String(), "c must login frist")
+		ULogger.Error("client %s %s", session.Conn().RemoteAddr().String(), "c must login frist")
 		session.Close()
 		return nil
 	}
@@ -67,8 +74,12 @@ func Process(session *link.Session, req map[string]string) error {
 		return answer(session, req)
 	case "test001":
 		return test001(session, req)
+	case "mstart":
+		return mStart(session, req)
+	case "getstatinfo":
+		return getStatInfo(session, req)
 	default:
-		ULogger.Error("client", session.Conn().RemoteAddr().String(), "not support command")
+		ULogger.Error("client %s %s", session.Conn().RemoteAddr().String(), "not support command")
 		session.Close()
 		//ULogger.Info("sssss")
 	}
@@ -209,7 +220,7 @@ func putFile(session *link.Session, req map[string]string) error {
 	fileid := GetMd5String(file)
 	fileAnswer := GetAnswer(fileid)
 	if fileAnswer != "" {
-		ULogger.Infof("file %s have in database,direct return", fileid)
+		ULogger.Info("file %s %s", fileid, " have in database,direct return")
 		//插入题目，状态为9
 		vf := &VerifyObj{Id: getId(), P: session, C: nil, FileId: fileid, File: file, Status: 9, Result: "1", Seq: seq, PPutUnix: time.Now().Unix()}
 		Exec(`insert into exam(file_id,file_hash,f_status,put_time,answer_result,answer) values(?,?,9,now(),1)`, vf.Id, vf.FileId, fileAnswer)
@@ -227,7 +238,7 @@ func putFile(session *link.Session, req map[string]string) error {
 		vf := &VerifyObj{Id: getId(), P: session, C: nil, FileId: fileid, File: file, Status: 1, Result: "0", Seq: seq, PPutUnix: time.Now().Unix()}
 		QueueInstance.Enqueue(vf)
 		VFMapInstance.Put(vf)
-		ULogger.Infof("putfile enqueue %s\n", vf.String())
+		ULogger.Info("putfile enqueue %s", vf.String())
 	}
 
 A:
@@ -255,7 +266,7 @@ func reportAnswer(session *link.Session, req map[string]string) error {
 
 	vf := VFMapInstance.Get(id)
 	if vf == nil {
-		ULogger.Errorf("answer,verifyobj not found,%v\n")
+		ULogger.Error("answer,verifyobj not found %s", vf)
 		return nil
 	}
 
@@ -265,7 +276,7 @@ func reportAnswer(session *link.Session, req map[string]string) error {
 		} else {
 			vf.C.State.(*User).CWrongCount = vf.C.State.(*User).CWrongCount + 1
 			if vf.C.State.(*User).CWrongCount >= 20 {
-				ULogger.Errorf("user %s %s, answer wrong to top limit", vf.C.State.(*User).Id, vf.C.Conn().RemoteAddr().String())
+				ULogger.Error("%s %s %s", vf.C.State.(*User).Id, vf.C.Conn().RemoteAddr().String(), " answer wrong to top limit")
 				vf.C.Close()
 			}
 		}
@@ -274,7 +285,7 @@ func reportAnswer(session *link.Session, req map[string]string) error {
 	vf.Status = 5
 	vf.Result = result
 	VFMapInstance.Update("p_reportanswer", vf)
-	ULogger.Infof("reportanswer %s\n", vf.String())
+	ULogger.Info("reportanswer %s", vf.String())
 	return nil
 }
 
@@ -285,14 +296,14 @@ func getFile(session *link.Session, req map[string]string) error {
 
 	vf := QueueInstance.DequeueWithoutPClosed()
 	if vf == nil {
-		ULogger.Info("queue is nil ,c userid is ", session.State.(*User).Id)
+		ULogger.Info("queue is nil ,c userid is %s", session.State.(*User).Id)
 		ret := map[string]string{
 			"action": "res_getfile",
 			"seq":    seq,
 		}
 		by, _ := json.Marshal(ret)
 		session.Send(link.Bytes(by))
-		ULogger.Info("send to client", session.Conn().RemoteAddr().String(), "say:", string(by))
+		ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
 		return nil
 	}
 	vf.C = session
@@ -308,7 +319,7 @@ func getFile(session *link.Session, req map[string]string) error {
 	by, _ := json.Marshal(ret)
 	VFMapInstance.Update("c_getfile", vf)
 	session.Send(link.Bytes(by))
-	ULogger.Info("res_getfile", session.Conn().RemoteAddr().String(), "say:", vf.String())
+	ULogger.Info("res_getfile %s %s %s", session.Conn().RemoteAddr().String(), "say:", vf.String())
 	return nil
 }
 
@@ -318,7 +329,7 @@ func cStart(session *link.Session, req map[string]string) error {
 	userid := req["userid"]
 	password := req["password"]
 	seq := req["seq"]
-	ULogger.Infof("user %s start answer", userid)
+	ULogger.Info("%s start answer", userid)
 	ret := map[string]string{
 		"action": "res_cstart",
 		"seq":    seq,
@@ -330,12 +341,12 @@ func cStart(session *link.Session, req map[string]string) error {
 		session.Close()
 	}
 
-	if b := Login(userid, password); !b {
-		ULogger.Errorf("cstart failed ,userid is %s password is %s", userid, password)
+	if b := Login(userid, password, "c"); !b {
+		ULogger.Error("cstart failed ,userid is %s", userid)
 
 		by, _ := json.Marshal(ret)
 		session.Send(link.Bytes(by))
-		ULogger.Info("send to client", session.Conn().RemoteAddr().String(), "say:", string(by))
+		ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
 		session.Close()
 		return nil
 	} else {
@@ -347,11 +358,107 @@ func cStart(session *link.Session, req map[string]string) error {
 		by, _ := json.Marshal(ret)
 
 		session.Send(link.Bytes(by))
-		ULogger.Info("cstart", session.Conn().RemoteAddr().String(), "say:", string(by))
+		ULogger.Info("cstart %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
 		//c端开始答题
 		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'begin','customer',?)`, userid, session.Conn().RemoteAddr().String())
 		VFMapInstance.AddCSession(session)
 	}
+
+	return nil
+}
+
+///m端开登陆
+func mStart(session *link.Session, req map[string]string) error {
+
+	userid := req["userid"]
+	password := req["password"]
+	seq := req["seq"]
+	ULogger.Info("m_user start %s", userid)
+	ret := map[string]string{
+		"action": "res_mstart",
+		"seq":    seq,
+		"result": "0",
+	}
+
+	if session.State != nil && session.State.(*User).UserType == "M" {
+		ULogger.Error("m have logined ", userid)
+		session.Close()
+	}
+
+	if b := Login(userid, password, "m"); !b {
+		ULogger.Error("m_start failed ,userid is %s ", userid)
+
+		by, _ := json.Marshal(ret)
+		session.Send(link.Bytes(by))
+		ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
+		session.Close()
+		return nil
+	} else {
+		user := &User{UserType: "M", Id: userid, WorkTime: time.Now().Format("2006-01-02 15:04:05"), CWrongCount: 0}
+		session.State = user
+
+		ret["result"] = "1"
+
+		by, _ := json.Marshal(ret)
+
+		session.Send(link.Bytes(by))
+		ULogger.Info("mstart %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
+		//m端登陆
+		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'begin','manager',?)`, userid, session.Conn().RemoteAddr().String())
+	}
+
+	return nil
+}
+
+func getStatInfo(session *link.Session, req map[string]string) error {
+	if session.State == nil {
+		ULogger.Error("bad request,please login first")
+		session.Close()
+		return nil
+	}
+	seq := req["seq"]
+	_ = seq
+	user := session.State.(*User)
+	if user.UserType != "M" {
+		ULogger.Error("only M can do it")
+		session.Close()
+		return nil
+	}
+	ret := ResMessage{Action: "res_getstatinfo", Seq: seq}
+	ret.StatInfo = make(MM, 0)
+
+	userId := user.Id
+	_ = userId
+	beginTime := req["begin_time"]
+	if beginTime == "" {
+		beginTime = GetSysLastStartTime()
+	} else {
+		tm, _ := time.Parse("2006-01-02 15:04:05", beginTime)
+		//德国服务器比utc 时间早一个市区
+		tm = tm.Add(time.Hour * 2)
+		beginTime = tm.Format("2006-01-02 15:04:05")
+	}
+	uids := GetUsersByManagerId(userId)
+	_ = uids
+	if uids == nil || len(uids) == 0 {
+		by, _ := json.Marshal(ret)
+		session.Send(link.Bytes(by))
+		return nil
+	}
+	for _, v := range uids {
+		query := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null`
+		finishCount := QueryInt(query, v, beginTime)
+		query1 := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null and answer_result=1`
+		rightCount := QueryInt(query1, v, beginTime)
+		m := map[string]string{"user_id": v, "finish_count": strconv.Itoa(finishCount), "right_count": strconv.Itoa(rightCount)}
+		ret.StatInfo = append(ret.StatInfo, m)
+	}
+	if len(ret.StatInfo) > 0 {
+		sort.Sort(ret.StatInfo)
+	}
+	by, _ := json.Marshal(ret)
+	session.Send(link.Bytes(by))
+	ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
 
 	return nil
 }
@@ -363,7 +470,7 @@ func answer(session *link.Session, req map[string]string) error {
 
 	vf := VFMapInstance.Get(id)
 	if vf == nil {
-		ULogger.Errorf("answer,verifyobj not found,may be timeout,vf is \r\n%v", req)
+		ULogger.Error("answer,verifyobj not found,may be timeout,vf is %s", req)
 
 		return nil
 	}
@@ -382,7 +489,7 @@ func answer(session *link.Session, req map[string]string) error {
 		}
 		by, _ := json.Marshal(ret)
 		vf.P.Send(link.Bytes(by))
-		ULogger.Info("res_putfile", vf.P.Conn().RemoteAddr().String(), "say:", string(by))
+		ULogger.Info("res_putfile %s %s %s", vf.P.Conn().RemoteAddr().String(), "say:", string(by))
 		vf.Status = 4
 		//给P投递了消息
 		VFMapInstance.Update("p_fileanswer", vf)

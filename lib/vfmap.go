@@ -26,7 +26,7 @@ func init() {
 				for k, v := range VFMapInstance.innerMap {
 					//p 端超时
 					if v.PPutUnix+900 < nowUnix {
-						ULogger.Infof("%s file timeover 15 minutes,puttime %s, now is %s", v.Id, v.PPutUnix, time.Now().Unix())
+						ULogger.Info(v.Id, "file timeover 15 minutes,puttime ", v.PPutUnix, " now is ", time.Now().Unix())
 						//						delete(VFMapInstance.innerMap, k)
 						//						if v.P != nil && v.P.IsClosed() {
 						//							v.P.Close()
@@ -34,7 +34,7 @@ func init() {
 					}
 					//被c 端获取且超时
 					if v.Status == 2 && (v.CGetUnix+300) < nowUnix {
-						ULogger.Infof("%s recycle", v.Id)
+						ULogger.Info(v.Id, " recycle")
 						VFMapInstance.Update("recycle", v)
 						delete(VFMapInstance.innerMap, k)
 						uid := ""
@@ -46,7 +46,7 @@ values(?,?,?,?,?,?)`, uid, v.Id, v.FileId, v.PPutUnix, v.CGetUnix, time.Now().Un
 						vf := &VerifyObj{Id: getId(), P: v.P, C: nil, FileId: v.FileId, File: v.File, Status: 1, Result: "0", Seq: v.Seq, PPutUnix: v.PPutUnix}
 						QueueInstance.Enqueue(vf)
 						VFMapInstance.Put(vf)
-						ULogger.Infof("recycle putfile 进队列 %v\n", vf.String())
+						ULogger.Info("recycle putfile enqueue %s", vf.String())
 					}
 				}
 				t1.Reset(time.Second * 60)
@@ -64,7 +64,7 @@ values(?,?,?,?,?,?)`, uid, v.Id, v.FileId, v.PPutUnix, v.CGetUnix, time.Now().Un
 					query := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null`
 					//c端回答的问题总数
 					canswer := QueryInt(query, u.Id, u.WorkTime)
-					ULogger.Info(query, u.Id, u.WorkTime)
+					//ULogger.Info(query+, u.Id, u.WorkTime)
 
 					query1 := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null and answer_result=1`
 					canswerrigth := QueryInt(query1, u.Id, u.WorkTime)
@@ -82,7 +82,7 @@ values(?,?,?,?,?,?)`, uid, v.Id, v.FileId, v.PPutUnix, v.CGetUnix, time.Now().Un
 					stat["pstatinfo"] = pstatInfo
 					by, _ := json.Marshal(stat)
 					v.Send(link.Bytes(by))
-					ULogger.Info("send to client", v.Conn().RemoteAddr().String(), "say:", string(by))
+					ULogger.Info("send to client %s %s %s", v.Conn().RemoteAddr().String(), "say:", string(by))
 				}
 				t2.Reset(time.Second * 30)
 			}
@@ -126,7 +126,7 @@ func (m *VFMap) AddCSession(s *link.Session) {
 	for k, v := range m.c_sessions {
 		tmpU := v.State.(*User)
 		if u.Id == tmpU.Id && !v.IsClosed() {
-			ULogger.Info("click c, cinfo is ", v.Conn().RemoteAddr().String())
+			ULogger.Info("click c, cinfo is %s", v.Conn().RemoteAddr().String())
 			notify := `{
 	"action": "notify_kick",
 	"seq": "s_0001"
@@ -186,7 +186,7 @@ func (m *VFMap) DelSessionByC(s *link.Session) {
 	//回收c 的任务
 	for k, v := range m.innerMap {
 		if v.Status == 2 && v.C != nil && v.C == s {
-			ULogger.Infof("c is closed, %s recycle", v.Id)
+			ULogger.Info("c is closed, recycle file,fileid is %s", v.Id)
 			VFMapInstance.Update("recycle", v)
 			delete(VFMapInstance.innerMap, k)
 			Exec(`insert into recycle_log(c_id,file_id,file_hash,put_time,c_getfile_time,recycle_time) 
@@ -195,7 +195,7 @@ values(?,?,?,?,?,?)`, s.State.(*User).Id, v.Id, v.FileId, v.PPutUnix, v.CGetUnix
 			vf := &VerifyObj{Id: getId(), P: v.P, C: nil, FileId: v.FileId, File: v.File, Status: 1, Result: "0", Seq: v.Seq, PPutUnix: v.PPutUnix}
 			QueueInstance.Enqueue(vf)
 			VFMapInstance.Put(vf)
-			ULogger.Infof("recycle putfile 进队列 %v\n", vf.String())
+			ULogger.Info("recycle putfile enqueue %s", vf.String())
 		}
 	}
 }
@@ -208,7 +208,7 @@ func (m *VFMap) DelSessionByP(s *link.Session) {
 	delete(m.p_sessions, s.Id())
 	for k, v := range m.innerMap {
 		if v.P == s {
-			ULogger.Info("p is closed ", s.Conn().RemoteAddr().String())
+			ULogger.Info("p is closed %s", s.Conn().RemoteAddr().String())
 			m.Update("p_closed", v)
 			delete(m.innerMap, k)
 		}

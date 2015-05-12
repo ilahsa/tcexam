@@ -2,14 +2,12 @@ package lib
 
 import (
 	"database/sql"
+	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func Exec(query string, args ...interface{}) {
-	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
-	if err != nil {
-		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
-	}
+	db := getDB()
 	defer db.Close()
 
 	// Prepare statement for inserting data
@@ -26,15 +24,12 @@ func Exec(query string, args ...interface{}) {
 
 }
 
-func Login(userid, password string) bool {
-	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
-	if err != nil {
-		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
-	}
+func Login(userid, password, userType string) bool {
+	db := getDB()
 	defer db.Close()
 
 	// Prepare statement for reading data
-	stmtOut, err := db.Prepare("select user_id from user where user_id =? and password=? and status=1")
+	stmtOut, err := db.Prepare("select user_id from user where user_id =? and password=? and user_type=? and status=1")
 	if err != nil {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
@@ -43,7 +38,7 @@ func Login(userid, password string) bool {
 	var uid string // we "scan" the result in here
 
 	// Query the square-number of 13
-	err = stmtOut.QueryRow(userid, password).Scan(&uid) // WHERE number = 13
+	err = stmtOut.QueryRow(userid, password, userType).Scan(&uid) // WHERE number = 13
 	if err != nil {
 		//panic(err.Error())
 		return false
@@ -56,7 +51,7 @@ func Login(userid, password string) bool {
 }
 
 func GetAnswer(fileMd5 string) string {
-	return ""
+	//return ""
 	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
 	if err != nil {
 		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
@@ -64,7 +59,7 @@ func GetAnswer(fileMd5 string) string {
 	defer db.Close()
 
 	// Prepare statement for reading data
-	stmtOut, err := db.Prepare("SELECT * from exam where  file_hash =? and answer_result =1 and answer is not null ")
+	stmtOut, err := db.Prepare("SELECT answer from exam where  file_hash =? and answer_result =1 and answer is not null ")
 	if err != nil {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
@@ -73,25 +68,89 @@ func GetAnswer(fileMd5 string) string {
 	var answer string // we "scan" the result in here
 
 	// Query the square-number of 13
-	qr := stmtOut.QueryRow(fileMd5)
+	rows, err := stmtOut.Query(fileMd5)
 
-	if qr == nil {
+	defer rows.Close()
+	if err != nil {
 		return ""
 	}
-	err = qr.Scan(&answer) // WHERE number = 13
-	if err != nil {
-		panic(err.Error())
-		return ""
+	for rows.Next() {
+		err = rows.Scan(&answer) // WHERE number = 13
+		if err != nil {
+			fmt.Println(err)
+			return ""
+		}
+		return answer
 	}
 	return answer
 }
 
-func QueryInt(query string, args ...interface{}) int {
+///获取系统最后开启时间
+func GetSysLastStartTime() string {
+	db := getDB()
+	defer db.Close()
 
-	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
+	// Prepare statement for reading data
+	stmtOut, err := db.Prepare("select active_time from user_activities where user_type='system' and active_type ='start' order by active_time desc limit 1")
 	if err != nil {
-		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
+		panic(err.Error()) // proper error handling instead of panic in your app
 	}
+	defer stmtOut.Close()
+
+	var activeTime string // we "scan" the result in here
+
+	// Query the square-number of 13
+	rows, err := stmtOut.Query()
+
+	defer rows.Close()
+	if err != nil {
+		return ""
+	}
+	for rows.Next() {
+		err = rows.Scan(&activeTime) // WHERE number = 13
+		if err != nil {
+			fmt.Println(err)
+			return ""
+		}
+		return activeTime
+	}
+	return activeTime
+}
+
+///根据管理员id 获取用户列表
+func GetUsersByManagerId(mId string) []string {
+	db := getDB()
+	defer db.Close()
+
+	// Prepare statement for reading data
+	stmtOut, err := db.Prepare("select u_id from user_group where m_id=? ")
+	if err != nil {
+		panic(err.Error()) // proper error handling instead of panic in your app
+	}
+	defer stmtOut.Close()
+
+	// Query the square-number of 13
+	rows, err := stmtOut.Query(mId)
+
+	defer rows.Close()
+	if err != nil {
+		return nil
+	}
+	ret := make([]string, 0)
+	for rows.Next() {
+		var uId string        // we "scan" the result in here
+		err = rows.Scan(&uId) // WHERE number = 13
+		if err != nil {
+			fmt.Println(err)
+			panic(err)
+		}
+		ret = append(ret, uId)
+	}
+	return ret
+}
+
+func QueryInt(query string, args ...interface{}) int {
+	db := getDB()
 	defer db.Close()
 
 	// Prepare statement for reading data
@@ -109,4 +168,12 @@ func QueryInt(query string, args ...interface{}) int {
 		panic(err.Error())
 	}
 	return count
+}
+
+func getDB() *sql.DB {
+	db, err := sql.Open("mysql", TCConfig.DBConnectStr)
+	if err != nil {
+		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
+	}
+	return db
 }

@@ -17,7 +17,7 @@ func main() {
 	lib.ULogger.Info("ssssssssss")
 
 	link.DefaultProtocol = lib.TCProtocol
-	client, err := link.Dial("tcp", "85.1.195.142:10010")
+	client, err := link.Dial("tcp", "10.1.9.27:10010")
 	if err != nil {
 		panic(err)
 	}
@@ -30,7 +30,7 @@ func main() {
 		json.Unmarshal(msg.Data, &dat)
 		action := dat["action"]
 		ret := dat["result"]
-		if action == "res_cstart" && ret == "1" {
+		if action == "res_mstart" && ret == "1" {
 			stopWait.Done()
 			fmt.Println("登陆成功")
 			return nil
@@ -53,7 +53,7 @@ func main() {
 
 	//登陆
 	dat := map[string]string{
-		"action": "cstart", "seq": "00001", "userid": "u_001", "password": "123456",
+		"action": "mstart", "seq": "00001", "userid": "m_0001", "password": "123456",
 	}
 	by, _ := json.Marshal(dat)
 	client.Send(link.Bytes(by))
@@ -64,10 +64,10 @@ func main() {
 		stopWait.Wait()
 
 		//发10个获取
-		for i := 0; i < 10; i++ {
+		for i := 0; i < 1; i++ {
 			id := strconv.Itoa(i)
 			dat := map[string]string{
-				"action": "getfile", "seq": id,
+				"action": "getstatinfo", "seq": id,
 			}
 			by, _ := json.Marshal(dat)
 			client.Send(link.Bytes(by))

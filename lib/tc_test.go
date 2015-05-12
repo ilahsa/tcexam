@@ -1,6 +1,9 @@
 package lib
 
 import (
+	"encoding/json"
+	"os"
+	"sort"
 	//"database/sql"
 	"fmt"
 	"testing"
@@ -8,6 +11,14 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+func TestMain(t *testing.M) {
+	fmt.Println("start")
+
+	InitConfig()
+	fmt.Println(TCConfig.DBConnectStr)
+	code := t.Run()
+	os.Exit(code)
+}
 func Test_02(t *testing.T) {
 
 	fmt.Println("22222")
@@ -19,25 +30,39 @@ func Test_MD5(t *testing.T) {
 }
 
 func Test_login(t *testing.T) {
-	b := Login(`u_001`, `123456`)
+	b := Login(`u_001`, `123456`, "c")
 	if !b {
 		t.Fail()
 	}
 }
 
 func Test_Exec(t *testing.T) {
-	//插入题目
-	//Exec(`insert into exam(file_id,file_hash,f_status,put_time) values(?,?,1,now())`, `f_id_001`, `f_hash_001`)
-	//c端获取问题
-	Exec(`update exam set f_status=?,c_userid=? where file_id=?`, 2, `c_user_001`, `f_id_001`)
-	//c端回答问题
-	Exec(`update exam set f_status=?,answer_time=now(),answer=? where file_id=?`, 3, `answer_0001`, `f_id_001`)
+	an := GetAnswer("6eb512cb2557734c63f6fa15ef61ef9f")
+	fmt.Println(an)
+	fmt.Println("wwwwwwwwww")
+	fmt.Println(GetSysLastStartTime())
+	ret := GetUsersByManagerId("m_0001")
+	for _, v := range ret {
+		fmt.Println(v)
+	}
+}
 
-	//给p端下发问题
-	Exec(`update exam set f_status=? where file_id=?`, 4, `f_id_001`)
-	//p端发送是否正确
-	Exec(`update exam set f_status=?,answer_result=? where file_id=?`, 5, 1, `f_id_001`)
+func Test_Json(t *testing.T) {
+	m1 := ResMessage{Action: "res_getstatinfo", Seq: "22"}
+	m1.StatInfo = make([]map[string]string, 0)
+	//m1.StatInfo[0] = map[string]string{"user_id": "w_0001", "finish_count": "22"}
+	//m1.StatInfo[1] = map[string]string{"user_id": "w_0002", "finish_count": "22"}
+	by, _ := json.Marshal(m1)
+	fmt.Println(string(by))
+}
 
-	i1 := QueryInt(`select count(*) from exam where c_userid='u_001' and c_getfile_time > '2015-04-17 12:54:31' and answer is not null`)
-	fmt.Println(i1)
+func Test_Sort(t *testing.T) {
+	mm := make(MM, 5)
+	mm[0] = map[string]string{"name": "n1", "finish_count": "20"}
+	mm[1] = map[string]string{"name": "n2", "finish_count": "234"}
+	mm[2] = map[string]string{"name": "n3", "finish_count": "20"}
+	mm[3] = map[string]string{"name": "n4", "finish_count": "1"}
+	mm[4] = map[string]string{"name": "n5", "finish_count": "23"}
+	sort.Sort(mm)
+	fmt.Println(mm)
 }
