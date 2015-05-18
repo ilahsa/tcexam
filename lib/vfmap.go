@@ -158,6 +158,35 @@ func (m *VFMap) pstatInfo() string {
 	return bufs.String()
 }
 
+//c 端的统计信息
+func (m *VFMap) cstatInfo() string {
+	m.syncRoot.Lock()
+	defer m.syncRoot.Unlock()
+
+	bufs := bytes.Buffer{}
+
+	for k, v := range m.c_sessions {
+		if v == nil {
+			delete(m.p_sessions, k)
+		}
+
+		if v == nil || v.State == nil {
+			delete(VFMapInstance.c_sessions, k)
+		}
+		u := v.State.(*User)
+		query := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null`
+		//c端回答的问题总数
+		canswer := QueryInt(query, u.Id, u.WorkTime)
+		//ULogger.Info(query+, u.Id, u.WorkTime)
+
+		query1 := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null and answer_result=1`
+		canswerrigth := QueryInt(query1, u.Id, u.WorkTime)
+
+		bufs.WriteString("c_addr:" + v.Conn().RemoteAddr().String() + ";c_userid:" + u.Id + ";finishcount:" + strconv.Itoa(canswer) + ";rigthcount:" + strconv.Itoa(canswerrigth) + "\r\n")
+	}
+	return bufs.String()
+}
+
 //添加p 端的session
 func (m *VFMap) AddPSession(s *link.Session) {
 	m.syncRoot.Lock()

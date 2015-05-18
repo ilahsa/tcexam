@@ -3,6 +3,7 @@ package lib
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"github.com/funny/link"
 	"runtime/debug"
 	"sort"
@@ -78,6 +79,8 @@ func Process(session *link.Session, req map[string]string) error {
 		return mStart(session, req)
 	case "getstatinfo":
 		return getStatInfo(session, req)
+	case "conrol":
+		return control(session, req)
 	default:
 		ULogger.Error("client %s %s", session.Conn().RemoteAddr().String(), "not support command")
 		session.Close()
@@ -104,17 +107,51 @@ func control(session *link.Session, req map[string]string) error {
 	}
 
 	event, _ := req["event"]
+	seq := req["seq"]
+	stat := map[string]string{"action": "res_control"}
+	stat["now"] = strconv.Itoa(int(time.Now().Unix()))
+	stat["seq"] = seq
 	switch event {
 	//开始系统
 	case "start":
+		fmt.Println("2222")
 		WorkingStatus = true
 		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'start','system',?)`, session.Conn().LocalAddr().String(), "operation:"+session.Conn().RemoteAddr().String())
+		by, _ := json.Marshal(stat)
+		session.Send(link.Bytes(by))
+		ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
+
 	//停止系统
 	case "stop":
-		WorkingStatus = false
+		//WorkingStatus = false
 		Exec(`insert into user_activities(user_id,active_time,active_type,user_type,other_info) values(?,now(),'stop','system',?)`, session.Conn().LocalAddr().String(), "operation:"+session.Conn().RemoteAddr().String())
+		by, _ := json.Marshal(stat)
+		session.Send(link.Bytes(by))
+		ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
+
 	case "stat":
-		ULogger.Info("dsdsfs")
+		waitcount := QueueInstance.len()
+		clientcount := len(VFMapInstance.c_sessions)
+		pcount := len(VFMapInstance.p_sessions)
+		questioncount := len(VFMapInstance.innerMap)
+		stat["productioncount"] = strconv.Itoa(pcount)
+		stat["questioncount"] = strconv.Itoa(questioncount)
+		stat["waitcount"] = strconv.Itoa(waitcount)
+		stat["clientcount"] = strconv.Itoa(clientcount)
+		pstatInfo := VFMapInstance.pstatInfo()
+		stat["pstatinfo"] = pstatInfo
+		cstatInfo := VFMapInstance.cstatInfo()
+		stat["cstatinfo"] = cstatInfo
+		by, _ := json.Marshal(stat)
+		session.Send(link.Bytes(by))
+		ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
+	case "exit":
+		session.Close()
+	default:
+		by, _ := json.Marshal(stat)
+		session.Send(link.Bytes(by))
+		ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
+
 	}
 
 	return nil
