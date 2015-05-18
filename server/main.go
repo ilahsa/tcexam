@@ -37,10 +37,15 @@ func main() {
 	flag.Parse()
 
 	runtime.GOMAXPROCS(8)
-	link.DefaultConnBufferSize = *buffersize
-	link.DefaultProtocol = lib.TCProtocol
+	//	link.DefaultConnBufferSize = *buffersize
+	//	link.DefaultProtocol = lib.TCProtocol
 
-	server, err := link.Listen("tcp", "0.0.0.0:10010")
+	link.DefaultConfig.InBufferSize = 1024
+	link.DefaultConfig.OutBufferSize = 1024
+	link.DefaultConfig.SendChanSize = 10000
+	pool := link.NewMemPool(10, 1, 10)
+
+	server, err := link.Listen("tcp", "0.0.0.0:10010", lib.Protocol, pool)
 	if err != nil {
 		panic(err)
 	}
@@ -51,7 +56,7 @@ func main() {
 	server.Serve(func(session *link.Session) {
 		lib.ULogger.Info("client %s %s", session.Conn().RemoteAddr().String(), "in")
 
-		session.Process(func(msg *link.InBuffer) error {
+		session.Process(func(msg *link.Buffer) error {
 			var receiveTmp []byte
 			if len(msg.Data) > 100 {
 				receiveTmp = msg.Data[0:100]
