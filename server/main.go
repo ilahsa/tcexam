@@ -36,7 +36,7 @@ func main() {
 
 	flag.Parse()
 
-	runtime.GOMAXPROCS(8)
+	runtime.GOMAXPROCS(runtime.NumCPU() * 2)
 	//	link.DefaultConnBufferSize = *buffersize
 	//	link.DefaultProtocol = lib.TCProtocol
 

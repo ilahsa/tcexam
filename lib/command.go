@@ -170,6 +170,8 @@ func test001(session *link.Session, req map[string]string) error {
 	session.Send(link.Bytes(by))
 	//session.Send(link.String("123456"))
 	//panic("222222")
+	ULogger.Info("send to client %s %s %s", session.Conn().RemoteAddr().String(), "say:", string(by))
+
 	return nil //errors.New("test001 error")
 
 }

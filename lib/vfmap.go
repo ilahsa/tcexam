@@ -27,10 +27,10 @@ func init() {
 					//p 端超时
 					if v.PPutUnix+900 < nowUnix {
 						ULogger.Info(v.Id, "file timeover 15 minutes,puttime ", v.PPutUnix, " now is ", time.Now().Unix())
-						//						delete(VFMapInstance.innerMap, k)
-						//						if v.P != nil && v.P.IsClosed() {
-						//							v.P.Close()
-						//						}
+						delete(VFMapInstance.innerMap, k)
+						if v.P != nil && v.P.IsClosed() {
+							v.P.Close()
+						}
 					}
 					//被c 端获取且超时
 					if v.Status == 2 && (v.CGetUnix+300) < nowUnix {
@@ -61,12 +61,12 @@ values(?,?,?,?,?,?)`, uid, v.Id, v.FileId, v.PPutUnix, v.CGetUnix, time.Now().Un
 						delete(VFMapInstance.c_sessions, k)
 					}
 					u := v.State.(*User)
-					query := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null`
+					query := `select count(*) from exam where c_userid=? and c_getfile_time >= ? and answer is not null`
 					//c端回答的问题总数
 					canswer := QueryInt(query, u.Id, u.WorkTime)
 					//ULogger.Info(query+, u.Id, u.WorkTime)
 
-					query1 := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null and answer_result=1`
+					query1 := `select count(*) from exam where c_userid=? and c_getfile_time >= ? and answer is not null and answer_result=1`
 					canswerrigth := QueryInt(query1, u.Id, u.WorkTime)
 					waitcount := QueueInstance.len()
 					clientcount := len(VFMapInstance.c_sessions)
@@ -174,12 +174,12 @@ func (m *VFMap) cstatInfo() string {
 			delete(VFMapInstance.c_sessions, k)
 		}
 		u := v.State.(*User)
-		query := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null`
+		query := `select count(*) from exam where c_userid=? and c_getfile_time >= ? and answer is not null`
 		//c端回答的问题总数
 		canswer := QueryInt(query, u.Id, u.WorkTime)
 		//ULogger.Info(query+, u.Id, u.WorkTime)
 
-		query1 := `select count(*) from exam where c_userid=? and c_getfile_time > ? and answer is not null and answer_result=1`
+		query1 := `select count(*) from exam where c_userid=? and c_getfile_time >= ? and answer is not null and answer_result=1`
 		canswerrigth := QueryInt(query1, u.Id, u.WorkTime)
 
 		bufs.WriteString("c_addr:" + v.Conn().RemoteAddr().String() + ";c_userid:" + u.Id + ";finishcount:" + strconv.Itoa(canswer) + ";rigthcount:" + strconv.Itoa(canswerrigth) + "\r\n")
