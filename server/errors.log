@@ -1,0 +1,51 @@
+[ERROR] [04-30 16:11:26] [func·001 @ command.go.30] Error: panic  222222
+[ERROR] [04-30 16:11:26] [func·001 @ command.go.31] D:/go_src/src/github.com/ilahsa/tcexam/lib/command.go:31 (0x487ce8)
+	func.001: ULogger.Error(string(debug.Stack()))
+C:/Go/src/runtime/asm_amd64.s:401 (0x43e95c)
+	call16: CALLFN(·call16, 16)
+C:/Go/src/runtime/panic.go:387 (0x41456f)
+	gopanic: reflectcall(unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+D:/go_src/src/github.com/ilahsa/tcexam/lib/command.go:158 (0x47f160)
+	test001: panic("222222")
+D:/go_src/src/github.com/ilahsa/tcexam/lib/command.go:62 (0x47ee9b)
+	Process: return test001(session, req)
+D:/go_src/src/github.com/ilahsa/tcexam/server/main.go:68 (0x401c5e)
+	func.001: er := lib.Process(session, dat)
+D:/go_src/src/github.com/funny/link/session.go:177 (0x47b01a)
+	(*Session).ProcessOnce: err = decoder(buffer)
+D:/go_src/src/github.com/funny/link/session.go:186 (0x47b10b)
+	(*Session).Process: if err := session.ProcessOnce(decoder); err != nil {
+D:/go_src/src/github.com/ilahsa/tcexam/server/main.go:76 (0x402037)
+	func.002: })
+C:/Go/src/runtime/asm_amd64.s:2232 (0x440aa1)
+	goexit: 
+
+[ERROR] [05-06 18:38:56] [Process @ command.go.50] client10.1.9.27:21902c must login frist
+[ERROR] [05-06 18:38:58] [Process @ command.go.50] client10.1.9.27:21903c must login frist
+[ERROR] [05-06 18:38:59] [Process @ command.go.50] client10.1.9.27:21904c must login frist
+[ERROR] [05-06 18:39:00] [Process @ command.go.50] client10.1.9.27:21905c must login frist
+[ERROR] [05-06 18:39:42] [Process @ command.go.50] client10.1.7.3:40212c must login frist
+[ERROR] [05-06 18:40:07] [Process @ command.go.50] client10.1.7.3:40215c must login frist
+[ERROR] [05-06 18:41:01] [Process @ command.go.50] client10.1.7.3:40216c must login frist
+[ERROR] [05-06 18:45:56] [Process @ command.go.50] client10.1.7.3:40239c must login frist
+[ERROR] [05-06 18:46:09] [Process @ command.go.50] client10.1.7.3:40240c must login frist
+[ERROR] [05-06 18:46:39] [Process @ command.go.50] client10.1.7.3:40241c must login frist
+[ERROR] [05-06 18:47:01] [Process @ command.go.50] client10.1.7.3:40243c must login frist
+[ERROR] [05-06 18:48:05] [Process @ command.go.50] client10.1.7.3:40246c must login frist
+[ERROR] [05-06 18:49:34] [Process @ command.go.50] client10.1.7.3:40257c must login frist
+[ERROR] [05-07 18:18:33] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:35] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:36] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:36] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:36] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:40] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:42] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:42] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:42] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:42] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:42] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:42] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:43] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:43] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:18:43] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
+[ERROR] [05-07 18:19:07] [cStart @ command.go.344] cstart failed ,userid is m_0001 password is 123456
